@@ -667,7 +667,7 @@ function App() {
                 required
               ></textarea>
 
-              <button type="submit" className="btn btn-primary submit-btn">
+              <button type="brandbywebeara@protonmail.com" className="btn btn-primary submit-btn">
                 Send Message <ArrowRight size={18} />
               </button>
             </form>
