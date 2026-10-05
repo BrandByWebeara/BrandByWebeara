@@ -2078,3 +2078,27 @@ button {
     padding: 19px;
   }
 }
+/* About image - mobile fix */
+@media (max-width: 760px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-image {
+    display: block !important;
+    width: 100%;
+    min-height: 320px;
+    margin-bottom: 35px;
+  }
+
+  .office-card {
+    display: flex !important;
+    width: 100%;
+    min-height: 320px;
+    height: 320px;
+  }
+
+  .office-laptop {
+    display: block !important;
+  }
+}
