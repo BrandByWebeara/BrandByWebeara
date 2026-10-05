@@ -2102,3 +2102,77 @@ button {
     display: block !important;
   }
 }
+/* =========================================
+   MOBILE - KEEP DESKTOP LAYOUT
+   ========================================= */
+
+@media (max-width: 760px) {
+  body {
+    min-width: 1200px;
+    overflow-x: auto;
+  }
+
+  .app {
+    min-width: 1200px;
+  }
+
+  .container {
+    width: 1120px;
+    max-width: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Keep desktop grids */
+  .hero-grid {
+    grid-template-columns: 1.05fr 0.95fr !important;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+
+  .process-grid {
+    grid-template-columns: repeat(5, 1fr) !important;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .why-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+
+  .testimonial-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  /* Keep navbar desktop */
+  .nav-links {
+    display: flex !important;
+  }
+
+  .menu-btn {
+    display: none !important;
+  }
+
+  /* Keep desktop sizing */
+  .hero {
+    min-width: 1200px;
+  }
+
+  .section-light,
+  .section-dark,
+  .footer {
+    min-width: 1200px;
+  }
+}
