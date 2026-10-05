@@ -2176,18 +2176,3 @@ button {
     min-width: 1200px;
   }
 }
-@media (max-width: 760px) {
-  html,
-  body,
-  #root {
-    min-width: 1200px !important;
-    width: 1200px !important;
-  }
-}@media (max-width: 760px) {
-  html,
-  body,
-  #root {
-    min-width: 1200px !important;
-    width: 1200px !important;
-  }
-}
