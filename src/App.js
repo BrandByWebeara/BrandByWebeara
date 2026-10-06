@@ -480,7 +480,7 @@ function App() {
               <p>We’ve helped many businesses go online and grow.</p>
             </div>
 
-            <a href="#contact" className="small-btn">
+            <a href="/portfolio" className="small-btn">
               View All Projects <ArrowRight size={15} />
             </a>
           </div>
