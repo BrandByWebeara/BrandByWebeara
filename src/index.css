@@ -6080,3 +6080,48 @@ button {
   }
 
 }
+/* =========================================================
+   CONTACT PAGE - MOBILE HEADER SPACING FIX
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .bb-contact-page .navbar {
+    position: relative;
+    z-index: 100;
+  }
+
+  .bb-contact-page .bb-contact-hero {
+    padding-top: 18px;
+  }
+
+  .bb-contact-page .bb-contact-hero-inner {
+    padding-top: 25px;
+  }
+
+  .bb-contact-page .bb-contact-heading {
+    padding-top: 18px;
+  }
+
+  .bb-contact-page .bb-contact-label {
+    margin-top: 8px;
+  }
+
+}
+
+
+@media (max-width: 768px) {
+
+  .bb-contact-page .bb-contact-hero {
+    padding-top: 15px;
+  }
+
+  .bb-contact-page .bb-contact-hero-inner {
+    padding-top: 22px;
+  }
+
+  .bb-contact-page .bb-contact-heading {
+    padding-top: 15px;
+  }
+
+}
