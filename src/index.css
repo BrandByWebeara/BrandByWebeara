@@ -5189,3 +5189,174 @@ button {
   }
 
 }
+/* =========================================================
+   PORTFOLIO HERO - DESKTOP SPACE FIX
+========================================================= */
+
+.portfolio-page .portfolio-hero {
+  padding: 0 !important;
+  margin: 0 !important;
+  min-height: 0 !important;
+}
+
+.portfolio-page .hero-inner {
+  min-height: 0 !important;
+  height: 330px !important;
+
+  display: grid !important;
+  grid-template-columns: 52% 48% !important;
+
+  align-items: center !important;
+
+  padding: 25px 0 !important;
+  margin: 0 auto !important;
+}
+
+.portfolio-page .hero-left {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.portfolio-page .back-home {
+  margin-bottom: 14px !important;
+}
+
+.portfolio-page .hero-left h1 {
+  margin: 8px 0 0 !important;
+  font-size: 52px !important;
+  line-height: .96 !important;
+}
+
+.portfolio-page .hero-left p {
+  margin: 13px 0 0 !important;
+  max-width: 430px !important;
+}
+
+
+/* HERO VISUAL */
+
+.portfolio-page .hero-mini-visual {
+  height: 240px !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  position: relative !important;
+}
+
+.portfolio-page .mini-browser {
+  width: 72% !important;
+  height: 150px !important;
+
+  top: 38px !important;
+  left: 2% !important;
+}
+
+.portfolio-page .mini-phone {
+  width: 64px !important;
+  height: 122px !important;
+
+  right: 9% !important;
+  bottom: 20px !important;
+}
+
+
+/* =========================================================
+   DESKTOP WORK SECTION
+========================================================= */
+
+.portfolio-page .portfolio-work {
+  padding-top: 42px !important;
+  padding-bottom: 45px !important;
+  margin: 0 !important;
+}
+
+.portfolio-page .work-heading {
+  margin: 0 !important;
+}
+
+.portfolio-page .portfolio-filters {
+  margin-top: 20px !important;
+}
+
+.portfolio-page .projects-grid {
+  margin-top: 20px !important;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .portfolio-page .hero-inner {
+    height: 300px !important;
+    grid-template-columns: 55% 45% !important;
+  }
+
+  .portfolio-page .hero-left h1 {
+    font-size: 44px !important;
+  }
+
+  .portfolio-page .hero-mini-visual {
+    height: 210px !important;
+  }
+
+  .portfolio-page .mini-browser {
+    height: 130px !important;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .portfolio-page .hero-inner {
+    height: auto !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+
+    padding: 24px 0 8px !important;
+  }
+
+  .portfolio-page .hero-left {
+    width: 100% !important;
+  }
+
+  .portfolio-page .hero-left h1 {
+    font-size: 37px !important;
+  }
+
+  .portfolio-page .hero-mini-visual {
+    width: 100% !important;
+    height: 135px !important;
+    min-height: 135px !important;
+
+    margin-top: 3px !important;
+  }
+
+  .portfolio-page .mini-browser {
+    width: 73% !important;
+    height: 91px !important;
+
+    top: 13px !important;
+    left: 2% !important;
+  }
+
+  .portfolio-page .mini-phone {
+    width: 43px !important;
+    height: 82px !important;
+
+    right: 7% !important;
+    bottom: 6px !important;
+  }
+
+  .portfolio-page .portfolio-work {
+    padding-top: 32px !important;
+  }
+
+}
