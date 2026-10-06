@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Portfolio from "./Portfolio";
-
+import Contact from "./Contact";
 import {
   ArrowRight,
   ArrowUpRight,
@@ -173,9 +173,9 @@ function App() {
             <a href="#about" onClick={() => setMenuOpen(false)}>About</a>
             <a href="/portfolio" onClick={() => setMenuOpen(false)}>Portfolio</a>
             <a href="#pricing" onClick={() => setMenuOpen(false)}>Pricing</a>
-            <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
+            <a href="/contact" onClick={() => setMenuOpen(false)}>Contact</a>
 
-            <a href="#contact" className="nav-cta" onClick={() => setMenuOpen(false)}>
+            <a href="/contact" className="nav-cta" onClick={() => setMenuOpen(false)}>
               Get Started <ArrowRight size={15} />
             </a>
           </nav>
@@ -720,6 +720,7 @@ function AppRouter() {
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </BrowserRouter>
   );
