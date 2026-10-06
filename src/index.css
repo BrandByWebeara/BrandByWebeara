@@ -2102,3 +2102,737 @@ button {
     display: block !important;
   }
 }
+/* =====================================================
+   MOBILE VIEW - BRANDBYWEBEARA
+   Desktop design ko touch nahi karega
+===================================================== */
+
+@media (max-width: 768px) {
+
+  /* ---------- GENERAL ---------- */
+
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .container {
+    width: calc(100% - 28px);
+    max-width: none;
+    margin: 0 auto;
+  }
+
+  /* ---------- NAVBAR ---------- */
+
+  .navbar {
+    width: 100%;
+  }
+
+  .nav-inner {
+    min-height: 64px;
+    padding: 0;
+  }
+
+  .brand {
+    gap: 7px;
+  }
+
+  .brand-logo {
+    width: 34px;
+    height: 34px;
+    border-radius: 7px;
+  }
+
+  .brand-logo span {
+    font-size: 14px;
+  }
+
+  .brand-name {
+    font-size: 14px;
+  }
+
+  .brand-tagline {
+    font-size: 5px;
+    letter-spacing: 1px;
+  }
+
+  /* Mobile menu button */
+
+  .menu-btn {
+    display: flex !important;
+    width: 38px;
+    height: 38px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 189, 63, 0.35);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.03);
+    color: #fff;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    left: 14px;
+    right: 14px;
+    width: auto;
+
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+
+    padding: 10px;
+    gap: 2px;
+
+    background: #081118;
+    border: 1px solid #243440;
+    border-radius: 10px;
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.55);
+  }
+
+  .nav-links.mobile-open {
+    display: flex;
+  }
+
+  .nav-links > a {
+    display: block;
+    width: 100%;
+    padding: 12px 13px;
+    font-size: 12px;
+    border-radius: 6px;
+  }
+
+  .nav-links > a:hover {
+    background: rgba(255, 189, 63, 0.08);
+  }
+
+  .nav-links .nav-cta {
+    justify-content: center;
+    margin-top: 5px;
+  }
+
+  /* ---------- HERO ---------- */
+
+  .hero {
+    width: 100%;
+    min-height: auto;
+    padding: 100px 0 35px;
+  }
+
+  .hero-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-height: auto;
+  }
+
+  .hero-content {
+    width: 100%;
+    text-align: left;
+  }
+
+  .eyebrow {
+    justify-content: flex-start;
+    font-size: 11px;
+  }
+
+  .hero h1 {
+    font-size: clamp(34px, 10vw, 46px);
+    line-height: 1.02;
+    letter-spacing: -1.8px;
+  }
+
+  .hero-text {
+    width: 100%;
+    font-size: 11px;
+    line-height: 1.65;
+    margin-top: 16px;
+  }
+
+  .hero-buttons {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 20px;
+  }
+
+  .hero-buttons .btn {
+    padding: 11px 15px;
+    font-size: 10px;
+  }
+
+  /* ---------- HERO SERVICES ---------- */
+
+  .hero-services {
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    margin-top: 30px;
+  }
+
+  .mini-service {
+    min-width: 0;
+    padding: 8px 4px;
+    border-right: 0;
+    gap: 7px;
+  }
+
+  .mini-icon {
+    min-width: 27px;
+    width: 27px;
+    height: 27px;
+  }
+
+  .mini-service strong {
+    font-size: 8px;
+  }
+
+  .mini-service small {
+    font-size: 6px;
+  }
+
+  /* ---------- HERO IMAGE / MOCKUP ---------- */
+
+  .hero-visual {
+    width: 100%;
+    height: 310px;
+    margin: 5px auto -5px;
+    transform: scale(0.82);
+    transform-origin: top center;
+  }
+
+  .laptop {
+    width: 68%;
+    height: 175px;
+    left: 11%;
+    bottom: 50px;
+  }
+
+  .laptop-screen {
+    height: 145px;
+    border-width: 6px;
+  }
+
+  .screen-content {
+    padding: 13px;
+  }
+
+  .screen-copy strong {
+    font-size: 17px;
+  }
+
+  .screen-chart {
+    width: 70px;
+    height: 55px;
+    gap: 4px;
+  }
+
+  .screen-chart span {
+    width: 8px;
+  }
+
+  .phone {
+    width: 76px;
+    height: 155px;
+    right: 9%;
+    bottom: 38px;
+  }
+
+  .platform {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+  }
+
+  .platform-meta {
+    left: 25%;
+    top: 25px;
+  }
+
+  .platform-google {
+    left: 47%;
+    top: 18px;
+  }
+
+  .platform-amazon {
+    right: 0;
+    top: 85px;
+  }
+
+  .platform-meesho {
+    right: 0;
+    bottom: 95px;
+  }
+
+  .platform-flipkart {
+    left: 1%;
+    bottom: 100px;
+  }
+
+  .success-note {
+    right: 5%;
+    top: 45px;
+    font-size: 9px;
+  }
+
+  .arrow-line {
+    font-size: 22px;
+  }
+
+  /* ---------- LIGHT SECTIONS ---------- */
+
+  .about {
+    padding: 48px 0;
+  }
+
+  .about-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .about-image {
+    width: 100%;
+    height: 230px;
+  }
+
+  .office-card {
+    width: 100%;
+    max-width: 350px;
+    height: 220px;
+  }
+
+  .office-laptop {
+    top: 58px;
+  }
+
+  .about-content {
+    width: 100%;
+  }
+
+  .about-content h2,
+  .section-heading h2,
+  .contact-box h2,
+  .faq h2 {
+    font-size: 29px;
+  }
+
+  .about-content p {
+    font-size: 11px;
+    line-height: 1.65;
+  }
+
+  /* ---------- STATS ---------- */
+
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px 0;
+    margin-top: 25px;
+  }
+
+  .stat {
+    padding: 0 12px;
+  }
+
+  .stat:nth-child(odd) {
+    padding-left: 0;
+  }
+
+  .stat:nth-child(even) {
+    border-right: 0;
+  }
+
+  .stat strong {
+    font-size: 21px;
+  }
+
+  .stat span {
+    font-size: 7px;
+  }
+
+  /* ---------- SERVICES ---------- */
+
+  .services {
+    padding: 50px 0;
+  }
+
+  .section-heading {
+    display: block;
+    margin-bottom: 25px;
+  }
+
+  .section-heading p {
+    font-size: 9px;
+    line-height: 1.5;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 9px;
+  }
+
+  .service-card {
+    min-height: 175px;
+    padding: 15px;
+  }
+
+  .service-icon {
+    margin-bottom: 13px;
+  }
+
+  .service-card h3 {
+    font-size: 11px;
+    line-height: 1.35;
+  }
+
+  .service-card p {
+    font-size: 8px;
+    line-height: 1.5;
+  }
+
+  .circle-arrow {
+    width: 23px;
+    height: 23px;
+    right: 10px;
+    bottom: 10px;
+  }
+
+  /* ---------- TECH STRIP ---------- */
+
+  .tech-strip {
+    margin-top: 12px;
+    padding: 15px;
+    display: block;
+  }
+
+  .tech-strip > div:first-child strong {
+    font-size: 10px;
+  }
+
+  .tech-strip > div:first-child span {
+    font-size: 7px;
+  }
+
+  .tech-list {
+    margin-top: 13px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px 8px;
+    font-size: 7px;
+  }
+
+  /* ---------- PROCESS ---------- */
+
+  .process {
+    padding: 50px 0;
+  }
+
+  .process-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-top: 42px;
+  }
+
+  .process-item {
+    display: grid;
+    grid-template-columns: 65px 1fr;
+    column-gap: 15px;
+    text-align: left;
+    align-items: center;
+  }
+
+  .process-icon {
+    grid-row: span 2;
+    width: 58px;
+    height: 58px;
+    margin: 0;
+  }
+
+  .process-number {
+    top: -5px;
+    left: 43px;
+    right: auto;
+  }
+
+  .process-item h3 {
+    margin-top: 0;
+    font-size: 11px;
+  }
+
+  .process-item p {
+    margin: 5px 0 0;
+    max-width: none;
+    font-size: 8px;
+  }
+
+  .process-arrow {
+    display: none;
+  }
+
+  /* ---------- WORK ---------- */
+
+  .work {
+    padding: 50px 0;
+  }
+
+  .work-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 9px;
+  }
+
+  .project-image {
+    height: 105px;
+    padding: 9px;
+  }
+
+  .project-window {
+    width: 90%;
+    height: 72px;
+    padding: 6px;
+  }
+
+  .project-window strong {
+    font-size: 6px;
+  }
+
+  .project-info {
+    padding: 10px;
+  }
+
+  .project-info small {
+    font-size: 8px;
+  }
+
+  .tag-list {
+    gap: 3px;
+  }
+
+  .tag-list span {
+    font-size: 5px;
+    padding: 2px 4px;
+  }
+
+  .project-info p {
+    font-size: 7px;
+  }
+
+  /* ---------- WHY CHOOSE US ---------- */
+
+  .why {
+    padding: 50px 0 65px;
+  }
+
+  .why-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px 12px;
+    margin-top: 30px;
+  }
+
+  .why-card {
+    gap: 8px;
+  }
+
+  .why-icon {
+    min-width: 34px;
+    width: 34px;
+    height: 34px;
+  }
+
+  .why-card h3 {
+    font-size: 8px;
+  }
+
+  .why-card p {
+    font-size: 7px;
+    line-height: 1.45;
+  }
+
+  .grow-text {
+    position: static;
+    margin: 40px auto 0;
+    width: max-content;
+  }
+
+  .grow-text span {
+    font-size: 11px;
+  }
+
+  .grow-text strong {
+    font-size: 18px;
+  }
+
+  /* ---------- TESTIMONIALS ---------- */
+
+  .testimonials {
+    padding: 50px 0;
+  }
+
+  .testimonial-grid {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .testimonial-card {
+    padding: 15px;
+  }
+
+  .client strong {
+    font-size: 9px;
+  }
+
+  .client small {
+    font-size: 6px;
+  }
+
+  .testimonial-card p {
+    font-size: 8px;
+  }
+
+  /* ---------- FAQ + CONTACT ---------- */
+
+  .contact-section {
+    padding: 50px 0;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .faq > p,
+  .contact-box > p {
+    font-size: 8px;
+  }
+
+  .faq-item button {
+    font-size: 9px;
+    padding: 14px 0;
+  }
+
+  .faq-answer {
+    font-size: 8px;
+  }
+
+  .contact-box {
+    padding: 20px 15px;
+  }
+
+  .contact-box input,
+  .contact-box select,
+  .contact-box textarea {
+    font-size: 8px;
+    padding: 11px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  /* ---------- FOOTER ---------- */
+
+  .footer-top {
+    min-height: auto;
+    padding: 25px 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
+
+  .footer-links {
+    flex-wrap: wrap;
+    gap: 12px 18px;
+  }
+
+  .footer-links a {
+    font-size: 8px;
+  }
+
+  .footer-bottom {
+    min-height: auto;
+    padding: 14px 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    font-size: 6px;
+  }
+}
+
+
+/* =====================================================
+   EXTRA SMALL MOBILE
+   320px - 420px
+===================================================== */
+
+@media (max-width: 420px) {
+
+  .container {
+    width: calc(100% - 22px);
+  }
+
+  .hero h1 {
+    font-size: 34px;
+  }
+
+  .hero-text {
+    font-size: 10px;
+  }
+
+  .hero-visual {
+    transform: scale(0.70);
+    width: 142%;
+    margin-left: -21%;
+    margin-bottom: -70px;
+  }
+
+  .services-grid,
+  .projects-grid {
+    gap: 7px;
+  }
+
+  .service-card {
+    min-height: 165px;
+    padding: 12px;
+  }
+
+  .service-card h3 {
+    font-size: 10px;
+  }
+
+  .service-card p {
+    font-size: 7px;
+  }
+
+  .why-grid {
+    gap: 20px 8px;
+  }
+
+  .why-card {
+    gap: 6px;
+  }
+
+  .why-icon {
+    min-width: 30px;
+    width: 30px;
+    height: 30px;
+  }
+
+  .why-card h3 {
+    font-size: 7px;
+  }
+
+  .why-card p {
+    font-size: 6px;
+  }
+}
