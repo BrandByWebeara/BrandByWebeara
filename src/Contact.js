@@ -31,20 +31,15 @@ function Contact() {
       {/* ================= NAVBAR ================= */}
       <header className="navbar">
         <div className="container nav-inner">
-
-          <a href="/" className="brand">
+          <a href="#home" className="brand">
             <div className="brand-logo">
               <span>W</span>
             </div>
-
             <div>
               <div className="brand-name">
                 Brand<span>By</span>Webeara
               </div>
-
-              <div className="brand-tagline">
-                YOUR BRAND. OUR CREATION.
-              </div>
+              <div className="brand-tagline">YOUR BRAND. OUR CREATION.</div>
             </div>
           </a>
 
