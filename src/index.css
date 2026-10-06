@@ -6125,3 +6125,59 @@ button {
   }
 
 }
+/* =========================================================
+   CONTACT PAGE NAVBAR - SAME AS HOMEPAGE
+========================================================= */
+
+.bb-contact-page .navbar {
+  background: #05090d !important;
+}
+
+.bb-contact-page .brand-name {
+  color: #ffffff !important;
+}
+
+.bb-contact-page .brand-name span {
+  color: #ffbd3f !important;
+}
+
+.bb-contact-page .brand-tagline {
+  color: #ffbd3f !important;
+}
+
+.bb-contact-page .brand-logo {
+  border-color: #ffbd3f !important;
+}
+
+.bb-contact-page .brand-logo span {
+  color: #ffffff !important;
+}
+
+.bb-contact-page .nav-links > a {
+  color: #cbd2d9 !important;
+}
+
+.bb-contact-page .nav-links > a:hover {
+  color: #ffbd3f !important;
+}
+
+.bb-contact-page .nav-links .nav-cta {
+  background: #ffbd3f !important;
+  color: #101010 !important;
+}
+
+.bb-contact-page .nav-links .nav-cta:hover {
+  background: #ffd36a !important;
+  color: #101010 !important;
+}
+
+.bb-contact-page .menu-btn {
+  color: #ffffff !important;
+}
+
+@media (max-width: 768px) {
+  .bb-contact-page .nav-links {
+    background: #081118 !important;
+    border-color: #243440 !important;
+  }
+}
