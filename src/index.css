@@ -172,6 +172,7 @@ button {
   color: white;
 }
 
+
 /* =========================
    HERO
 ========================= */
@@ -6180,4 +6181,40 @@ button {
     background: #081118 !important;
     border-color: #243440 !important;
   }
+}
+/* =========================================================
+   PORTFOLIO PAGE - MOBILE NAVBAR / HERO SPACING FIX
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .portfolio-page .navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  .portfolio-page .portfolio-hero {
+    padding-top: 105px;
+  }
+
+  .portfolio-page .hero-inner {
+    padding-top: 15px;
+  }
+
+}
+
+
+@media (max-width: 420px) {
+
+  .portfolio-page .portfolio-hero {
+    padding-top: 95px;
+  }
+
+  .portfolio-page .hero-inner {
+    padding-top: 10px;
+  }
+
 }

@@ -203,8 +203,9 @@ function Portfolio() {
   return (
     <div className="portfolio-page">
 
-     {/* NAVBAR */}
-      <header className="navbar">
+      {/* ================= NAVBAR ================= */}
+
+     <header className="navbar">
         <div className="container nav-inner">
           <a href="#home" className="brand">
             <div className="brand-logo">
@@ -218,26 +219,32 @@ function Portfolio() {
             </div>
           </a>
 
-          <nav className={`nav-links ${menuOpen ? "mobile-open" : ""}`}>
-            <a href="#home" onClick={() => setMenuOpen(false)}>Home</a>
-            <a href="#services" onClick={() => setMenuOpen(false)}>Services</a>
-            <a href="#about" onClick={() => setMenuOpen(false)}>About</a>
-            <a href="/portfolio" onClick={() => setMenuOpen(false)}>Portfolio</a>
-            <a href="#pricing" onClick={() => setMenuOpen(false)}>Pricing</a>
-            <a href="/contact" onClick={() => setMenuOpen(false)}>Contact</a>
+          <nav className="portfolio-nav">
 
-            <a href="/contact" className="nav-cta" onClick={() => setMenuOpen(false)}>
-              Get Started <ArrowRight size={15} />
-            </a>
+            <Link to="/">Home</Link>
+            <Link to="#services">Services</Link>
+            <Link to="#about">About</Link>
+
+            <Link
+              to="#portfolio"
+              className="active"
+            >
+              Portfolio
+            </Link>
+
+            <Link to="#pricing">Pricing</Link>
+            <Link to="#contact">Contact</Link>
+
           </nav>
 
-          <button
-            className="menu-btn"
-            onClick={() => setMenuOpen(!menuOpen)}
-            aria-label="Toggle menu"
+          <Link
+            to="#contact"
+            className="portfolio-start-btn"
           >
-            {menuOpen ? <X /> : <Menu />}
-          </button>
+            Get Started
+            <ArrowRight size={14} />
+          </Link>
+
         </div>
       </header>
 
