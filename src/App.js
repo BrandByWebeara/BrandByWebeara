@@ -172,7 +172,7 @@ function App() {
             <a href="#services" onClick={() => setMenuOpen(false)}>Services</a>
             <a href="#about" onClick={() => setMenuOpen(false)}>About</a>
             <a href="/portfolio" onClick={() => setMenuOpen(false)}>Portfolio</a>
-            <a href="#pricing" onClick={() => setMenuOpen(false)}>Pricing</a>
+            <a href="/pricing" onClick={() => setMenuOpen(false)}>Pricing</a>
             <a href="/contact" onClick={() => setMenuOpen(false)}>Contact</a>
 
             <a href="/contact" className="nav-cta" onClick={() => setMenuOpen(false)}>

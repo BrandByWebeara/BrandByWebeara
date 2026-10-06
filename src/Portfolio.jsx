@@ -324,7 +324,7 @@ function Portfolio() {
               Portfolio
             </button>
 
-            <button type="button" onClick={() => goHome("pricing")}>
+            <button type="button" onClick={() => (window.location.href = "/pricing")}>
               Pricing
             </button>
 

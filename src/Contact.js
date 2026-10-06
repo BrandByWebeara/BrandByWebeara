@@ -65,7 +65,7 @@ function Contact() {
               Portfolio
             </a>
 
-            <a href="/#pricing" onClick={() => setMenuOpen(false)}>
+            <a href="/pricing" onClick={() => setMenuOpen(false)}>
               Pricing
             </a>
 
