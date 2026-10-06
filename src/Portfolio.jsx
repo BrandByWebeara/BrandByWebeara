@@ -1,4 +1,4 @@
-```jsx
+jsx
 import React, { useState } from "react";
 import {
   ArrowLeft,
@@ -698,5 +698,5 @@ function Portfolio() {
   );
 }
 
-export default Portfolio;
-```
+
+
