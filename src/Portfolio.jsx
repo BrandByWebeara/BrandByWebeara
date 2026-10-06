@@ -205,47 +205,40 @@ function Portfolio() {
 
       {/* ================= NAVBAR ================= */}
 
-      <header className="portfolio-navbar">
-        <div className="portfolio-container nav-inner">
-
-          <Link to="/" className="portfolio-logo">
-
-            <div className="logo-symbol">
-              BW
+     <header className="navbar">
+        <div className="container nav-inner">
+          <a href="#home" className="brand">
+            <div className="brand-logo">
+              <span>W</span>
             </div>
-
             <div>
-              <strong>
+              <div className="brand-name">
                 Brand<span>By</span>Webeara
-              </strong>
-
-              <small>
-                YOUR BRAND. OUR CREATION.
-              </small>
+              </div>
+              <div className="brand-tagline">YOUR BRAND. OUR CREATION.</div>
             </div>
-
-          </Link>
+          </a>
 
           <nav className="portfolio-nav">
 
             <Link to="/">Home</Link>
-            <Link to="/services">Services</Link>
-            <Link to="/about">About</Link>
+            <Link to="#services">Services</Link>
+            <Link to="#about">About</Link>
 
             <Link
-              to="/portfolio"
+              to="#portfolio"
               className="active"
             >
               Portfolio
             </Link>
 
-            <Link to="/pricing">Pricing</Link>
-            <Link to="/contact">Contact</Link>
+            <Link to="#pricing">Pricing</Link>
+            <Link to="#contact">Contact</Link>
 
           </nav>
 
           <Link
-            to="/contact"
+            to="#contact"
             className="portfolio-start-btn"
           >
             Get Started
@@ -265,7 +258,7 @@ function Portfolio() {
           <div className="hero-left">
 
             <Link
-              to="/"
+              to="#home"
               className="back-home"
             >
               <ArrowLeft size={14} />
@@ -533,34 +526,26 @@ function Portfolio() {
 
       {/* ================= FOOTER ================= */}
 
-      <footer className="portfolio-footer">
-
-        <div className="portfolio-container footer-inner">
-
-          <Link to="/" className="portfolio-logo">
-
-            <div className="logo-symbol">
-              BW
+       <footer className="footer">
+        <div className="container footer-top">
+          <a href="#home" className="brand">
+            <div className="brand-logo">
+              <span>W</span>
             </div>
-
             <div>
-              <strong>
+              <div className="brand-name">
                 Brand<span>By</span>Webeara
-              </strong>
-
-              <small>
-                YOUR BRAND. OUR CREATION.
-              </small>
+              </div>
+              <div className="brand-tagline">YOUR BRAND. OUR CREATION.</div>
             </div>
-
-          </Link>
-
+          </a>
+          
           <div className="footer-links">
             <Link to="/">Home</Link>
-            <Link to="/services">Services</Link>
-            <Link to="/about">About</Link>
-            <Link to="/portfolio">Portfolio</Link>
-            <Link to="/contact">Contact</Link>
+            <Link to="#services">Services</Link>
+            <Link to="#about">About</Link>
+            <Link to="#portfolio">Portfolio</Link>
+            <Link to="#contact">Contact</Link>
           </div>
 
           <div className="copyright">
