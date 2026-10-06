@@ -1,53 +1,74 @@
+```jsx
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import {
-  ArrowLeft,
   ArrowRight,
   ArrowUpRight,
-  Globe,
-  ShoppingBag,
-  Smartphone,
-  BarChart3,
+  Check,
   Code2,
-  ExternalLink,
+  Facebook,
+  Globe,
+  Instagram,
+  Menu,
+  MessageCircle,
+  Smartphone,
+  X,
 } from "lucide-react";
-import { Link } from "react-router-dom";
 
 const projects = [
   {
+    id: 1,
     title: "E-Commerce Store",
     category: "E-Commerce",
     type: "ecommerce",
-    text: "Modern online store with product listing and shopping experience.",
+    description:
+      "A modern online store designed to turn visitors into customers.",
+    tags: ["E-Commerce", "Responsive", "Modern UI"],
   },
   {
+    id: 2,
     title: "Business Website",
     category: "Business",
     type: "business",
-    text: "Professional website designed to build trust and generate leads.",
+    description:
+      "A professional business website built to create trust and generate leads.",
+    tags: ["Business", "Corporate", "Responsive"],
   },
   {
+    id: 3,
     title: "Meta Ads Campaign",
     category: "Marketing",
     type: "marketing",
-    text: "Social media advertising campaign designed for business growth.",
+    description:
+      "A conversion-focused digital marketing campaign designed for growth.",
+    tags: ["Meta Ads", "Marketing", "Growth"],
   },
   {
+    id: 4,
     title: "Google Business Listing",
     category: "Business",
     type: "google",
-    text: "Google Business Profile setup and optimization.",
+    description:
+      "Google Business optimization designed to improve local visibility.",
+    tags: ["Google", "Local SEO", "Business"],
   },
   {
+    id: 5,
     title: "Modern Landing Page",
     category: "Landing Page",
     type: "landing",
-    text: "High-converting landing page for a growing business.",
+    description:
+      "A clean landing page designed for strong conversions and engagement.",
+    tags: ["Landing Page", "UI/UX", "Conversion"],
   },
   {
+    id: 6,
     title: "Mobile Business App",
     category: "Mobile",
     type: "mobile",
-    text: "Mobile-first interface designed for a modern brand.",
+    description:
+      "A mobile-first digital experience designed for modern businesses.",
+    tags: ["Mobile", "App UI", "Modern"],
   },
 ];
 
@@ -63,22 +84,27 @@ const filters = [
 function ProjectPreview({ type }) {
   if (type === "ecommerce") {
     return (
-      <div className="preview ecommerce-preview">
+      <div className="preview-window ecommerce-preview">
         <div className="preview-top">
-          <b>SHOP</b>
-          <span>⌕　♡　🛒</span>
+          <span className="preview-logo">SHOP</span>
+          <div className="preview-menu">
+            <span />
+            <span />
+            <span />
+          </div>
         </div>
 
-        <div className="preview-banner">
-          <small>NEW COLLECTION</small>
-          <strong>Grow Your<br />Business Online</strong>
-          <button>SHOP NOW</button>
-        </div>
+        <div className="ecommerce-content">
+          <div>
+            <small>NEW COLLECTION</small>
+            <h4>Style & Modern</h4>
+            <button>Shop Now</button>
+          </div>
 
-        <div className="preview-products">
-          <div></div>
-          <div></div>
-          <div></div>
+          <div className="product-shape">
+            <span />
+            <span />
+          </div>
         </div>
       </div>
     );
@@ -86,47 +112,50 @@ function ProjectPreview({ type }) {
 
   if (type === "business") {
     return (
-      <div className="preview business-preview">
-        <div className="preview-browser">
-          <i></i><i></i><i></i>
+      <div className="preview-window business-preview">
+        <div className="preview-top">
+          <span className="preview-logo">BRAND</span>
+          <div className="preview-menu">
+            <span />
+            <span />
+            <span />
+          </div>
         </div>
 
         <div className="business-content">
-          <small>YOUR BUSINESS</small>
-          <h4>Build Your<br /><span>Digital Presence</span></h4>
-          <p>Professional solutions for modern businesses.</p>
-          <button>GET STARTED</button>
-        </div>
+          <div>
+            <small>BUILD YOUR</small>
+            <h4>Digital Presence</h4>
+            <p>Grow your business online.</p>
+            <button>Get Started</button>
+          </div>
 
-        <div className="business-circle"></div>
+          <div className="business-person">
+            <div className="person-head" />
+            <div className="person-body" />
+          </div>
+        </div>
       </div>
     );
   }
 
   if (type === "marketing") {
     return (
-      <div className="preview marketing-preview">
+      <div className="preview-window marketing-preview">
         <div className="marketing-phone">
-          <div className="phone-head">Instagram</div>
-          <div className="insta-photo">
-            <span>SALE</span>
+          <div className="phone-notch" />
+          <div className="phone-screen">
+            <small>GROW ONLINE</small>
+            <strong>+127%</strong>
+            <span>Campaign Results</span>
           </div>
-          <div className="insta-lines"></div>
-          <div className="insta-lines short"></div>
         </div>
 
         <div className="marketing-chart">
-          <small>CAMPAIGN RESULTS</small>
-          <strong>+127%</strong>
-
-          <div className="chart-bars">
-            <i></i>
-            <i></i>
-            <i></i>
-            <i></i>
-            <i></i>
-            <i></i>
-          </div>
+          <div className="bar bar-1" />
+          <div className="bar bar-2" />
+          <div className="bar bar-3" />
+          <div className="bar bar-4" />
         </div>
       </div>
     );
@@ -134,22 +163,13 @@ function ProjectPreview({ type }) {
 
   if (type === "google") {
     return (
-      <div className="preview google-preview">
-        <div className="google-logo">G</div>
-
-        <div className="google-search">
-          Google Business Profile
-        </div>
-
+      <div className="preview-window google-preview">
         <div className="google-card">
-          <div className="google-stars">★★★★★</div>
-          <strong>BrandByWebeara</strong>
-          <small>Digital Growth Agency</small>
-
-          <div className="google-info">
-            📍 India
-            <br />
-            ✓ Open · Online services
+          <div className="google-icon">G</div>
+          <div>
+            <strong>BrandByWebeara</strong>
+            <small>Digital Growth Agency</small>
+            <span>● Open · Online services</span>
           </div>
         </div>
       </div>
@@ -158,419 +178,371 @@ function ProjectPreview({ type }) {
 
   if (type === "landing") {
     return (
-      <div className="preview landing-preview">
-        <div className="landing-nav">
-          BRAND<span>WEB</span>
-          <small>MENU　CONTACT</small>
+      <div className="preview-window landing-preview">
+        <div className="landing-copy">
+          <small>TURN IDEAS INTO</small>
+          <h4>Impact.</h4>
+          <p>Build something people remember.</p>
+          <button>Start Now</button>
         </div>
 
-        <div className="landing-center">
-          <small>CREATIVE DIGITAL AGENCY</small>
-          <h4>Turn Ideas Into<br /><span>Impact.</span></h4>
-          <button>START PROJECT →</button>
+        <div className="landing-image">
+          <div className="landing-circle" />
+          <div className="landing-person" />
         </div>
       </div>
     );
   }
 
   return (
-    <div className="preview mobile-preview">
-      <div className="mobile-phone">
-        <div className="mobile-notch"></div>
-        <small>BrandByWebeara</small>
-        <h4>Grow<br /><span>Online.</span></h4>
-
-        <div className="mobile-box"></div>
-        <div className="mobile-line"></div>
-        <div className="mobile-line short"></div>
-
-        <button>EXPLORE</button>
+    <div className="preview-window mobile-preview">
+      <div className="mobile-device">
+        <div className="mobile-notch" />
+        <div className="mobile-content">
+          <small>YOUR BRAND</small>
+          <h4>Grow Online</h4>
+          <div className="mobile-line" />
+          <div className="mobile-line short" />
+          <button>Explore</button>
+        </div>
       </div>
+
+      <div className="mobile-glow-circle" />
     </div>
   );
 }
 
 function Portfolio() {
   const [activeFilter, setActiveFilter] = useState("All");
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const filteredProjects =
     activeFilter === "All"
       ? projects
-      : projects.filter(
-          (project) => project.category === activeFilter
-        );
+      : projects.filter((project) => project.category === activeFilter);
 
   return (
     <div className="portfolio-page">
-
-      {/* ================= NAVBAR ================= */}
-
-      <header className="portfolio-navbar">
-        <div className="portfolio-container nav-inner">
-
-          <Link to="/" className="portfolio-logo">
-
-            <div className="logo-symbol">
-              BW
-            </div>
+      <header className="navbar">
+        <div className="container nav-inner">
+          <Link to="/" className="brand">
+            <div className="brand-logo">W</div>
 
             <div>
-              <strong>
-                Brand<span>By</span>Webeara
-              </strong>
+              <div className="brand-name">
+                Brand<span>ByWebeara</span>
+              </div>
 
-              <small>
+              <div className="brand-tagline">
                 YOUR BRAND. OUR CREATION.
-              </small>
+              </div>
             </div>
-
           </Link>
 
-          <nav className="portfolio-nav">
-
+          <nav className={`nav-links ${menuOpen ? "mobile-open" : ""}`}>
             <Link to="/">Home</Link>
-            <Link to="/services">Services</Link>
-            <Link to="/about">About</Link>
+            <a href="/#services">Services</a>
+            <a href="/#about">About</a>
 
-            <Link
-              to="/portfolio"
-              className="active"
-            >
+            <Link to="/portfolio" className="active">
               Portfolio
             </Link>
 
-            <Link to="/pricing">Pricing</Link>
-            <Link to="/contact">Contact</Link>
+            <a href="/#pricing">Pricing</a>
+            <a href="/#contact">Contact</a>
 
+            <a href="/#contact" className="nav-cta">
+              Get Started
+              <ArrowRight size={16} />
+            </a>
           </nav>
 
-          <Link
-            to="/contact"
-            className="portfolio-start-btn"
+          <button
+            className="menu-btn"
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Toggle menu"
           >
-            Get Started
-            <ArrowRight size={14} />
-          </Link>
-
+            {menuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
         </div>
       </header>
 
-
-      {/* ================= COMPACT HERO ================= */}
-
       <section className="portfolio-hero">
-
-        <div className="portfolio-container hero-inner">
-
-          <div className="hero-left">
-
-            <Link
-              to="/"
-              className="back-home"
-            >
-              <ArrowLeft size={14} />
-              Back to Home
-            </Link>
-
-            <div className="gold-label">
-              <span></span>
-              OUR PORTFOLIO
-            </div>
-
-            <h1>
-              Projects We've
-              <br />
-              <span>Built.</span>
-            </h1>
-
-            <p>
-              Explore our latest websites, e-commerce stores,
-              landing pages and digital projects.
-            </p>
-
-          </div>
-
-          <div className="hero-mini-visual">
-
-            <div className="mini-browser">
-
-              <div className="browser-dots">
-                <i></i>
-                <i></i>
-                <i></i>
+        <div className="container">
+          <div className="portfolio-hero-grid">
+            <div className="portfolio-hero-content">
+              <div className="portfolio-badge">
+                <span />
+                OUR PORTFOLIO
               </div>
 
-              <div className="mini-browser-content">
-                <small>BRANDBYWEBEARA</small>
+              <h1>
+                Creative Projects
+                <br />
+                That{" "}
+                <span className="portfolio-gradient-text">Make Impact</span>
+              </h1>
 
-                <h3>
-                  Grow Your
-                  <br />
-                  <span>Business Online</span>
-                </h3>
+              <p>
+                Explore our latest websites, e-commerce stores, landing pages and
+                digital projects. We build solutions that help brands grow and
+                succeed online.
+              </p>
 
-                <div className="mini-button">
-                  GET STARTED
+              <div className="portfolio-stats">
+                <div>
+                  <strong>50+</strong>
+                  <span>Projects</span>
+                </div>
+
+                <div>
+                  <strong>30+</strong>
+                  <span>Happy Clients</span>
+                </div>
+
+                <div>
+                  <strong>5★</strong>
+                  <span>Client Rating</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="portfolio-hero-visual">
+              <div className="hero-glow" />
+
+              <div className="hero-browser">
+                <div className="browser-top">
+                  <div className="browser-dots">
+                    <span />
+                    <span />
+                    <span />
+                  </div>
+
+                  <div className="browser-address">brandbywebeara.com</div>
+                </div>
+
+                <div className="browser-screen">
+                  <div className="screen-header">
+                    <span>BrandByWebeara</span>
+                    <div />
+                  </div>
+
+                  <div className="screen-content">
+                    <small>BUILD YOUR</small>
+                    <h3>Digital Presence</h3>
+                    <p>Grow your brand online.</p>
+
+                    <div className="screen-buttons">
+                      <span />
+                      <span />
+                    </div>
+                  </div>
+
+                  <div className="screen-card">
+                    <Code2 size={24} />
+                    <strong>Modern Website</strong>
+                  </div>
                 </div>
               </div>
 
-            </div>
-
-            <div className="mini-phone">
-
-              <div className="mini-notch"></div>
-
-              <small>BrandBy</small>
-
-              <strong>
-                Grow
-                <br />
-                Online
-              </strong>
-
-              <div className="mini-phone-box"></div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </section>
-
-
-      {/* ================= PROJECTS ================= */}
-
-      <section className="portfolio-work">
-
-        <div className="portfolio-container">
-
-          <div className="work-heading">
-
-            <div>
-
-              <div className="gold-label">
-                <span></span>
-                FEATURED WORK
+              <div className="floating-card floating-card-one">
+                <Globe size={18} />
+                <span>Web Design</span>
               </div>
 
-              <h2>
-                Our Recent <span>Projects</span>
-              </h2>
+              <div className="floating-card floating-card-two">
+                <Smartphone size={18} />
+                <span>Mobile Friendly</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
+      <section className="portfolio-work">
+        <div className="container">
+          <div className="portfolio-section-heading">
+            <div>
+              <span className="section-label">SELECTED WORK</span>
+
+              <h2>
+                Projects Built for
+                <span> Growth.</span>
+              </h2>
             </div>
 
             <p>
-              A collection of websites and digital experiences
-              we've created for businesses and brands.
+              Every project is designed with performance, usability and your
+              business goals in mind.
             </p>
-
           </div>
 
-
-          {/* FILTERS */}
-
           <div className="portfolio-filters">
-
             {filters.map((filter) => (
-
               <button
                 key={filter}
-                className={
-                  activeFilter === filter
-                    ? "active"
-                    : ""
-                }
-                onClick={() =>
-                  setActiveFilter(filter)
-                }
+                className={activeFilter === filter ? "active" : ""}
+                onClick={() => setActiveFilter(filter)}
               >
                 {filter}
               </button>
-
             ))}
-
           </div>
 
+          <div className="portfolio-grid">
+            {filteredProjects.map((project) => (
+              <article className="portfolio-project-card" key={project.id}>
+                <div className="portfolio-preview">
+                  <ProjectPreview type={project.type} />
 
-          {/* PROJECT GRID */}
+                  <div className="preview-arrow">
+                    <ArrowUpRight size={18} />
+                  </div>
+                </div>
 
-          <div className="projects-grid">
-
-            {filteredProjects.map(
-              (project, index) => (
-
-                <article
-                  className="project-card"
-                  key={project.title}
-                >
-
-                  <div className="project-preview">
-
-                    <ProjectPreview
-                      type={project.type}
-                    />
-
-                    <span className="project-number">
-                      {String(index + 1).padStart(2, "0")}
-                    </span>
-
-                    <button className="preview-arrow">
-                      <ArrowUpRight size={17} />
-                    </button>
-
+                <div className="portfolio-project-info">
+                  <div className="portfolio-project-category">
+                    {project.category}
                   </div>
 
+                  <h3>{project.title}</h3>
 
-                  <div className="project-info">
+                  <p>{project.description}</p>
 
-                    <div className="project-category">
-                      {project.category}
-                    </div>
-
-                    <h3>
-                      {project.title}
-                    </h3>
-
-                    <p>
-                      {project.text}
-                    </p>
-
-                    <button className="view-project">
-                      View Project
-                      <ArrowRight size={13} />
-                    </button>
-
+                  <div className="project-tags">
+                    {project.tags.map((tag) => (
+                      <span key={tag}>{tag}</span>
+                    ))}
                   </div>
 
-                </article>
-
-              )
-            )}
-
+                  <button className="view-project-btn">
+                    View Project
+                    <ArrowRight size={16} />
+                  </button>
+                </div>
+              </article>
+            ))}
           </div>
-
-
-          {/* BOTTOM INFO */}
-
-          <div className="portfolio-bottom-info">
-
-            <div>
-              <Globe size={18} />
-              <span>
-                Modern & Responsive
-              </span>
-            </div>
-
-            <div>
-              <Code2 size={18} />
-              <span>
-                Clean Development
-              </span>
-            </div>
-
-            <div>
-              <Smartphone size={18} />
-              <span>
-                Mobile Friendly
-              </span>
-            </div>
-
-            <div>
-              <BarChart3 size={18} />
-              <span>
-                Business Focused
-              </span>
-            </div>
-
-          </div>
-
         </div>
-
       </section>
 
+      <section className="portfolio-features">
+        <div className="container">
+          <div className="portfolio-features-grid">
+            <div className="portfolio-feature">
+              <div className="feature-icon">
+                <Code2 size={21} />
+              </div>
 
-      {/* ================= CTA ================= */}
+              <div>
+                <h3>Modern & Responsive</h3>
+                <p>Beautiful on every device.</p>
+              </div>
+            </div>
+
+            <div className="portfolio-feature">
+              <div className="feature-icon">
+                <Check size={21} />
+              </div>
+
+              <div>
+                <h3>Clean Development</h3>
+                <p>Fast & reliable code.</p>
+              </div>
+            </div>
+
+            <div className="portfolio-feature">
+              <div className="feature-icon">
+                <Smartphone size={21} />
+              </div>
+
+              <div>
+                <h3>Mobile Friendly</h3>
+                <p>Perfect for every screen.</p>
+              </div>
+            </div>
+
+            <div className="portfolio-feature">
+              <div className="feature-icon">
+                <ArrowUpRight size={21} />
+              </div>
+
+              <div>
+                <h3>Business Focused</h3>
+                <p>Designed for growth.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section className="portfolio-cta">
-
-        <div className="portfolio-container">
-
-          <div className="cta-inner">
-
+        <div className="container">
+          <div className="portfolio-cta-inner">
             <div>
-
-              <small>
-                HAVE A PROJECT IN MIND?
-              </small>
+              <span>LET'S BUILD SOMETHING GREAT</span>
 
               <h2>
-                Let's build something
-                <span> amazing.</span>
+                Ready to Start
+                <br />
+                Your Project?
               </h2>
 
-              <p>
-                Ready to turn your idea into a professional
-                digital experience?
-              </p>
-
+              <p>Let's turn your ideas into a powerful digital experience.</p>
             </div>
 
-            <Link
-              to="/contact"
-              className="cta-button"
-            >
-              Start Your Project
-              <ArrowUpRight size={17} />
-            </Link>
-
+            <a href="/#contact" className="portfolio-cta-button">
+              Get Started
+              <ArrowRight size={18} />
+            </a>
           </div>
-
         </div>
-
       </section>
 
-
-      {/* ================= FOOTER ================= */}
-
-      <footer className="portfolio-footer">
-
-        <div className="portfolio-container footer-inner">
-
-          <Link to="/" className="portfolio-logo">
-
-            <div className="logo-symbol">
-              BW
-            </div>
+      <footer className="footer">
+        <div className="container footer-top">
+          <div className="brand">
+            <div className="brand-logo">W</div>
 
             <div>
-              <strong>
-                Brand<span>By</span>Webeara
-              </strong>
+              <div className="brand-name">
+                Brand<span>ByWebeara</span>
+              </div>
 
-              <small>
+              <div className="brand-tagline">
                 YOUR BRAND. OUR CREATION.
-              </small>
+              </div>
             </div>
-
-          </Link>
+          </div>
 
           <div className="footer-links">
             <Link to="/">Home</Link>
-            <Link to="/services">Services</Link>
-            <Link to="/about">About</Link>
+            <a href="/#services">Services</a>
+            <a href="/#about">About</a>
             <Link to="/portfolio">Portfolio</Link>
-            <Link to="/contact">Contact</Link>
+            <a href="/#contact">Contact</a>
           </div>
 
-          <div className="copyright">
-            © 2026 BrandByWebeara
-          </div>
+          <div className="socials">
+            <a href="/#contact" aria-label="Facebook">
+              <Facebook size={18} />
+            </a>
 
+            <a href="/#contact" aria-label="Instagram">
+              <Instagram size={18} />
+            </a>
+
+            <a href="/#contact" aria-label="WhatsApp">
+              <MessageCircle size={18} />
+            </a>
+          </div>
         </div>
 
+        <div className="container footer-bottom">
+          <span>© 2026 BrandByWebeara. All rights reserved.</span>
+          <span>Built with modern technology.</span>
+        </div>
       </footer>
-
     </div>
   );
 }
