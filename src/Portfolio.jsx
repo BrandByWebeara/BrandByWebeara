@@ -1,14 +1,18 @@
+```jsx
 import React, { useState } from "react";
 import {
   ArrowLeft,
   ArrowRight,
   ArrowUpRight,
   Globe,
-  ShoppingBag,
   Smartphone,
   BarChart3,
   Code2,
-  ExternalLink,
+  Facebook,
+  Instagram,
+  MessageCircle,
+  Menu,
+  X,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -71,7 +75,11 @@ function ProjectPreview({ type }) {
 
         <div className="preview-banner">
           <small>NEW COLLECTION</small>
-          <strong>Grow Your<br />Business Online</strong>
+          <strong>
+            Grow Your
+            <br />
+            Business Online
+          </strong>
           <button>SHOP NOW</button>
         </div>
 
@@ -88,13 +96,22 @@ function ProjectPreview({ type }) {
     return (
       <div className="preview business-preview">
         <div className="preview-browser">
-          <i></i><i></i><i></i>
+          <i></i>
+          <i></i>
+          <i></i>
         </div>
 
         <div className="business-content">
           <small>YOUR BUSINESS</small>
-          <h4>Build Your<br /><span>Digital Presence</span></h4>
+
+          <h4>
+            Build Your
+            <br />
+            <span>Digital Presence</span>
+          </h4>
+
           <p>Professional solutions for modern businesses.</p>
+
           <button>GET STARTED</button>
         </div>
 
@@ -108,15 +125,18 @@ function ProjectPreview({ type }) {
       <div className="preview marketing-preview">
         <div className="marketing-phone">
           <div className="phone-head">Instagram</div>
+
           <div className="insta-photo">
             <span>SALE</span>
           </div>
+
           <div className="insta-lines"></div>
           <div className="insta-lines short"></div>
         </div>
 
         <div className="marketing-chart">
           <small>CAMPAIGN RESULTS</small>
+
           <strong>+127%</strong>
 
           <div className="chart-bars">
@@ -143,7 +163,9 @@ function ProjectPreview({ type }) {
 
         <div className="google-card">
           <div className="google-stars">★★★★★</div>
+
           <strong>BrandByWebeara</strong>
+
           <small>Digital Growth Agency</small>
 
           <div className="google-info">
@@ -161,12 +183,19 @@ function ProjectPreview({ type }) {
       <div className="preview landing-preview">
         <div className="landing-nav">
           BRAND<span>WEB</span>
+
           <small>MENU　CONTACT</small>
         </div>
 
         <div className="landing-center">
           <small>CREATIVE DIGITAL AGENCY</small>
-          <h4>Turn Ideas Into<br /><span>Impact.</span></h4>
+
+          <h4>
+            Turn Ideas Into
+            <br />
+            <span>Impact.</span>
+          </h4>
+
           <button>START PROJECT →</button>
         </div>
       </div>
@@ -177,10 +206,17 @@ function ProjectPreview({ type }) {
     <div className="preview mobile-preview">
       <div className="mobile-phone">
         <div className="mobile-notch"></div>
+
         <small>BrandByWebeara</small>
-        <h4>Grow<br /><span>Online.</span></h4>
+
+        <h4>
+          Grow
+          <br />
+          <span>Online.</span>
+        </h4>
 
         <div className="mobile-box"></div>
+
         <div className="mobile-line"></div>
         <div className="mobile-line short"></div>
 
@@ -192,6 +228,7 @@ function ProjectPreview({ type }) {
 
 function Portfolio() {
   const [activeFilter, setActiveFilter] = useState("All");
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const filteredProjects =
     activeFilter === "All"
@@ -205,52 +242,94 @@ function Portfolio() {
 
       {/* ================= NAVBAR ================= */}
 
-      <header className="portfolio-navbar">
-        <div className="portfolio-container nav-inner">
+      <header className="navbar">
+        <div className="container nav-inner">
 
-          <Link to="/" className="portfolio-logo">
-
-            <div className="logo-symbol">
-              BW
+          <Link
+            to="/"
+            className="brand"
+            onClick={() => setMenuOpen(false)}
+          >
+            <div className="brand-logo">
+              <span>W</span>
             </div>
 
             <div>
-              <strong>
+              <div className="brand-name">
                 Brand<span>By</span>Webeara
-              </strong>
+              </div>
 
-              <small>
+              <div className="brand-tagline">
                 YOUR BRAND. OUR CREATION.
-              </small>
+              </div>
             </div>
-
           </Link>
 
-          <nav className="portfolio-nav">
+          <nav
+            className={`nav-links ${
+              menuOpen ? "mobile-open" : ""
+            }`}
+          >
+            <Link
+              to="/"
+              onClick={() => setMenuOpen(false)}
+            >
+              Home
+            </Link>
 
-            <Link to="/">Home</Link>
-            <Link to="/services">Services</Link>
-            <Link to="/about">About</Link>
+            <Link
+              to="/#services"
+              onClick={() => setMenuOpen(false)}
+            >
+              Services
+            </Link>
+
+            <Link
+              to="/#about"
+              onClick={() => setMenuOpen(false)}
+            >
+              About
+            </Link>
 
             <Link
               to="/portfolio"
               className="active"
+              onClick={() => setMenuOpen(false)}
             >
               Portfolio
             </Link>
 
-            <Link to="/pricing">Pricing</Link>
-            <Link to="/contact">Contact</Link>
+            <Link
+              to="/#pricing"
+              onClick={() => setMenuOpen(false)}
+            >
+              Pricing
+            </Link>
 
+            <Link
+              to="/#contact"
+              onClick={() => setMenuOpen(false)}
+            >
+              Contact
+            </Link>
+
+            <Link
+              to="/#contact"
+              className="nav-cta"
+              onClick={() => setMenuOpen(false)}
+            >
+              Get Started
+              <ArrowRight size={15} />
+            </Link>
           </nav>
 
-          <Link
-            to="/contact"
-            className="portfolio-start-btn"
+          <button
+            className="menu-btn"
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Toggle menu"
           >
-            Get Started
-            <ArrowRight size={14} />
-          </Link>
+            {menuOpen ? <X /> : <Menu />}
+          </button>
 
         </div>
       </header>
@@ -517,7 +596,7 @@ function Portfolio() {
             </div>
 
             <Link
-              to="/contact"
+              to="/#contact"
               className="cta-button"
             >
               Start Your Project
@@ -533,39 +612,83 @@ function Portfolio() {
 
       {/* ================= FOOTER ================= */}
 
-      <footer className="portfolio-footer">
+      <footer className="footer">
 
-        <div className="portfolio-container footer-inner">
+        <div className="container footer-top">
 
-          <Link to="/" className="portfolio-logo">
-
-            <div className="logo-symbol">
-              BW
+          <Link
+            to="/"
+            className="brand"
+          >
+            <div className="brand-logo">
+              <span>W</span>
             </div>
 
             <div>
-              <strong>
+              <div className="brand-name">
                 Brand<span>By</span>Webeara
-              </strong>
+              </div>
 
-              <small>
+              <div className="brand-tagline">
                 YOUR BRAND. OUR CREATION.
-              </small>
+              </div>
             </div>
-
           </Link>
 
+
           <div className="footer-links">
-            <Link to="/">Home</Link>
-            <Link to="/services">Services</Link>
-            <Link to="/about">About</Link>
-            <Link to="/portfolio">Portfolio</Link>
-            <Link to="/contact">Contact</Link>
+
+            <Link to="/">
+              Home
+            </Link>
+
+            <Link to="/#services">
+              Services
+            </Link>
+
+            <Link to="/#about">
+              About
+            </Link>
+
+            <Link to="/portfolio">
+              Portfolio
+            </Link>
+
+            <Link to="/#contact">
+              Contact
+            </Link>
+
           </div>
 
-          <div className="copyright">
-            © 2026 BrandByWebeara
+
+          <div className="socials">
+
+            <a href="#contact">
+              <Facebook size={17} />
+            </a>
+
+            <a href="#contact">
+              <Instagram size={17} />
+            </a>
+
+            <a href="#contact">
+              <MessageCircle size={17} />
+            </a>
+
           </div>
+
+        </div>
+
+
+        <div className="container footer-bottom">
+
+          <span>
+            © 2026 BrandByWebeara. All rights reserved.
+          </span>
+
+          <span>
+            Built with modern technology.
+          </span>
 
         </div>
 
@@ -576,3 +699,4 @@ function Portfolio() {
 }
 
 export default Portfolio;
+```
