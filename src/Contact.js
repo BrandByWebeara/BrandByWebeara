@@ -1,255 +1,459 @@
-import React, { useState } from "react";
+import React from "react";
+import {
+  ArrowRight,
+  Check,
+  Facebook,
+  Instagram,
+  Mail,
+  MapPin,
+  Menu,
+  MessageCircle,
+  Phone,
+  X,
+} from "lucide-react";
 
-const Contact = () => {
-  const [status, setStatus] = useState("");
+function Contact() {
+  const [menuOpen, setMenuOpen] = React.useState(false);
+  const [submitted, setSubmitted] = React.useState(false);
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
+    setSubmitted(true);
 
-    setStatus("sending");
-
-    const form = e.target;
-    const data = new FormData(form);
-
-    try {
-      const response = await fetch("https://formspree.io/f/YOUR_FORM_ID", {
-        method: "POST",
-        body: data,
-        headers: {
-          Accept: "application/json",
-        },
-      });
-
-      if (response.ok) {
-        setStatus("success");
-        form.reset();
-      } else {
-        setStatus("error");
-      }
-    } catch (error) {
-      setStatus("error");
-    }
+    setTimeout(() => {
+      setSubmitted(false);
+    }, 5000);
   };
 
   return (
-    <div className="contact-page">
-      <section className="contact-section">
+    <div className="bb-contact-page">
 
-        {/* LEFT SIDE */}
-        <div className="contact-info">
-          <p className="contact-small-title">GET IN TOUCH</p>
+      {/* ================= NAVBAR ================= */}
+      <header className="navbar">
+        <div className="container nav-inner">
 
-          <h1>
-            Let's build something
-            <span> amazing together.</span>
-          </h1>
-
-          <p className="contact-description">
-            Have a project in mind, need a website, or want to grow your
-            business online? Send me a message and I'll get back to you as
-            soon as possible.
-          </p>
-
-          <div className="contact-details">
-
-            <div className="contact-detail">
-              <div className="contact-icon">✉</div>
-              <div>
-                <small>Email</small>
-                <a href="mailto:brandbywebeara@portonmail.com">
-                  brandbywebeara@portonmail.com
-                </a>
-              </div>
+          <a href="/" className="brand">
+            <div className="brand-logo">
+              <span>W</span>
             </div>
 
-            <div className="contact-detail">
-              <div className="contact-icon">☎</div>
-              <div>
-                <small>Phone</small>
-                <a href="tel:+918957689571">
-                  +91 8957689571
-                </a>
+            <div>
+              <div className="brand-name">
+                Brand<span>By</span>Webeara
               </div>
+
+              <div className="brand-tagline">
+                YOUR BRAND. OUR CREATION.
+              </div>
+            </div>
+          </a>
+
+          <nav className={`nav-links ${menuOpen ? "mobile-open" : ""}`}>
+            <a href="/" onClick={() => setMenuOpen(false)}>
+              Home
+            </a>
+
+            <a href="/#services" onClick={() => setMenuOpen(false)}>
+              Services
+            </a>
+
+            <a href="/#about" onClick={() => setMenuOpen(false)}>
+              About
+            </a>
+
+            <a href="/portfolio" onClick={() => setMenuOpen(false)}>
+              Portfolio
+            </a>
+
+            <a href="/#pricing" onClick={() => setMenuOpen(false)}>
+              Pricing
+            </a>
+
+            <a href="/contact" onClick={() => setMenuOpen(false)}>
+              Contact
+            </a>
+
+            <a
+              href="/contact"
+              className="nav-cta"
+              onClick={() => setMenuOpen(false)}
+            >
+              Get Started
+              <ArrowRight size={15} />
+            </a>
+          </nav>
+
+          <button
+            className="menu-btn"
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Toggle menu"
+          >
+            {menuOpen ? <X /> : <Menu />}
+          </button>
+
+        </div>
+      </header>
+
+
+      {/* ================= CONTACT HERO ================= */}
+      <main>
+
+        <section className="bb-contact-hero">
+          <div className="bb-contact-glow bb-contact-glow-one"></div>
+          <div className="bb-contact-glow bb-contact-glow-two"></div>
+
+          <div className="container bb-contact-hero-inner">
+
+            <div className="bb-contact-heading">
+
+              <div className="bb-contact-label">
+                <span></span>
+                GET IN TOUCH
+              </div>
+
+              <h1>
+                Let's Build
+                <br />
+                Something <span>Great.</span>
+              </h1>
+
+              <p>
+                Have a project in mind or want to take your business online?
+                Tell us what you need and our team will get back to you.
+              </p>
+
+              <div className="bb-contact-points">
+                <div>
+                  <div className="bb-contact-point-icon">
+                    <Check size={15} />
+                  </div>
+                  <span>Fast Response</span>
+                </div>
+
+                <div>
+                  <div className="bb-contact-point-icon">
+                    <Check size={15} />
+                  </div>
+                  <span>Professional Support</span>
+                </div>
+
+                <div>
+                  <div className="bb-contact-point-icon">
+                    <Check size={15} />
+                  </div>
+                  <span>Custom Solutions</span>
+                </div>
+              </div>
+
+            </div>
+
+            <div className="bb-contact-hero-card">
+
+              <div className="bb-contact-card-top">
+                <span>START A PROJECT</span>
+
+                <div className="bb-contact-card-dot"></div>
+              </div>
+
+              <div className="bb-contact-card-line"></div>
+
+              <div className="bb-contact-card-content">
+                <strong>Let's grow your business</strong>
+
+                <p>
+                  Website, ads, Google Business, e-commerce or complete
+                  online setup.
+                </p>
+
+                <div className="bb-contact-card-services">
+                  <span>Website</span>
+                  <span>Meta Ads</span>
+                  <span>E-Commerce</span>
+                  <span>Branding</span>
+                </div>
+              </div>
+
             </div>
 
           </div>
+        </section>
+
+
+        {/* ================= CONTACT CONTENT ================= */}
+        <section className="bb-contact-section">
+
+          <div className="container bb-contact-grid">
+
+            {/* LEFT INFO */}
+            <div className="bb-contact-info">
+
+              <div className="bb-contact-label">
+                CONTACT US
+              </div>
+
+              <h2>
+                We'd Love To
+                <br />
+                <span>Hear From You.</span>
+              </h2>
+
+              <p>
+                Whether you're starting a new business, improving your
+                existing online presence, or looking for more customers,
+                we're here to help.
+              </p>
+
+
+              <div className="bb-contact-info-list">
+
+                <div className="bb-contact-info-item">
+                  <div className="bb-contact-info-icon">
+                    <MessageCircle size={19} />
+                  </div>
+
+                  <div>
+                    <small>WhatsApp</small>
+                    <strong>Let's discuss your project</strong>
+                  </div>
+                </div>
+
+
+                <div className="bb-contact-info-item">
+                  <div className="bb-contact-info-icon">
+                    <Mail size={19} />
+                  </div>
+
+                  <div>
+                    <small>Email</small>
+                    <strong>Send us your enquiry</strong>
+                  </div>
+                </div>
+
+
+                <div className="bb-contact-info-item">
+                  <div className="bb-contact-info-icon">
+                    <Phone size={19} />
+                  </div>
+
+                  <div>
+                    <small>Phone</small>
+                    <strong>Available for business enquiries</strong>
+                  </div>
+                </div>
+
+
+                <div className="bb-contact-info-item">
+                  <div className="bb-contact-info-icon">
+                    <MapPin size={19} />
+                  </div>
+
+                  <div>
+                    <small>Location</small>
+                    <strong>India</strong>
+                  </div>
+                </div>
+
+              </div>
+
+
+              <div className="bb-contact-note">
+                <div className="bb-contact-note-icon">
+                  ✦
+                </div>
+
+                <div>
+                  <strong>Your Brand. Our Creation.</strong>
+                  <p>
+                    Let's turn your idea into a professional online presence.
+                  </p>
+                </div>
+              </div>
+
+            </div>
+
+
+            {/* FORM */}
+            <div className="bb-contact-form-card">
+
+              <div className="bb-contact-label">
+                SEND AN ENQUIRY
+              </div>
+
+              <h2>Tell Us About Your Project</h2>
+
+              <p>
+                Fill in the details below and we'll get back to you soon.
+              </p>
+
+
+              {submitted && (
+                <div className="bb-contact-success">
+                  <div>
+                    <Check size={18} />
+                  </div>
+
+                  <span>
+                    Thank you! Your enquiry has been received.
+                  </span>
+                </div>
+              )}
+
+
+              <form onSubmit={handleSubmit}>
+
+                <div className="bb-contact-form-row">
+
+                  <div className="bb-contact-field">
+                    <label>Your Name</label>
+
+                    <input
+                      type="text"
+                      placeholder="Enter your name"
+                      required
+                    />
+                  </div>
+
+
+                  <div className="bb-contact-field">
+                    <label>Email Address</label>
+
+                    <input
+                      type="email"
+                      placeholder="Enter your email"
+                      required
+                    />
+                  </div>
+
+                </div>
+
+
+                <div className="bb-contact-field">
+                  <label>Phone Number</label>
+
+                  <input
+                    type="tel"
+                    placeholder="Enter your phone number"
+                    required
+                  />
+                </div>
+
+
+                <div className="bb-contact-field">
+                  <label>What do you need?</label>
+
+                  <select defaultValue="" required>
+                    <option value="" disabled>
+                      Select a service
+                    </option>
+
+                    <option>Website Development</option>
+                    <option>Meta Ads</option>
+                    <option>Google Business Profile</option>
+                    <option>E-Commerce Listing</option>
+                    <option>Graphic & Brand Design</option>
+                    <option>Online Business Setup</option>
+                    <option>Complete Digital Growth</option>
+                  </select>
+                </div>
+
+
+                <div className="bb-contact-field">
+                  <label>Tell us about your project</label>
+
+                  <textarea
+                    rows="6"
+                    placeholder="Tell us about your business, project or requirements..."
+                    required
+                  ></textarea>
+                </div>
+
+
+                <button
+                  type="submit"
+                  className="bb-contact-submit"
+                >
+                  Send Enquiry
+                  <ArrowRight size={18} />
+                </button>
+
+                <small className="bb-contact-form-bottom">
+                  We respect your privacy and will only use your details
+                  to contact you regarding your enquiry.
+                </small>
+
+              </form>
+
+            </div>
+
+          </div>
+
+        </section>
+
+      </main>
+
+
+      {/* ================= FOOTER ================= */}
+      <footer className="footer">
+
+        <div className="container footer-top">
+
+          <a href="/" className="brand">
+            <div className="brand-logo">
+              <span>W</span>
+            </div>
+
+            <div>
+              <div className="brand-name">
+                Brand<span>By</span>Webeara
+              </div>
+
+              <div className="brand-tagline">
+                YOUR BRAND. OUR CREATION.
+              </div>
+            </div>
+          </a>
+
+
+          <div className="footer-links">
+            <a href="/">Home</a>
+            <a href="/#services">Services</a>
+            <a href="/#about">About</a>
+            <a href="/portfolio">Portfolio</a>
+            <a href="/contact">Contact</a>
+          </div>
+
+
+          <div className="socials">
+            <a href="/contact">
+              <Facebook size={17} />
+            </a>
+
+            <a href="/contact">
+              <Instagram size={17} />
+            </a>
+
+            <a href="/contact">
+              <MessageCircle size={17} />
+            </a>
+          </div>
+
         </div>
 
-        {/* RIGHT SIDE */}
-        <div className="contact-form-box">
 
-          <form onSubmit={handleSubmit}>
+        <div className="container footer-bottom">
+          <span>
+            © 2026 BrandByWebeara. All rights reserved.
+          </span>
 
-            <div className="form-row">
-
-              <div className="form-group">
-                <label htmlFor="name">Your Name *</label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  placeholder="Enter your name"
-                  required
-                />
-              </div>
-
-              <div className="form-group">
-                <label htmlFor="email">Email Address *</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="you@example.com"
-                  required
-                />
-              </div>
-
-            </div>
-
-            <div className="form-row">
-
-              <div className="form-group">
-                <label htmlFor="phone">Phone Number</label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  placeholder="+91 XXXXXXXXXX"
-                />
-              </div>
-
-              <div className="form-group">
-                <label htmlFor="company">Company / Business</label>
-                <input
-                  type="text"
-                  id="company"
-                  name="company"
-                  placeholder="Your company name"
-                />
-              </div>
-
-            </div>
-
-            <div className="form-group">
-              <label htmlFor="service">What do you need? *</label>
-
-              <select
-                id="service"
-                name="service"
-                required
-                defaultValue=""
-              >
-                <option value="" disabled>
-                  Select a service
-                </option>
-                <option value="Website Development">
-                  Website Development
-                </option>
-                <option value="E-commerce Website">
-                  E-commerce Website
-                </option>
-                <option value="Landing Page">
-                  Landing Page
-                </option>
-                <option value="Portfolio Website">
-                  Portfolio Website
-                </option>
-                <option value="Website Redesign">
-                  Website Redesign
-                </option>
-                <option value="Other">
-                  Other
-                </option>
-              </select>
-            </div>
-
-            <div className="form-group">
-              <label htmlFor="budget">Estimated Budget</label>
-
-              <select
-                id="budget"
-                name="budget"
-                defaultValue=""
-              >
-                <option value="" disabled>
-                  Select your budget
-                </option>
-                <option value="Under ₹10,000">
-                  Under ₹10,000
-                </option>
-                <option value="₹10,000 - ₹25,000">
-                  ₹10,000 - ₹25,000
-                </option>
-                <option value="₹25,000 - ₹50,000">
-                  ₹25,000 - ₹50,000
-                </option>
-                <option value="₹50,000+">
-                  ₹50,000+
-                </option>
-                <option value="Not sure yet">
-                  Not sure yet
-                </option>
-              </select>
-            </div>
-
-            <div className="form-group">
-              <label htmlFor="message">Tell me about your project *</label>
-
-              <textarea
-                id="message"
-                name="message"
-                rows="6"
-                placeholder="Tell me about your project, requirements, goals..."
-                required
-              ></textarea>
-            </div>
-
-            {/* Formspree subject */}
-            <input
-              type="hidden"
-              name="_subject"
-              value="New Website Enquiry - BrandByWebeara"
-            />
-
-            {/* Reply-to email */}
-            <input
-              type="hidden"
-              name="_replyto"
-              value=""
-            />
-
-            <button
-              type="submit"
-              disabled={status === "sending"}
-              className="contact-submit"
-            >
-              {status === "sending"
-                ? "Sending..."
-                : "Send Message →"}
-            </button>
-
-            {status === "success" && (
-              <div className="form-success">
-                ✓ Thank you! Your message has been sent successfully.
-                I'll get back to you soon.
-              </div>
-            )}
-
-            {status === "error" && (
-              <div className="form-error">
-                ✕ Something went wrong. Please try again or contact me
-                directly by email.
-              </div>
-            )}
-
-          </form>
-
+          <span>
+            Built with modern technology.
+          </span>
         </div>
 
-      </section>
+      </footer>
+
     </div>
   );
-};
+}
 
 export default Contact;
-
