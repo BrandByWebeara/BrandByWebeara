@@ -2031,3 +2031,200 @@ button {
   }
 
 }
+/* =========================================
+   CONTACT PAGE NAVBAR
+   SAME AS HOMEPAGE APP.JSX
+========================================= */
+
+/* DESKTOP */
+.bb-contact-page .navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background: transparent;
+}
+
+.bb-contact-page .nav-inner {
+  min-height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bb-contact-page .brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.bb-contact-page .brand-logo {
+  width: 43px;
+  height: 43px;
+  border: 2px solid var(--gold);
+  border-radius: 9px;
+  display: grid;
+  place-items: center;
+  transform: rotate(-7deg);
+  position: relative;
+  box-shadow: 0 0 20px rgba(255, 189, 63, 0.08);
+}
+
+.bb-contact-page .brand-logo::before,
+.bb-contact-page .brand-logo::after {
+  content: "";
+  position: absolute;
+  border: 1px solid var(--gold);
+  width: 19px;
+  height: 27px;
+  transform: rotate(35deg);
+}
+
+.bb-contact-page .brand-logo::after {
+  width: 14px;
+  height: 22px;
+  transform: rotate(-35deg);
+}
+
+.bb-contact-page .brand-logo span {
+  font-weight: 800;
+  font-size: 17px;
+  color: var(--white);
+  transform: rotate(7deg);
+  z-index: 2;
+}
+
+.bb-contact-page .brand-name {
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.bb-contact-page .brand-name span {
+  color: var(--gold);
+}
+
+.bb-contact-page .brand-tagline {
+  color: var(--gold);
+  font-size: 6px;
+  letter-spacing: 1.5px;
+  margin-top: 2px;
+  font-weight: 700;
+}
+
+.bb-contact-page .nav-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.bb-contact-page .nav-links > a {
+  font-size: 12px;
+  color: #cbd2d9;
+  transition: 0.25s ease;
+}
+
+.bb-contact-page .nav-links > a:hover {
+  color: var(--gold);
+}
+
+.bb-contact-page .nav-links .nav-cta {
+  background: var(--gold);
+  color: #101010;
+  padding: 10px 18px;
+  border-radius: 22px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.bb-contact-page .nav-links .nav-cta:hover {
+  color: #101010;
+  background: var(--gold-light);
+  transform: translateY(-2px);
+}
+
+.bb-contact-page .menu-btn {
+  display: none;
+  border: 0;
+  background: #05090d;
+  color: white;
+}
+
+
+/* =========================================
+   TABLET / MOBILE
+========================================= */
+
+@media (max-width: 760px) {
+
+  .bb-contact-page .container {
+    width: min(100% - 34px, 600px);
+  }
+
+  .bb-contact-page .nav-inner {
+    min-height: 70px;
+  }
+
+  .bb-contact-page .menu-btn {
+    display: block;
+  }
+
+  .bb-contact-page .nav-links {
+    position: absolute;
+    top: 68px;
+    left: 17px;
+    right: 17px;
+
+    background: #081118;
+    border: 1px solid #263743;
+    border-radius: 10px;
+
+    padding: 17px;
+
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 3px;
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  }
+
+  .bb-contact-page .nav-links.mobile-open {
+    display: flex;
+  }
+
+  .bb-contact-page .nav-links > a {
+    padding: 11px;
+  }
+
+  .bb-contact-page .nav-links .nav-cta {
+    justify-content: center;
+    margin-top: 6px;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 450px) {
+
+  .bb-contact-page .brand-logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .bb-contact-page .brand-name {
+    font-size: 15px;
+  }
+
+  .bb-contact-page .brand-tagline {
+    font-size: 5px;
+    letter-spacing: 1.2px;
+  }
+
+}
