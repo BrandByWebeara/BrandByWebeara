@@ -165,70 +165,91 @@ const Services = () => {
   return (
     <div className="services-page">
       {/* ================= NAVBAR ================= */}
-      <header className="services-navbar">
-        <div className="services-nav-inner">
-          <a href="/" className="services-logo">
-            <span className="services-logo-mark">W</span>
+<header className="navbar">
+  <div className="container nav-inner">
 
-            <span className="services-logo-text">
-              <strong>BrandByWebeara</strong>
-              <small>YOUR BRAND. OUR CREATION.</small>
-            </span>
-          </a>
+    <a href="/" className="brand">
+      <div className="brand-logo">
+        <span>W</span>
+      </div>
 
-          <nav className={`services-nav-links ${menuOpen ? "open" : ""}`}>
-            <a href="/" onClick={() => setMenuOpen(false)}>
-              Home
-            </a>
-
-            <a
-              href="/services"
-              className="active"
-              onClick={() => setMenuOpen(false)}
-            >
-              Services
-            </a>
-
-            <a href="/#about" onClick={() => setMenuOpen(false)}>
-              About
-            </a>
-
-            <a href="/portfolio" onClick={() => setMenuOpen(false)}>
-              Portfolio
-            </a>
-
-            <a href="/pricing" onClick={() => setMenuOpen(false)}>
-              Pricing
-            </a>
-
-            <a href="/contact" onClick={() => setMenuOpen(false)}>
-              Contact
-            </a>
-
-            <a
-              href="/contact"
-              className="services-nav-cta mobile-cta"
-              onClick={() => setMenuOpen(false)}
-            >
-              Get Started
-              <ArrowRight size={16} />
-            </a>
-          </nav>
-
-          <a href="/contact" className="services-nav-cta desktop-cta">
-            Get Started
-            <ArrowRight size={16} />
-          </a>
-
-          <button
-            className="services-menu-btn"
-            onClick={() => setMenuOpen(!menuOpen)}
-            aria-label="Toggle menu"
-          >
-            {menuOpen ? <X size={25} /> : <Menu size={25} />}
-          </button>
+      <div>
+        <div className="brand-name">
+          Brand<span>By</span>Webeara
         </div>
-      </header>
+
+        <div className="brand-tagline">
+          YOUR BRAND. OUR CREATION.
+        </div>
+      </div>
+    </a>
+
+    <nav className={`nav-links ${menuOpen ? "mobile-open" : ""}`}>
+
+      <a
+        href="/"
+        onClick={() => setMenuOpen(false)}
+      >
+        Home
+      </a>
+
+      <a
+        href="/services"
+        onClick={() => setMenuOpen(false)}
+      >
+        Services
+      </a>
+
+      <a
+        href="/#about"
+        onClick={() => setMenuOpen(false)}
+      >
+        About
+      </a>
+
+      <a
+        href="/portfolio"
+        onClick={() => setMenuOpen(false)}
+      >
+        Portfolio
+      </a>
+
+      <a
+        href="/pricing"
+        onClick={() => setMenuOpen(false)}
+      >
+        Pricing
+      </a>
+
+      <a
+        href="/contact"
+        onClick={() => setMenuOpen(false)}
+      >
+        Contact
+      </a>
+
+      <a
+        href="/contact"
+        className="nav-cta"
+        onClick={() => setMenuOpen(false)}
+      >
+        Get Started
+        <ArrowRight size={15} />
+      </a>
+
+    </nav>
+
+    <button
+      className="menu-btn"
+      onClick={() => setMenuOpen(!menuOpen)}
+      aria-label="Toggle menu"
+      type="button"
+    >
+      {menuOpen ? <X /> : <Menu />}
+    </button>
+
+  </div>
+</header>
 
       {/* ================= HERO ================= */}
       <section className="services-hero">
@@ -633,88 +654,59 @@ const Services = () => {
       </section>
 
       {/* ================= FOOTER ================= */}
-      <footer className="services-footer">
-        <div className="services-container">
-          <div className="services-footer-grid">
-            <div className="services-footer-brand">
-              <a href="/" className="services-logo">
-                <span className="services-logo-mark">W</span>
+<footer className="footer">
+  <div className="container footer-top">
 
-                <span className="services-logo-text">
-                  <strong>BrandByWebeara</strong>
-                  <small>YOUR BRAND. OUR CREATION.</small>
-                </span>
-              </a>
+    <a href="/" className="brand">
+      <div className="brand-logo">
+        <span>W</span>
+      </div>
 
-              <p>
-                We help businesses build their online presence, reach more
-                customers and grow with digital solutions.
-              </p>
-
-              <div className="services-socials">
-                <a href="#" aria-label="Instagram">
-                  <Instagram size={18} />
-                </a>
-
-                <a href="#" aria-label="Facebook">
-                  <Facebook size={18} />
-                </a>
-
-                <a href="/contact" aria-label="WhatsApp">
-                  <MessageCircle size={18} />
-                </a>
-              </div>
-            </div>
-
-            <div className="services-footer-column">
-              <h4>Quick Links</h4>
-
-              <a href="/">Home</a>
-              <a href="/services">Services</a>
-              <a href="/portfolio">Portfolio</a>
-              <a href="/pricing">Pricing</a>
-              <a href="/contact">Contact</a>
-            </div>
-
-            <div className="services-footer-column">
-              <h4>Services</h4>
-
-              <a href="/services">Website Development</a>
-              <a href="/services">Meta Ads</a>
-              <a href="/services">Google Business</a>
-              <a href="/services">E-Commerce Listing</a>
-              <a href="/services">Brand Design</a>
-            </div>
-
-            <div className="services-footer-column">
-              <h4>Let's Talk</h4>
-
-              <a href="/contact">
-                <MessageCircle size={16} />
-                Start a Project
-              </a>
-
-              <a href="/contact">
-                <MailIcon />
-                Send Enquiry
-              </a>
-
-              <a href="/contact">
-                <MapPin size={16} />
-                India
-              </a>
-            </div>
-          </div>
-
-          <div className="services-footer-bottom">
-            <p>
-              © {new Date().getFullYear()} BrandByWebeara. All rights reserved.
-            </p>
-
-            <p>YOUR BRAND. OUR CREATION.</p>
-          </div>
+      <div>
+        <div className="brand-name">
+          Brand<span>By</span>Webeara
         </div>
-      </footer>
+
+        <div className="brand-tagline">
+          YOUR BRAND. OUR CREATION.
+        </div>
+      </div>
+    </a>
+
+    <div className="footer-links">
+      <a href="/">Home</a>
+      <a href="/services">Services</a>
+      <a href="/#about">About</a>
+      <a href="/portfolio">Portfolio</a>
+      <a href="/contact">Contact</a>
+    </div>
+
+    <div className="socials">
+      <a href="/contact">
+        <Facebook size={17} />
+      </a>
+
+      <a href="/contact">
+        <Instagram size={17} />
+      </a>
+
+      <a href="/contact">
+        <MessageCircle size={17} />
+      </a>
+    </div>
+
+  </div>
+
+  <div className="container footer-bottom">
+    <span>
+      © {new Date().getFullYear()} BrandByWebeara. All rights reserved.
+    </span>
+
+    <span>
+      Built with modern technology.
+    </span>
+  </div>
+</footer>
     </div>
   );
 };
