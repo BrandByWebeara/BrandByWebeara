@@ -1768,3 +1768,102 @@ button {
     padding: 22px;
   }
 }
+/* =========================
+   WHO WE ARE - MOBILE FIX
+========================= */
+
+@media (max-width: 760px) {
+  .about {
+    padding: 60px 0;
+  }
+
+  .about-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+  }
+
+  .about-image {
+    display: grid !important;
+    width: 100%;
+    max-width: 560px;
+    height: 300px !important;
+    min-height: 300px !important;
+    margin: 0 auto !important;
+    place-items: center;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  .office-card {
+    display: block !important;
+    width: 92%;
+    max-width: 500px;
+    height: 270px !important;
+    min-height: 270px !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: relative;
+  }
+
+  .office-laptop {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  .office-screen {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  .coffee,
+  .plant {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  .about-content {
+    width: 100%;
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 450px) {
+  .about {
+    padding: 50px 0;
+  }
+
+  .about-image {
+    height: 270px !important;
+    min-height: 270px !important;
+  }
+
+  .office-card {
+    width: 96%;
+    height: 245px !important;
+    min-height: 245px !important;
+  }
+
+  .office-laptop {
+    width: 68%;
+    left: 16%;
+    top: 62px;
+  }
+
+  .office-screen {
+    height: 95px;
+  }
+
+  .coffee {
+    font-size: 34px;
+    bottom: 20px;
+  }
+
+  .plant {
+    font-size: 55px;
+    bottom: 14px;
+  }
+}
