@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Portfolio from "./Portfolio";
 import Contact from "./Contact";
+import Pricing from "./Pricing";
 import {
   ArrowRight,
   ArrowUpRight,
@@ -695,7 +696,7 @@ function App() {
             <a href="#services">Services</a>
             <a href="#about">About</a>
             <a href="/portfolio">Portfolio</a>
-            <a href="#contact">Contact</a>
+            <a href="/contact">Contact</a>
           </div>
 
           <div className="socials">
@@ -720,6 +721,7 @@ function AppRouter() {
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/pricing" element={<Pricing />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </BrowserRouter>

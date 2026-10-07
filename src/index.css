@@ -5171,3 +5171,1187 @@ button {
     border-color: #243440 !important;
   }
 }
+/* =========================================================
+   BRAND BY WEBEARA - PRICING PAGE
+   Isolated pricing styles
+========================================================= */
+
+.pricing-page {
+  width: 100%;
+  overflow: hidden;
+  background: #ffffff;
+  color: #111936;
+}
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.pricing-navbar {
+  position: relative;
+  z-index: 1000;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.pricing-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 95px 0 85px;
+  background:
+    radial-gradient(circle at 15% 25%, rgba(101, 73, 255, 0.12), transparent 28%),
+    radial-gradient(circle at 85% 20%, rgba(0, 191, 255, 0.10), transparent 25%),
+    #f8f9ff;
+}
+
+.pricing-glow {
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  filter: blur(90px);
+  pointer-events: none;
+  opacity: 0.35;
+}
+
+.pricing-glow-one {
+  background: rgba(91, 67, 255, 0.22);
+  left: -220px;
+  top: 20px;
+}
+
+.pricing-glow-two {
+  background: rgba(0, 183, 255, 0.18);
+  right: -220px;
+  bottom: -180px;
+}
+
+.pricing-hero-inner {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 900px;
+}
+
+.pricing-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 8px 15px;
+  border: 1px solid rgba(84, 63, 220, 0.18);
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.75);
+  color: #5541d7;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 22px;
+}
+
+.pricing-eyebrow span {
+  width: 7px;
+  height: 7px;
+  background: #6045ff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 5px rgba(96, 69, 255, 0.10);
+}
+
+.pricing-hero h1 {
+  margin: 0;
+  font-size: clamp(42px, 6vw, 76px);
+  line-height: 1.04;
+  letter-spacing: -2.5px;
+  font-weight: 800;
+  color: #111936;
+}
+
+.pricing-hero h1 span {
+  background: linear-gradient(90deg, #5942f4, #287cff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.pricing-hero p {
+  max-width: 700px;
+  margin: 24px auto 0;
+  color: #68708a;
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+.pricing-hero-pills {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.pricing-hero-pills span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 14px;
+  border-radius: 30px;
+  background: #ffffff;
+  border: 1px solid #e5e8f2;
+  color: #3d4560;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.pricing-hero-pills svg {
+  color: #5c46ee;
+}
+
+/* =========================================================
+   PACKAGE SECTION
+========================================================= */
+
+.pricing-packages {
+  padding: 95px 0;
+}
+
+.pricing-heading {
+  margin-bottom: 50px;
+}
+
+.pricing-heading h2 {
+  margin-bottom: 12px;
+}
+
+.pricing-heading p {
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+/* =========================================================
+   PRICING GRID
+========================================================= */
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  align-items: stretch;
+}
+
+.pricing-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 28px 23px 22px;
+  border: 1px solid #e4e7f1;
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 0 10px 35px rgba(28, 36, 74, 0.06);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 22px 55px rgba(28, 36, 74, 0.12);
+}
+
+.pricing-card.growth {
+  border: 2px solid #6345ed;
+  box-shadow: 0 18px 55px rgba(99, 69, 237, 0.14);
+}
+
+.pricing-card.business {
+  border-color: #22aaa4;
+}
+
+.pricing-card.custom {
+  border-color: #f09a32;
+}
+
+.popular-badge {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 7px 16px;
+  border-radius: 30px;
+  background: linear-gradient(90deg, #6541ed, #8246ed);
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  white-space: nowrap;
+}
+
+.pricing-card-top {
+  display: flex;
+  gap: 13px;
+  align-items: flex-start;
+}
+
+.pricing-icon {
+  flex: 0 0 48px;
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #edf3ff;
+  color: #327bea;
+}
+
+.growth .pricing-icon {
+  background: #f0ebff;
+  color: #6741e9;
+}
+
+.business .pricing-icon {
+  background: #e8f9f6;
+  color: #16a49d;
+}
+
+.custom .pricing-icon {
+  background: #fff2df;
+  color: #ed8b22;
+}
+
+.pricing-card-top h3 {
+  margin: 2px 0 5px;
+  font-size: 22px;
+  color: #172143;
+}
+
+.pricing-card-top p {
+  margin: 0;
+  color: #7a8196;
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.price {
+  margin-top: 27px;
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+
+.price span {
+  font-size: 34px;
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: -1.3px;
+  color: #111936;
+}
+
+.price small {
+  margin-left: 4px;
+  color: #8a91a4;
+  font-size: 11px;
+}
+
+.pricing-divider {
+  width: 100%;
+  height: 1px;
+  background: #edf0f5;
+  margin: 21px 0 20px;
+}
+
+.pricing-card h4 {
+  margin: 0 0 14px;
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: #4f5a79;
+}
+
+.pricing-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.pricing-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  color: #515a73;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.feature-check {
+  flex: 0 0 18px;
+  width: 18px;
+  height: 18px;
+  margin-top: -1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #e9f7f0;
+  color: #20a064;
+}
+
+.growth .feature-check {
+  background: #eeeaff;
+  color: #6642e9;
+}
+
+.business .feature-check {
+  background: #e6f8f5;
+  color: #159e96;
+}
+
+.custom .feature-check {
+  background: #fff1df;
+  color: #e78820;
+}
+
+.package-note {
+  margin-top: auto;
+  padding-top: 22px;
+  color: #81889b;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.pricing-btn {
+  margin-top: 17px;
+  min-height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #ffffff;
+  background: #2f7eea;
+  font-size: 13px;
+  font-weight: 700;
+  transition: 0.25s ease;
+}
+
+.pricing-btn:hover {
+  color: #ffffff;
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+}
+
+.growth .pricing-btn {
+  background: linear-gradient(90deg, #6140e8, #7645eb);
+}
+
+.business .pricing-btn {
+  background: #13a59e;
+}
+
+.custom .pricing-btn {
+  background: #ed8b21;
+}
+
+/* =========================================================
+   BOTTOM PACKAGE NOTE
+========================================================= */
+
+.pricing-bottom-note {
+  margin-top: 28px;
+  padding: 17px 20px;
+  border-radius: 13px;
+  border: 1px solid #e3e7f1;
+  background: #f8f9fc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  color: #5d657b;
+  font-size: 13px;
+}
+
+.pricing-bottom-note svg {
+  color: #6045ed;
+  flex: 0 0 auto;
+}
+
+.pricing-bottom-note a {
+  color: #5941dc;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+/* =========================================================
+   MARKETPLACE
+========================================================= */
+
+.marketplace-section {
+  padding: 95px 0;
+}
+
+.marketplace-heading {
+  margin-bottom: 45px;
+}
+
+.marketplace-heading h2 {
+  color: #ffffff;
+}
+
+.marketplace-heading p {
+  color: #aeb6c9;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.marketplace-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.marketplace-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 21px;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.045);
+  transition: 0.3s ease;
+}
+
+.marketplace-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(119, 90, 255, 0.55);
+  background: rgba(255, 255, 255, 0.065);
+}
+
+.marketplace-icon {
+  flex: 0 0 46px;
+  width: 46px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  color: #ffffff;
+  background: rgba(104, 76, 241, 0.20);
+}
+
+.marketplace-content {
+  flex: 1;
+}
+
+.marketplace-content h3 {
+  margin: 0 0 4px;
+  color: #ffffff;
+  font-size: 17px;
+}
+
+.marketplace-content span {
+  color: #929bb1;
+  font-size: 11px;
+}
+
+.marketplace-price {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 800;
+  text-align: right;
+}
+
+.marketplace-price small {
+  display: block;
+  color: #8e97aa;
+  font-size: 10px;
+  font-weight: 500;
+  margin-top: 2px;
+}
+
+.custom-marketplace {
+  margin-top: 18px;
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  padding: 21px 23px;
+  border: 1px solid rgba(111, 82, 241, 0.35);
+  border-radius: 15px;
+  background: rgba(99, 69, 237, 0.08);
+}
+
+.custom-marketplace-icon {
+  width: 48px;
+  height: 48px;
+  flex: 0 0 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 13px;
+  background: rgba(105, 78, 241, 0.20);
+  color: #a58fff;
+}
+
+.custom-marketplace div:nth-child(2) {
+  flex: 1;
+}
+
+.custom-marketplace h3 {
+  margin: 0 0 4px;
+  color: #ffffff;
+  font-size: 17px;
+}
+
+.custom-marketplace p {
+  margin: 0;
+  color: #949db2;
+  font-size: 12px;
+}
+
+.custom-marketplace > strong {
+  color: #ffffff;
+  font-size: 20px;
+}
+
+.custom-marketplace > strong small {
+  color: #8e97aa;
+  font-size: 10px;
+  font-weight: 500;
+}
+
+.custom-marketplace > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 11px 15px;
+  border-radius: 9px;
+  background: #6545e8;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.marketplace-other {
+  text-align: center;
+  margin-top: 22px;
+}
+
+.marketplace-other span {
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.marketplace-other p {
+  margin: 5px 0 0;
+  color: #8f98ae;
+  font-size: 12px;
+}
+
+.marketplace-other a {
+  color: #9a87ff;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+/* =========================================================
+   INDIVIDUAL SERVICES
+========================================================= */
+
+.individual-section {
+  padding: 95px 0;
+}
+
+.individual-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-top: 45px;
+}
+
+.individual-card {
+  padding: 23px;
+  border-radius: 17px;
+  border: 1px solid #e4e7f0;
+  background: #ffffff;
+  box-shadow: 0 8px 30px rgba(24, 31, 62, 0.045);
+}
+
+.individual-title {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding-bottom: 17px;
+  border-bottom: 1px solid #edf0f5;
+}
+
+.individual-icon {
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 11px;
+  background: #f0edff;
+  color: #5d43e6;
+}
+
+.individual-title h3 {
+  margin: 0;
+  color: #18203e;
+  font-size: 15px;
+}
+
+.individual-list {
+  margin-top: 9px;
+}
+
+.individual-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 11px 0;
+  border-bottom: 1px solid #f0f2f6;
+  color: #697187;
+  font-size: 12px;
+}
+
+.individual-row:last-child {
+  border-bottom: 0;
+}
+
+.individual-row strong {
+  color: #1c2544;
+  white-space: nowrap;
+}
+
+.service-note {
+  margin-top: 7px;
+  color: #8b91a2;
+  font-size: 10px;
+}
+
+/* =========================================================
+   WHY CHOOSE US
+========================================================= */
+
+.pricing-why {
+  padding: 95px 0;
+}
+
+.pricing-why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 17px;
+  margin-top: 45px;
+}
+
+.pricing-why-card {
+  display: flex;
+  gap: 14px;
+  padding: 22px;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.pricing-why-icon {
+  width: 44px;
+  height: 44px;
+  flex: 0 0 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: rgba(99, 69, 237, 0.16);
+  color: #a493ff;
+}
+
+.pricing-why-card h3 {
+  margin: 0 0 6px;
+  color: #ffffff;
+  font-size: 15px;
+}
+
+.pricing-why-card p {
+  margin: 0;
+  color: #929bb0;
+  font-size: 11px;
+  line-height: 1.55;
+}
+
+/* =========================================================
+   FAQ
+========================================================= */
+
+.pricing-faq {
+  padding: 95px 0;
+}
+
+.pricing-faq-container {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 70px;
+  align-items: start;
+}
+
+.pricing-faq-intro h2 {
+  margin: 10px 0 13px;
+}
+
+.pricing-faq-intro > p {
+  color: #71798e;
+  font-size: 14px;
+  line-height: 1.7;
+  max-width: 410px;
+}
+
+.pricing-contact-btn {
+  margin-top: 20px;
+  display: inline-flex;
+  text-decoration: none;
+}
+
+.pricing-faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pricing-faq-item {
+  border: 1px solid #e3e6ef;
+  border-radius: 12px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.pricing-faq-item button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border: 0;
+  background: transparent;
+  padding: 18px 20px;
+  color: #1b2340;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  text-align: left;
+  cursor: pointer;
+}
+
+.faq-chevron {
+  flex: 0 0 auto;
+  transition: transform 0.25s ease;
+  color: #636c84;
+}
+
+.faq-chevron.rotate {
+  transform: rotate(180deg);
+  color: #6246e9;
+}
+
+.pricing-faq-answer {
+  padding: 0 20px 19px;
+  color: #727a8f;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.pricing-cta {
+  padding: 0 0 95px;
+  background: #ffffff;
+}
+
+.pricing-cta-box {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 48px 52px;
+  border-radius: 22px;
+  background:
+    radial-gradient(circle at 90% 20%, rgba(119, 93, 255, 0.30), transparent 30%),
+    linear-gradient(120deg, #111936, #171f46);
+}
+
+.pricing-cta-content h2 {
+  margin: 9px 0 10px;
+  color: #ffffff;
+  font-size: clamp(28px, 4vw, 43px);
+  line-height: 1.12;
+}
+
+.pricing-cta-content h2 span {
+  color: #9a88ff;
+}
+
+.pricing-cta-content p {
+  margin: 0;
+  max-width: 560px;
+  color: #aeb6c8;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.pricing-cta-btn {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 20px;
+  border-radius: 10px;
+  background: #6847eb;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  transition: 0.25s ease;
+}
+
+.pricing-cta-btn:hover {
+  color: #ffffff;
+  transform: translateY(-2px);
+  background: #7555f2;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.pricing-footer {
+  margin-top: 0;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .pricing-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .individual-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pricing-why-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+/* =========================================================
+   MOBILE / TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .pricing-hero {
+    padding: 65px 0 60px;
+  }
+
+  .pricing-hero h1 {
+    font-size: clamp(36px, 10vw, 52px);
+    letter-spacing: -1.5px;
+  }
+
+  .pricing-hero p {
+    padding: 0 8px;
+    font-size: 14px;
+  }
+
+  .pricing-hero-pills {
+    gap: 7px;
+  }
+
+  .pricing-hero-pills span {
+    font-size: 11px;
+    padding: 8px 10px;
+  }
+
+  .pricing-packages,
+  .marketplace-section,
+  .individual-section,
+  .pricing-why,
+  .pricing-faq {
+    padding: 70px 0;
+  }
+
+  .pricing-heading {
+    margin-bottom: 38px;
+  }
+
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  .pricing-card {
+    padding: 27px 22px 22px;
+  }
+
+  .pricing-card.growth {
+    transform: none;
+  }
+
+  .pricing-card:hover {
+    transform: none;
+  }
+
+  .pricing-card-top h3 {
+    font-size: 21px;
+  }
+
+  .price span {
+    font-size: 32px;
+  }
+
+  .pricing-bottom-note {
+    flex-wrap: wrap;
+    text-align: center;
+    font-size: 12px;
+  }
+
+  .marketplace-grid {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .custom-marketplace {
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .custom-marketplace > strong {
+    margin-left: 65px;
+  }
+
+  .custom-marketplace > a {
+    margin-left: auto;
+  }
+
+  .individual-grid {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .pricing-why-grid {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .pricing-faq-container {
+    grid-template-columns: 1fr;
+    gap: 38px;
+  }
+
+  .pricing-faq-intro > p {
+    max-width: 600px;
+  }
+
+  .pricing-cta {
+    padding-bottom: 70px;
+  }
+
+  .pricing-cta-box {
+    padding: 35px 25px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .pricing-cta-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .pricing-hero {
+    padding: 52px 0 50px;
+  }
+
+  .pricing-eyebrow {
+    font-size: 10px;
+    padding: 7px 11px;
+  }
+
+  .pricing-hero h1 {
+    font-size: 34px;
+    line-height: 1.08;
+  }
+
+  .pricing-hero p {
+    font-size: 13px;
+    line-height: 1.65;
+  }
+
+  .pricing-hero-pills {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pricing-hero-pills span {
+    width: fit-content;
+  }
+
+  .pricing-card {
+    border-radius: 16px;
+    padding: 23px 17px 18px;
+  }
+
+  .pricing-card-top {
+    gap: 10px;
+  }
+
+  .pricing-icon {
+    width: 43px;
+    height: 43px;
+    flex-basis: 43px;
+  }
+
+  .pricing-card-top h3 {
+    font-size: 19px;
+  }
+
+  .pricing-card-top p {
+    font-size: 11px;
+  }
+
+  .price {
+    margin-top: 22px;
+  }
+
+  .price span {
+    font-size: 29px;
+  }
+
+  .pricing-features {
+    gap: 10px;
+  }
+
+  .pricing-features li {
+    font-size: 11px;
+  }
+
+  .feature-check {
+    width: 17px;
+    height: 17px;
+    flex-basis: 17px;
+  }
+
+  .marketplace-card {
+    padding: 17px;
+    gap: 11px;
+  }
+
+  .marketplace-icon {
+    width: 40px;
+    height: 40px;
+    flex-basis: 40px;
+  }
+
+  .marketplace-content h3 {
+    font-size: 15px;
+  }
+
+  .marketplace-price {
+    font-size: 15px;
+  }
+
+  .custom-marketplace {
+    padding: 18px;
+  }
+
+  .custom-marketplace-icon {
+    width: 42px;
+    height: 42px;
+    flex-basis: 42px;
+  }
+
+  .custom-marketplace h3 {
+    font-size: 14px;
+  }
+
+  .custom-marketplace p {
+    font-size: 10px;
+  }
+
+  .custom-marketplace > strong {
+    margin-left: 54px;
+    font-size: 17px;
+  }
+
+  .custom-marketplace > a {
+    padding: 9px 12px;
+    font-size: 10px;
+  }
+
+  .individual-card {
+    padding: 18px;
+  }
+
+  .individual-row {
+    font-size: 11px;
+  }
+
+  .pricing-why-card {
+    padding: 18px;
+  }
+
+  .pricing-why-card h3 {
+    font-size: 14px;
+  }
+
+  .pricing-faq-item button {
+    padding: 16px;
+    font-size: 12px;
+  }
+
+  .pricing-faq-answer {
+    padding: 0 16px 17px;
+    font-size: 11px;
+  }
+
+  .pricing-cta-box {
+    border-radius: 17px;
+    padding: 30px 20px;
+  }
+
+  .pricing-cta-content h2 {
+    font-size: 28px;
+  }
+
+  .pricing-cta-content p {
+    font-size: 12px;
+  }
+
+}
