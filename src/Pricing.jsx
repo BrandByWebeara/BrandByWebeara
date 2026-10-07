@@ -26,7 +26,6 @@ import {
   Megaphone,
 } from "lucide-react";
 
-import "./pricing.css";
 
 function Pricing() {
   const [menuOpen, setMenuOpen] = React.useState(false);
