@@ -1867,3 +1867,167 @@ button {
     bottom: 14px;
   }
 }
+/* =========================================
+   MOBILE - HOW IT WORKS / RECENT PROJECTS /
+   WHY BRANDBYWEBEARA
+========================================= */
+
+@media (max-width: 760px) {
+
+  /* =========================
+     HOW IT WORKS
+  ========================= */
+
+  .process {
+    padding: 60px 0;
+  }
+
+  .process-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 38px !important;
+    margin-top: 50px;
+    width: 100%;
+  }
+
+  .process-item {
+    width: 100%;
+    text-align: center;
+  }
+
+  .process-number {
+    top: -23px;
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+  .process-icon {
+    width: 58px;
+    height: 58px;
+  }
+
+  .process-item h3 {
+    font-size: 12px;
+    margin-top: 14px;
+  }
+
+  .process-item p {
+    font-size: 9px;
+    max-width: 230px;
+    margin: 6px auto 0;
+  }
+
+  .process-arrow {
+    display: none !important;
+  }
+
+
+  /* =========================
+     RECENT PROJECTS
+  ========================= */
+
+  .work {
+    padding: 60px 0;
+  }
+
+  .work-heading {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 16px;
+    margin-bottom: 28px;
+  }
+
+  .work-heading h2 {
+    font-size: 32px;
+  }
+
+  .projects-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+    width: 100%;
+  }
+
+  .project-card {
+    width: 100%;
+  }
+
+  .project-image {
+    height: 175px;
+  }
+
+  .project-window {
+    width: 82%;
+    height: 110px;
+  }
+
+  .project-info {
+    padding: 16px;
+  }
+
+  .project-info small {
+    font-size: 10px;
+  }
+
+  .tag-list {
+    gap: 6px;
+  }
+
+  .tag-list span {
+    font-size: 7px;
+    padding: 4px 7px;
+  }
+
+  .project-info p {
+    font-size: 9px;
+  }
+
+
+  /* =========================
+     WHY BRANDBYWEBEARA
+  ========================= */
+
+  .why {
+    padding: 60px 0 70px;
+  }
+
+  .why-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+    margin-top: 38px;
+    width: 100%;
+  }
+
+  .why-card {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 4px 0;
+  }
+
+  .why-icon {
+    min-width: 44px;
+    width: 44px;
+    height: 44px;
+  }
+
+  .why-card h3 {
+    font-size: 11px;
+  }
+
+  .why-card p {
+    font-size: 9px;
+    line-height: 1.6;
+    margin-top: 5px;
+  }
+
+  .grow-text {
+    position: static !important;
+    margin: 45px auto 0;
+    text-align: center;
+  }
+
+}
