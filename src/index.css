@@ -5676,4 +5676,24 @@ button {
   }
 
 }
+/* =========================================
+   PRICING PAGE - MOBILE HERO FIX
+   ========================================= */
 
+@media (max-width: 768px) {
+  .pricing-page .pricing-hero {
+    padding-top: 110px !important;
+  }
+
+  .pricing-page .pricing-hero h1,
+  .pricing-page .pricing-hero .pricing-hero-title {
+    position: relative;
+    z-index: 2;
+  }
+
+  .pricing-page .pricing-hero-content,
+  .pricing-page .pricing-hero-inner {
+    position: relative;
+    z-index: 2;
+  }
+}
