@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Portfolio from "./Portfolio";
 import Contact from "./Contact";
 import Pricing from "./Pricing";
+import Services from "./Services";
 import {
   ArrowRight,
   ArrowUpRight,
@@ -723,6 +724,7 @@ function AppRouter() {
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/services" element={<Services />} />
       </Routes>
     </BrowserRouter>
   );
