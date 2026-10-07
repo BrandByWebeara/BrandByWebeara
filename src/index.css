@@ -4350,846 +4350,76 @@ button {
   }
 }
 
-/* =========================================================
-   BRAND BY WEBEARA - SEPARATE CONTACT PAGE
-   IMPORTANT:
-   All new contact classes use "bb-contact-" prefix
-   so existing homepage contact form is NOT affected.
-========================================================= */
 
-.bb-contact-page {
-  min-height: 100vh;
-  background: var(--light);
-  color: var(--dark-text);
-}
-
-
-/* =========================================================
-   CONTACT HERO
-========================================================= */
-
-.bb-contact-hero {
-  position: relative;
-  overflow: hidden;
-  background:
-    radial-gradient(
-      circle at 78% 40%,
-      rgba(255, 189, 63, 0.13),
-      transparent 30%
-    ),
-    linear-gradient(
-      135deg,
-      #03080c,
-      #071118,
-      #04090d
-    );
-  border-bottom: 1px solid rgba(255,255,255,.08);
-}
-
-.bb-contact-hero-inner {
-  min-height: 420px;
-  display: grid;
-  grid-template-columns: 55% 45%;
-  align-items: center;
-  gap: 30px;
-  position: relative;
-  z-index: 2;
-}
-
-.bb-contact-glow {
-  position: absolute;
-  border-radius: 50%;
-  pointer-events: none;
-  filter: blur(5px);
-}
-
-.bb-contact-glow-one {
-  width: 260px;
-  height: 260px;
-  right: 4%;
-  top: 15%;
-  background: rgba(255,189,63,.07);
-}
-
-.bb-contact-glow-two {
-  width: 180px;
-  height: 180px;
-  left: -70px;
-  bottom: -90px;
-  background: rgba(255,189,63,.05);
-}
-
-
-.bb-contact-heading {
-  padding: 55px 0;
-}
-
-.bb-contact-label {
-  display: flex;
-  align-items: center;
-  gap: 7px;
-  color: var(--gold);
-  font-size: 9px;
-  font-weight: 800;
-  letter-spacing: .8px;
-  text-transform: uppercase;
-}
-
-.bb-contact-label span {
-  width: 5px;
-  height: 5px;
-  background: var(--gold);
-  border-radius: 50%;
-  box-shadow: 0 0 10px var(--gold);
-}
-
-.bb-contact-heading h1 {
-  color: var(--white);
-  font-family: "Playfair Display", serif;
-  font-size: clamp(42px, 5vw, 64px);
-  line-height: .96;
-  letter-spacing: -2.5px;
-  margin-top: 12px;
-}
-
-.bb-contact-heading h1 span {
-  color: var(--gold);
-}
-
-.bb-contact-heading > p {
-  max-width: 500px;
-  color: #89959e;
-  font-size: 10px;
-  line-height: 1.75;
-  margin-top: 17px;
-}
-
-
-.bb-contact-points {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px 25px;
-  margin-top: 24px;
-}
-
-.bb-contact-points > div {
-  display: flex;
-  align-items: center;
-  gap: 7px;
-  color: #b6c0c8;
-  font-size: 8px;
-}
-
-.bb-contact-point-icon {
-  width: 22px;
-  height: 22px;
-  border: 1px solid rgba(255,189,63,.35);
-  color: var(--gold);
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-}
-
-
-/* =========================================================
-   HERO CARD
-========================================================= */
-
-.bb-contact-hero-card {
-  position: relative;
-  min-height: 245px;
-  background:
-    radial-gradient(
-      circle at 80% 20%,
-      rgba(255,189,63,.13),
-      transparent 35%
-    ),
-    #0a141c;
-  border: 1px solid rgba(255,255,255,.11);
-  border-radius: 12px;
-  padding: 25px;
-  box-shadow: 0 25px 60px rgba(0,0,0,.35);
-  transform: rotate(1deg);
-}
-
-.bb-contact-card-top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  color: var(--gold);
-  font-size: 7px;
-  font-weight: 800;
-  letter-spacing: 1px;
-}
-
-.bb-contact-card-dot {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: var(--gold);
-  box-shadow: 0 0 12px rgba(255,189,63,.8);
-}
-
-.bb-contact-card-line {
-  height: 1px;
-  background: rgba(255,255,255,.1);
-  margin-top: 17px;
-}
-
-.bb-contact-card-content {
-  padding-top: 30px;
-}
-
-.bb-contact-card-content strong {
-  display: block;
-  color: white;
-  font-family: "Playfair Display", serif;
-  font-size: 27px;
-  line-height: 1.1;
-}
-
-.bb-contact-card-content p {
-  color: #7f8c95;
-  font-size: 8px;
-  line-height: 1.7;
-  max-width: 300px;
-  margin-top: 10px;
-}
-
-.bb-contact-card-services {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 7px;
-  margin-top: 20px;
-}
-
-.bb-contact-card-services span {
-  border: 1px solid #263640;
-  color: #9ba6ad;
-  border-radius: 20px;
-  padding: 6px 9px;
-  font-size: 6px;
-}
-
-
-/* =========================================================
-   CONTACT SECTION
-========================================================= */
-
-.bb-contact-section {
-  padding: 75px 0;
-  background: var(--light);
-}
-
-.bb-contact-grid {
-  display: grid;
-  grid-template-columns: 42% 58%;
-  gap: 55px;
-  align-items: start;
-}
-
-
-/* =========================================================
-   LEFT INFORMATION
-========================================================= */
-
-.bb-contact-info {
-  padding-top: 10px;
-}
-
-.bb-contact-info > .bb-contact-label {
-  color: #9a711f;
-}
-
-.bb-contact-info h2 {
-  color: #111820;
-  font-family: "Playfair Display", serif;
-  font-size: 38px;
-  line-height: 1.05;
-  letter-spacing: -1.2px;
-  margin-top: 10px;
-}
-
-.bb-contact-info h2 span {
-  color: #c08a1e;
-}
-
-.bb-contact-info > p {
-  color: #6e7880;
-  max-width: 430px;
-  font-size: 10px;
-  line-height: 1.8;
-  margin-top: 15px;
-}
-
-
-.bb-contact-info-list {
-  margin-top: 30px;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-
-.bb-contact-info-item {
-  display: flex;
-  align-items: center;
-  gap: 13px;
-}
-
-.bb-contact-info-icon {
-  width: 39px;
-  height: 39px;
-  flex: 0 0 39px;
-  display: grid;
-  place-items: center;
-  color: #bd891d;
-  background: #fff;
-  border: 1px solid #e4dfd2;
-  border-radius: 8px;
-}
-
-.bb-contact-info-item small {
-  display: block;
-  color: #9b7a3b;
-  font-size: 7px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: .6px;
-}
-
-.bb-contact-info-item strong {
-  display: block;
-  color: #20282e;
-  font-size: 9px;
-  margin-top: 3px;
-}
-
-
-.bb-contact-note {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  background: #111920;
-  border-radius: 8px;
-  padding: 16px;
-  margin-top: 32px;
-  max-width: 430px;
-}
-
-.bb-contact-note-icon {
-  width: 35px;
-  height: 35px;
-  flex: 0 0 35px;
-  display: grid;
-  place-items: center;
-  border: 1px solid rgba(255,189,63,.35);
-  border-radius: 50%;
-  color: var(--gold);
-}
-
-.bb-contact-note strong {
-  color: white;
-  display: block;
-  font-size: 9px;
-}
-
-.bb-contact-note p {
-  color: #7d8992;
-  font-size: 7px;
-  margin-top: 4px;
-  line-height: 1.5;
-}
-
-
-/* =========================================================
-   NEW CONTACT FORM
-========================================================= */
-
-.bb-contact-form-card {
-  position: relative;
-  background: white;
-  border: 1px solid #e5e4df;
-  border-radius: 10px;
-  padding: 30px;
-  box-shadow: 0 18px 45px rgba(12,20,26,.08);
-}
-
-.bb-contact-form-card::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 25px;
-  bottom: 25px;
-  width: 3px;
-  border-radius: 0 4px 4px 0;
-  background: var(--gold);
-}
-
-.bb-contact-form-card > .bb-contact-label {
-  color: #a77a1d;
-}
-
-.bb-contact-form-card h2 {
-  color: #111820;
-  font-family: "Playfair Display", serif;
-  font-size: 28px;
-  margin-top: 8px;
-}
-
-.bb-contact-form-card > p {
-  color: #7a858c;
-  font-size: 9px;
-  margin-top: 7px;
-  line-height: 1.6;
-}
-
-
-.bb-contact-form-card form {
-  margin-top: 25px;
-}
-
-.bb-contact-form-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-}
-
-.bb-contact-field {
-  margin-bottom: 14px;
-}
-
-.bb-contact-field label {
-  display: block;
-  color: #303a41;
-  font-size: 8px;
-  font-weight: 700;
-  margin-bottom: 6px;
-}
-
-.bb-contact-field input,
-.bb-contact-field select,
-.bb-contact-field textarea {
-  width: 100%;
-  border: 1px solid #d9dcde;
-  background: #fbfbfa;
-  color: #172027;
-  border-radius: 5px;
-  padding: 11px 12px;
-  font-family: inherit;
-  font-size: 9px;
-  outline: none;
-  transition: .2s ease;
-}
-
-.bb-contact-field input,
-.bb-contact-field select {
-  height: 40px;
-}
-
-.bb-contact-field textarea {
-  min-height: 125px;
-  resize: vertical;
-  line-height: 1.6;
-}
-
-.bb-contact-field input::placeholder,
-.bb-contact-field textarea::placeholder {
-  color: #a2a9ad;
-}
-
-.bb-contact-field input:focus,
-.bb-contact-field select:focus,
-.bb-contact-field textarea:focus {
-  border-color: #d2a039;
-  box-shadow: 0 0 0 3px rgba(255,189,63,.1);
-  background: white;
-}
-
-.bb-contact-field select {
-  cursor: pointer;
-}
-
-
-.bb-contact-submit {
-  width: 100%;
-  min-height: 43px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  border: 0;
-  border-radius: 5px;
-  background: var(--gold);
-  color: #111820;
-  font-family: inherit;
-  font-size: 9px;
-  font-weight: 800;
-  cursor: pointer;
-  transition: .2s ease;
-}
-
-.bb-contact-submit:hover {
-  background: var(--gold-light);
-  transform: translateY(-1px);
-}
-
-
-.bb-contact-form-bottom {
-  display: block;
-  color: #92999e;
-  text-align: center;
-  font-size: 6.5px;
-  line-height: 1.5;
-  margin-top: 11px;
-}
-
-
-/* =========================================================
-   SUCCESS MESSAGE
-========================================================= */
-
-.bb-contact-success {
-  display: flex;
-  align-items: center;
-  gap: 9px;
-  background: #edf8ef;
-  border: 1px solid #cce6d0;
-  color: #2e6337;
-  border-radius: 5px;
-  padding: 10px 12px;
-  margin-top: 18px;
-  font-size: 8px;
-}
-
-.bb-contact-success > div {
-  width: 23px;
-  height: 23px;
-  flex: 0 0 23px;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  background: #d5efd9;
-}
-
-
-/* =========================================================
-   CONTACT PAGE TABLET
-========================================================= */
-
-@media (max-width: 900px) {
-
-  .bb-contact-hero-inner {
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-  }
-
-  .bb-contact-heading h1 {
-    font-size: 47px;
-  }
-
-  .bb-contact-grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .bb-contact-info > p,
-  .bb-contact-note {
-    max-width: 600px;
-  }
-
-}
-
-
-/* =========================================================
-   CONTACT PAGE MOBILE
-========================================================= */
-
-@media (max-width: 768px) {
-
-  .bb-contact-hero-inner {
-    min-height: auto;
-    grid-template-columns: 1fr;
-    gap: 20px;
-    padding-top: 30px;
-    padding-bottom: 38px;
-  }
-
-  .bb-contact-heading {
-    padding: 15px 0 0;
-  }
-
-  .bb-contact-heading h1 {
-    font-size: 40px;
-    letter-spacing: -1.8px;
-  }
-
-  .bb-contact-heading > p {
-    font-size: 8px;
-    max-width: 400px;
-  }
-
-  .bb-contact-points {
-    gap: 10px 16px;
-    margin-top: 18px;
-  }
-
-  .bb-contact-points > div {
-    font-size: 7px;
-  }
-
-  .bb-contact-point-icon {
-    width: 20px;
-    height: 20px;
-  }
-
-
-  .bb-contact-hero-card {
-    min-height: 190px;
-    padding: 20px;
-    transform: none;
-  }
-
-  .bb-contact-card-content {
-    padding-top: 22px;
-  }
-
-  .bb-contact-card-content strong {
-    font-size: 22px;
-  }
-
-
-  .bb-contact-section {
-    padding: 45px 0;
-  }
-
-  .bb-contact-grid {
-    gap: 35px;
-  }
-
-  .bb-contact-info h2 {
-    font-size: 31px;
-  }
-
-  .bb-contact-info > p {
-    font-size: 8px;
-  }
-
-  .bb-contact-info-list {
-    margin-top: 23px;
-  }
-
-  .bb-contact-info-item strong {
-    font-size: 8px;
-  }
-
-  .bb-contact-note {
-    margin-top: 25px;
-  }
-
-
-  .bb-contact-form-card {
-    padding: 22px 18px;
-  }
-
-  .bb-contact-form-card h2 {
-    font-size: 23px;
-  }
-
-  .bb-contact-form-card > p {
-    font-size: 8px;
-  }
-
-  .bb-contact-form-row {
-    grid-template-columns: 1fr;
-    gap: 0;
-  }
-
-  .bb-contact-field input,
-  .bb-contact-field select,
-  .bb-contact-field textarea {
-    font-size: 8px;
-  }
-
-  .bb-contact-submit {
-    font-size: 8px;
-  }
-
-}
-
-
-/* =========================================================
-   CONTACT PAGE SMALL MOBILE
-========================================================= */
-
-@media (max-width: 420px) {
-
-  .bb-contact-hero-inner {
-    padding-top: 25px;
-    padding-bottom: 30px;
-  }
-
-  .bb-contact-heading h1 {
-    font-size: 34px;
-  }
-
-  .bb-contact-heading > p {
-    font-size: 7px;
-  }
-
-  .bb-contact-points {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .bb-contact-hero-card {
-    padding: 17px;
-  }
-
-  .bb-contact-card-content strong {
-    font-size: 19px;
-  }
-
-  .bb-contact-card-content p {
-    font-size: 7px;
-  }
-
-  .bb-contact-section {
-    padding: 35px 0;
-  }
-
-  .bb-contact-info h2 {
-    font-size: 27px;
-  }
-
-  .bb-contact-form-card {
-    padding: 19px 15px;
-  }
-
-  .bb-contact-form-card h2 {
-    font-size: 21px;
-  }
-
-}
-/* =========================================================
-   CONTACT PAGE - MOBILE HEADER SPACING FIX
-========================================================= */
-
-@media (max-width: 768px) {
-
-  .bb-contact-page .navbar {
-    position: relative;
-    z-index: 100;
-  }
-
-  .bb-contact-page .bb-contact-hero {
-    padding-top: 18px;
-  }
-
-  .bb-contact-page .bb-contact-hero-inner {
-    padding-top: 25px;
-  }
-
-  .bb-contact-page .bb-contact-heading {
-    padding-top: 18px;
-  }
-
-  .bb-contact-page .bb-contact-label {
-    margin-top: 8px;
-  }
-
-}
-
-
-@media (max-width: 768px) {
-
-  .bb-contact-page .bb-contact-hero {
-    padding-top: 15px;
-  }
-
-  .bb-contact-page .bb-contact-hero-inner {
-    padding-top: 22px;
-  }
-
-  .bb-contact-page .bb-contact-heading {
-    padding-top: 15px;
-  }
-
-}
-/* =========================================================
-   CONTACT PAGE NAVBAR - SAME AS HOMEPAGE
-========================================================= */
-
-.bb-contact-page .navbar {
-  background: #050d14 !important;
-}
-
-.bb-contact-page .brand-name {
-  color: #ffffff !important;
-}
-
-.bb-contact-page .brand-name span {
-  color: #ffbd3f !important;
-}
-
-.bb-contact-page .brand-tagline {
-  color: #ffbd3f !important;
-}
-
-.bb-contact-page .brand-logo {
-  border-color: #ffbd3f !important;
-}
-
-.bb-contact-page .brand-logo span {
-  color: #ffffff !important;
-}
-
-.bb-contact-page .nav-links > a {
-  color: #cbd2d9 !important;
-}
-
-.bb-contact-page .nav-links > a:hover {
-  color: #ffbd3f !important;
-}
-
-.bb-contact-page .nav-links .nav-cta {
-  background: #ffbd3f !important;
-  color: #101010 !important;
-}
-
-.bb-contact-page .nav-links .nav-cta:hover {
-  background: #ffd36a !important;
-  color: #101010 !important;
-}
-
-.bb-contact-page .menu-btn {
-  color: #ffffff !important;
-}
-
-@media (max-width: 768px) {
-  .bb-contact-page .nav-links {
-    background: #081118 !important;
-    border-color: #243440 !important;
-  }
-}
 /* =========================================================
    BRAND BY WEBEARA - PRICING PAGE
-   Isolated pricing styles
+   MAIN THEME: DARK NAVY + GOLD + WHITE
 ========================================================= */
 
 .pricing-page {
   width: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
   background: #ffffff;
-  color: #111936;
+  color: #111820;
 }
 
 /* =========================================================
    NAVBAR
 ========================================================= */
 
-.pricing-navbar {
-  position: relative;
-  z-index: 1000;
+.pricing-page .navbar {
+  background: #050d14 !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.pricing-page .brand-name {
+  color: #ffffff !important;
+}
+
+.pricing-page .brand-name span {
+  color: #ffbd3f !important;
+}
+
+.pricing-page .brand-tagline {
+  color: #ffbd3f !important;
+}
+
+.pricing-page .brand-logo {
+  border-color: #ffbd3f !important;
+}
+
+.pricing-page .brand-logo span {
+  color: #ffffff !important;
+}
+
+.pricing-page .nav-links > a {
+  color: #cbd2d9 !important;
+}
+
+.pricing-page .nav-links > a:hover,
+.pricing-page .nav-links > a.active {
+  color: #ffbd3f !important;
+}
+
+.pricing-page .nav-links .nav-cta {
+  background: #ffbd3f !important;
+  color: #101010 !important;
+}
+
+.pricing-page .nav-links .nav-cta:hover {
+  background: #ffd36a !important;
+  color: #101010 !important;
+}
+
+.pricing-page .menu-btn {
+  color: #ffffff !important;
+}
+
+@media (max-width: 768px) {
+  .pricing-page .nav-links {
+    background: #081118 !important;
+    border-color: #243440 !important;
+  }
 }
 
 /* =========================================================
@@ -5201,29 +4431,37 @@ button {
   overflow: hidden;
   padding: 95px 0 85px;
   background:
-    radial-gradient(circle at 15% 25%, rgba(101, 73, 255, 0.12), transparent 28%),
-    radial-gradient(circle at 85% 20%, rgba(0, 191, 255, 0.10), transparent 25%),
-    #f8f9ff;
+    radial-gradient(
+      circle at 15% 25%,
+      rgba(255, 189, 63, 0.10),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 85% 20%,
+      rgba(255, 189, 63, 0.06),
+      transparent 25%
+    ),
+    #f7f8f8;
 }
 
 .pricing-glow {
   position: absolute;
-  width: 420px;
-  height: 420px;
+  width: 400px;
+  height: 400px;
   border-radius: 50%;
-  filter: blur(90px);
+  filter: blur(100px);
   pointer-events: none;
   opacity: 0.35;
 }
 
 .pricing-glow-one {
-  background: rgba(91, 67, 255, 0.22);
+  background: rgba(255, 189, 63, 0.12);
   left: -220px;
   top: 20px;
 }
 
 .pricing-glow-two {
-  background: rgba(0, 183, 255, 0.18);
+  background: rgba(255, 189, 63, 0.08);
   right: -220px;
   bottom: -180px;
 }
@@ -5240,10 +4478,10 @@ button {
   align-items: center;
   gap: 9px;
   padding: 8px 15px;
-  border: 1px solid rgba(84, 63, 220, 0.18);
+  border: 1px solid rgba(255, 189, 63, 0.35);
   border-radius: 50px;
-  background: rgba(255, 255, 255, 0.75);
-  color: #5541d7;
+  background: #ffffff;
+  color: #9a711f;
   font-size: 13px;
   font-weight: 700;
   margin-bottom: 22px;
@@ -5252,9 +4490,9 @@ button {
 .pricing-eyebrow span {
   width: 7px;
   height: 7px;
-  background: #6045ff;
+  background: #ffbd3f;
   border-radius: 50%;
-  box-shadow: 0 0 0 5px rgba(96, 69, 255, 0.10);
+  box-shadow: 0 0 0 5px rgba(255, 189, 63, 0.12);
 }
 
 .pricing-hero h1 {
@@ -5263,20 +4501,17 @@ button {
   line-height: 1.04;
   letter-spacing: -2.5px;
   font-weight: 800;
-  color: #111936;
+  color: #111820;
 }
 
 .pricing-hero h1 span {
-  background: linear-gradient(90deg, #5942f4, #287cff);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: #bd891d;
 }
 
 .pricing-hero p {
   max-width: 700px;
   margin: 24px auto 0;
-  color: #68708a;
+  color: #69747c;
   font-size: 17px;
   line-height: 1.75;
 }
@@ -5296,14 +4531,14 @@ button {
   padding: 9px 14px;
   border-radius: 30px;
   background: #ffffff;
-  border: 1px solid #e5e8f2;
-  color: #3d4560;
+  border: 1px solid #e3dfd3;
+  color: #465057;
   font-size: 13px;
   font-weight: 600;
 }
 
 .pricing-hero-pills svg {
-  color: #5c46ee;
+  color: #bd891d;
 }
 
 /* =========================================================
@@ -5312,6 +4547,7 @@ button {
 
 .pricing-packages {
   padding: 95px 0;
+  background: #ffffff;
 }
 
 .pricing-heading {
@@ -5343,10 +4579,10 @@ button {
   display: flex;
   flex-direction: column;
   padding: 28px 23px 22px;
-  border: 1px solid #e4e7f1;
-  border-radius: 20px;
+  border: 1px solid #e3e3df;
+  border-radius: 18px;
   background: #ffffff;
-  box-shadow: 0 10px 35px rgba(28, 36, 74, 0.06);
+  box-shadow: 0 10px 35px rgba(17, 24, 32, 0.07);
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease,
@@ -5354,21 +4590,24 @@ button {
 }
 
 .pricing-card:hover {
-  transform: translateY(-7px);
-  box-shadow: 0 22px 55px rgba(28, 36, 74, 0.12);
+  transform: translateY(-6px);
+  box-shadow: 0 22px 50px rgba(17, 24, 32, 0.12);
+  border-color: #d4b15e;
 }
 
+/* Gold highlight for popular package */
+
 .pricing-card.growth {
-  border: 2px solid #6345ed;
-  box-shadow: 0 18px 55px rgba(99, 69, 237, 0.14);
+  border: 2px solid #d2a039;
+  box-shadow: 0 18px 50px rgba(189, 137, 29, 0.15);
 }
 
 .pricing-card.business {
-  border-color: #22aaa4;
+  border-color: #d7d8d4;
 }
 
 .pricing-card.custom {
-  border-color: #f09a32;
+  border-color: #d7d8d4;
 }
 
 .popular-badge {
@@ -5378,8 +4617,8 @@ button {
   transform: translateX(-50%);
   padding: 7px 16px;
   border-radius: 30px;
-  background: linear-gradient(90deg, #6541ed, #8246ed);
-  color: #ffffff;
+  background: #ffbd3f;
+  color: #111820;
   font-size: 10px;
   font-weight: 800;
   letter-spacing: 0.6px;
@@ -5400,34 +4639,26 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #edf3ff;
-  color: #327bea;
+  background: #fff6df;
+  color: #b98216;
 }
 
-.growth .pricing-icon {
-  background: #f0ebff;
-  color: #6741e9;
-}
-
-.business .pricing-icon {
-  background: #e8f9f6;
-  color: #16a49d;
-}
-
+.growth .pricing-icon,
+.business .pricing-icon,
 .custom .pricing-icon {
-  background: #fff2df;
-  color: #ed8b22;
+  background: #fff6df;
+  color: #b98216;
 }
 
 .pricing-card-top h3 {
   margin: 2px 0 5px;
   font-size: 22px;
-  color: #172143;
+  color: #172027;
 }
 
 .pricing-card-top p {
   margin: 0;
-  color: #7a8196;
+  color: #707a82;
   font-size: 12px;
   line-height: 1.55;
 }
@@ -5444,19 +4675,19 @@ button {
   line-height: 1;
   font-weight: 800;
   letter-spacing: -1.3px;
-  color: #111936;
+  color: #111820;
 }
 
 .price small {
   margin-left: 4px;
-  color: #8a91a4;
+  color: #8a9298;
   font-size: 11px;
 }
 
 .pricing-divider {
   width: 100%;
   height: 1px;
-  background: #edf0f5;
+  background: #ecece8;
   margin: 21px 0 20px;
 }
 
@@ -5464,7 +4695,7 @@ button {
   margin: 0 0 14px;
   font-size: 11px;
   letter-spacing: 1px;
-  color: #4f5a79;
+  color: #59636a;
 }
 
 .pricing-features {
@@ -5480,7 +4711,7 @@ button {
   display: flex;
   align-items: flex-start;
   gap: 8px;
-  color: #515a73;
+  color: #515b62;
   font-size: 12px;
   line-height: 1.45;
 }
@@ -5494,29 +4725,21 @@ button {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background: #e9f7f0;
-  color: #20a064;
+  background: #fff4d6;
+  color: #b98216;
 }
 
-.growth .feature-check {
-  background: #eeeaff;
-  color: #6642e9;
-}
-
-.business .feature-check {
-  background: #e6f8f5;
-  color: #159e96;
-}
-
+.growth .feature-check,
+.business .feature-check,
 .custom .feature-check {
-  background: #fff1df;
-  color: #e78820;
+  background: #fff4d6;
+  color: #b98216;
 }
 
 .package-note {
   margin-top: auto;
   padding-top: 22px;
-  color: #81889b;
+  color: #81898f;
   font-size: 10px;
   font-weight: 600;
 }
@@ -5528,31 +4751,26 @@ button {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  border-radius: 10px;
+  border-radius: 9px;
   text-decoration: none;
-  color: #ffffff;
-  background: #2f7eea;
+  color: #111820;
+  background: #ffbd3f;
   font-size: 13px;
-  font-weight: 700;
+  font-weight: 800;
   transition: 0.25s ease;
 }
 
 .pricing-btn:hover {
-  color: #ffffff;
+  color: #111820;
   transform: translateY(-2px);
-  filter: brightness(1.05);
+  background: #ffd36a;
 }
 
-.growth .pricing-btn {
-  background: linear-gradient(90deg, #6140e8, #7645eb);
-}
-
-.business .pricing-btn {
-  background: #13a59e;
-}
-
+.growth .pricing-btn,
+.business .pricing-btn,
 .custom .pricing-btn {
-  background: #ed8b21;
+  background: #ffbd3f;
+  color: #111820;
 }
 
 /* =========================================================
@@ -5563,26 +4781,30 @@ button {
   margin-top: 28px;
   padding: 17px 20px;
   border-radius: 13px;
-  border: 1px solid #e3e7f1;
-  background: #f8f9fc;
+  border: 1px solid #e3dfd3;
+  background: #faf9f5;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 9px;
-  color: #5d657b;
+  color: #5d656b;
   font-size: 13px;
 }
 
 .pricing-bottom-note svg {
-  color: #6045ed;
+  color: #bd891d;
   flex: 0 0 auto;
 }
 
 .pricing-bottom-note a {
-  color: #5941dc;
+  color: #a57618;
   font-weight: 700;
   text-decoration: none;
   white-space: nowrap;
+}
+
+.pricing-bottom-note a:hover {
+  color: #7e5b12;
 }
 
 /* =========================================================
@@ -5591,6 +4813,7 @@ button {
 
 .marketplace-section {
   padding: 95px 0;
+  background: #071118;
 }
 
 .marketplace-heading {
@@ -5602,7 +4825,7 @@ button {
 }
 
 .marketplace-heading p {
-  color: #aeb6c9;
+  color: #aeb7bd;
   max-width: 650px;
   margin: 0 auto;
 }
@@ -5620,14 +4843,14 @@ button {
   padding: 21px;
   border: 1px solid rgba(255, 255, 255, 0.10);
   border-radius: 15px;
-  background: rgba(255, 255, 255, 0.045);
+  background: rgba(255, 255, 255, 0.035);
   transition: 0.3s ease;
 }
 
 .marketplace-card:hover {
   transform: translateY(-4px);
-  border-color: rgba(119, 90, 255, 0.55);
-  background: rgba(255, 255, 255, 0.065);
+  border-color: rgba(255, 189, 63, 0.45);
+  background: rgba(255, 189, 63, 0.045);
 }
 
 .marketplace-icon {
@@ -5638,12 +4861,13 @@ button {
   align-items: center;
   justify-content: center;
   border-radius: 12px;
-  color: #ffffff;
-  background: rgba(104, 76, 241, 0.20);
+  color: #ffbd3f;
+  background: rgba(255, 189, 63, 0.10);
 }
 
 .marketplace-content {
   flex: 1;
+  min-width: 0;
 }
 
 .marketplace-content h3 {
@@ -5653,7 +4877,7 @@ button {
 }
 
 .marketplace-content span {
-  color: #929bb1;
+  color: #929da4;
   font-size: 11px;
 }
 
@@ -5662,11 +4886,12 @@ button {
   font-size: 18px;
   font-weight: 800;
   text-align: right;
+  white-space: nowrap;
 }
 
 .marketplace-price small {
   display: block;
-  color: #8e97aa;
+  color: #8e989f;
   font-size: 10px;
   font-weight: 500;
   margin-top: 2px;
@@ -5678,9 +4903,9 @@ button {
   align-items: center;
   gap: 17px;
   padding: 21px 23px;
-  border: 1px solid rgba(111, 82, 241, 0.35);
+  border: 1px solid rgba(255, 189, 63, 0.25);
   border-radius: 15px;
-  background: rgba(99, 69, 237, 0.08);
+  background: rgba(255, 189, 63, 0.055);
 }
 
 .custom-marketplace-icon {
@@ -5691,12 +4916,13 @@ button {
   align-items: center;
   justify-content: center;
   border-radius: 13px;
-  background: rgba(105, 78, 241, 0.20);
-  color: #a58fff;
+  background: rgba(255, 189, 63, 0.11);
+  color: #ffbd3f;
 }
 
 .custom-marketplace div:nth-child(2) {
   flex: 1;
+  min-width: 0;
 }
 
 .custom-marketplace h3 {
@@ -5707,17 +4933,18 @@ button {
 
 .custom-marketplace p {
   margin: 0;
-  color: #949db2;
+  color: #949da5;
   font-size: 12px;
 }
 
 .custom-marketplace > strong {
   color: #ffffff;
   font-size: 20px;
+  white-space: nowrap;
 }
 
 .custom-marketplace > strong small {
-  color: #8e97aa;
+  color: #8e989f;
   font-size: 10px;
   font-weight: 500;
 }
@@ -5728,11 +4955,16 @@ button {
   gap: 7px;
   padding: 11px 15px;
   border-radius: 9px;
-  background: #6545e8;
-  color: #ffffff;
+  background: #ffbd3f;
+  color: #111820;
   text-decoration: none;
   font-size: 11px;
-  font-weight: 700;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.custom-marketplace > a:hover {
+  background: #ffd36a;
 }
 
 .marketplace-other {
@@ -5748,12 +4980,12 @@ button {
 
 .marketplace-other p {
   margin: 5px 0 0;
-  color: #8f98ae;
+  color: #8f98a0;
   font-size: 12px;
 }
 
 .marketplace-other a {
-  color: #9a87ff;
+  color: #ffbd3f;
   text-decoration: none;
   font-weight: 700;
 }
@@ -5764,6 +4996,7 @@ button {
 
 .individual-section {
   padding: 95px 0;
+  background: #ffffff;
 }
 
 .individual-grid {
@@ -5776,9 +5009,9 @@ button {
 .individual-card {
   padding: 23px;
   border-radius: 17px;
-  border: 1px solid #e4e7f0;
+  border: 1px solid #e3e3df;
   background: #ffffff;
-  box-shadow: 0 8px 30px rgba(24, 31, 62, 0.045);
+  box-shadow: 0 8px 30px rgba(17, 24, 32, 0.045);
 }
 
 .individual-title {
@@ -5786,7 +5019,7 @@ button {
   align-items: center;
   gap: 11px;
   padding-bottom: 17px;
-  border-bottom: 1px solid #edf0f5;
+  border-bottom: 1px solid #ecece8;
 }
 
 .individual-icon {
@@ -5797,13 +5030,13 @@ button {
   align-items: center;
   justify-content: center;
   border-radius: 11px;
-  background: #f0edff;
-  color: #5d43e6;
+  background: #fff5dc;
+  color: #b98216;
 }
 
 .individual-title h3 {
   margin: 0;
-  color: #18203e;
+  color: #182027;
   font-size: 15px;
 }
 
@@ -5816,8 +5049,8 @@ button {
   justify-content: space-between;
   gap: 10px;
   padding: 11px 0;
-  border-bottom: 1px solid #f0f2f6;
-  color: #697187;
+  border-bottom: 1px solid #f0f0ec;
+  color: #69737a;
   font-size: 12px;
 }
 
@@ -5826,13 +5059,13 @@ button {
 }
 
 .individual-row strong {
-  color: #1c2544;
+  color: #1c252b;
   white-space: nowrap;
 }
 
 .service-note {
   margin-top: 7px;
-  color: #8b91a2;
+  color: #8b9297;
   font-size: 10px;
 }
 
@@ -5842,6 +5075,7 @@ button {
 
 .pricing-why {
   padding: 95px 0;
+  background: #071118;
 }
 
 .pricing-why-grid {
@@ -5868,8 +5102,8 @@ button {
   align-items: center;
   justify-content: center;
   border-radius: 12px;
-  background: rgba(99, 69, 237, 0.16);
-  color: #a493ff;
+  background: rgba(255, 189, 63, 0.10);
+  color: #ffbd3f;
 }
 
 .pricing-why-card h3 {
@@ -5880,7 +5114,7 @@ button {
 
 .pricing-why-card p {
   margin: 0;
-  color: #929bb0;
+  color: #929da4;
   font-size: 11px;
   line-height: 1.55;
 }
@@ -5891,6 +5125,7 @@ button {
 
 .pricing-faq {
   padding: 95px 0;
+  background: #ffffff;
 }
 
 .pricing-faq-container {
@@ -5905,7 +5140,7 @@ button {
 }
 
 .pricing-faq-intro > p {
-  color: #71798e;
+  color: #717a81;
   font-size: 14px;
   line-height: 1.7;
   max-width: 410px;
@@ -5924,7 +5159,7 @@ button {
 }
 
 .pricing-faq-item {
-  border: 1px solid #e3e6ef;
+  border: 1px solid #e3e3df;
   border-radius: 12px;
   background: #ffffff;
   overflow: hidden;
@@ -5939,7 +5174,7 @@ button {
   border: 0;
   background: transparent;
   padding: 18px 20px;
-  color: #1b2340;
+  color: #1b252b;
   font-family: inherit;
   font-size: 13px;
   font-weight: 700;
@@ -5950,17 +5185,17 @@ button {
 .faq-chevron {
   flex: 0 0 auto;
   transition: transform 0.25s ease;
-  color: #636c84;
+  color: #747d83;
 }
 
 .faq-chevron.rotate {
   transform: rotate(180deg);
-  color: #6246e9;
+  color: #bd891d;
 }
 
 .pricing-faq-answer {
   padding: 0 20px 19px;
-  color: #727a8f;
+  color: #727b82;
   font-size: 12px;
   line-height: 1.7;
 }
@@ -5984,8 +5219,13 @@ button {
   padding: 48px 52px;
   border-radius: 22px;
   background:
-    radial-gradient(circle at 90% 20%, rgba(119, 93, 255, 0.30), transparent 30%),
-    linear-gradient(120deg, #111936, #171f46);
+    radial-gradient(
+      circle at 90% 20%,
+      rgba(255, 189, 63, 0.16),
+      transparent 30%
+    ),
+    linear-gradient(120deg, #050d14, #0c1821);
+  border: 1px solid rgba(255, 189, 63, 0.12);
 }
 
 .pricing-cta-content h2 {
@@ -5996,13 +5236,13 @@ button {
 }
 
 .pricing-cta-content h2 span {
-  color: #9a88ff;
+  color: #ffbd3f;
 }
 
 .pricing-cta-content p {
   margin: 0;
   max-width: 560px;
-  color: #aeb6c8;
+  color: #aeb7bd;
   font-size: 13px;
   line-height: 1.7;
 }
@@ -6014,18 +5254,18 @@ button {
   gap: 8px;
   padding: 14px 20px;
   border-radius: 10px;
-  background: #6847eb;
-  color: #ffffff;
+  background: #ffbd3f;
+  color: #111820;
   text-decoration: none;
   font-size: 13px;
-  font-weight: 700;
+  font-weight: 800;
   transition: 0.25s ease;
 }
 
 .pricing-cta-btn:hover {
-  color: #ffffff;
+  color: #111820;
   transform: translateY(-2px);
-  background: #7555f2;
+  background: #ffd36a;
 }
 
 /* =========================================================
@@ -6057,27 +5297,30 @@ button {
 }
 
 /* =========================================================
-   MOBILE / TABLET
+   MOBILE
 ========================================================= */
 
 @media (max-width: 768px) {
 
   .pricing-hero {
-    padding: 65px 0 60px;
+    padding: 62px 0 55px;
   }
 
   .pricing-hero h1 {
-    font-size: clamp(36px, 10vw, 52px);
-    letter-spacing: -1.5px;
+    font-size: clamp(34px, 9vw, 50px);
+    letter-spacing: -1.4px;
+    line-height: 1.08;
   }
 
   .pricing-hero p {
     padding: 0 8px;
     font-size: 14px;
+    line-height: 1.65;
   }
 
   .pricing-hero-pills {
-    gap: 7px;
+    gap: 8px;
+    margin-top: 23px;
   }
 
   .pricing-hero-pills span {
@@ -6090,78 +5333,134 @@ button {
   .individual-section,
   .pricing-why,
   .pricing-faq {
-    padding: 70px 0;
+    padding: 65px 0;
   }
 
   .pricing-heading {
-    margin-bottom: 38px;
+    margin-bottom: 36px;
   }
+
+  /* Pricing cards */
 
   .pricing-grid {
     grid-template-columns: 1fr;
     gap: 22px;
+    width: 100%;
     max-width: 520px;
     margin: 0 auto;
   }
 
   .pricing-card {
-    padding: 27px 22px 22px;
-  }
-
-  .pricing-card.growth {
-    transform: none;
+    width: 100%;
+    padding: 27px 21px 22px;
+    border-radius: 17px;
   }
 
   .pricing-card:hover {
     transform: none;
   }
 
+  .pricing-card.growth {
+    transform: none;
+  }
+
+  .pricing-card-top {
+    gap: 12px;
+  }
+
   .pricing-card-top h3 {
     font-size: 21px;
   }
 
+  .pricing-card-top p {
+    font-size: 12px;
+  }
+
+  .price {
+    margin-top: 23px;
+  }
+
   .price span {
-    font-size: 32px;
+    font-size: 31px;
+  }
+
+  .pricing-features {
+    gap: 10px;
+  }
+
+  .pricing-features li {
+    font-size: 12px;
   }
 
   .pricing-bottom-note {
     flex-wrap: wrap;
     text-align: center;
     font-size: 12px;
+    line-height: 1.5;
   }
+
+  /* Marketplace */
 
   .marketplace-grid {
     grid-template-columns: 1fr;
+    width: 100%;
     max-width: 600px;
     margin: 0 auto;
   }
 
+  .marketplace-card {
+    width: 100%;
+  }
+
   .custom-marketplace {
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 13px;
     align-items: center;
   }
 
+  .custom-marketplace-icon {
+    grid-row: span 2;
+  }
+
+  .custom-marketplace div:nth-child(2) {
+    min-width: 0;
+  }
+
   .custom-marketplace > strong {
-    margin-left: 65px;
+    margin: 0;
+    grid-column: 2;
+    justify-self: start;
   }
 
   .custom-marketplace > a {
-    margin-left: auto;
+    grid-column: 1 / -1;
+    width: 100%;
+    justify-content: center;
+    margin: 2px 0 0;
   }
+
+  /* Individual services */
 
   .individual-grid {
     grid-template-columns: 1fr;
+    width: 100%;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
   }
 
+  /* Why choose us */
+
   .pricing-why-grid {
     grid-template-columns: 1fr;
+    width: 100%;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
   }
+
+  /* FAQ */
 
   .pricing-faq-container {
     grid-template-columns: 1fr;
@@ -6172,14 +5471,21 @@ button {
     max-width: 600px;
   }
 
+  .pricing-faq-item button {
+    gap: 12px;
+  }
+
+  /* CTA */
+
   .pricing-cta {
-    padding-bottom: 70px;
+    padding-bottom: 65px;
   }
 
   .pricing-cta-box {
-    padding: 35px 25px;
+    padding: 35px 24px;
     flex-direction: column;
     align-items: flex-start;
+    border-radius: 18px;
   }
 
   .pricing-cta-btn {
@@ -6196,16 +5502,17 @@ button {
 @media (max-width: 480px) {
 
   .pricing-hero {
-    padding: 52px 0 50px;
+    padding: 50px 0 45px;
   }
 
   .pricing-eyebrow {
+    max-width: 100%;
     font-size: 10px;
     padding: 7px 11px;
   }
 
   .pricing-hero h1 {
-    font-size: 34px;
+    font-size: 33px;
     line-height: 1.08;
   }
 
@@ -6216,16 +5523,17 @@ button {
 
   .pricing-hero-pills {
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
   }
 
   .pricing-hero-pills span {
-    width: fit-content;
+    width: 100%;
+    justify-content: center;
   }
 
   .pricing-card {
+    padding: 22px 16px 18px;
     border-radius: 16px;
-    padding: 23px 17px 18px;
   }
 
   .pricing-card-top {
@@ -6247,19 +5555,20 @@ button {
   }
 
   .price {
-    margin-top: 22px;
+    margin-top: 21px;
   }
 
   .price span {
-    font-size: 29px;
+    font-size: 28px;
   }
 
   .pricing-features {
-    gap: 10px;
+    gap: 9px;
   }
 
   .pricing-features li {
     font-size: 11px;
+    line-height: 1.5;
   }
 
   .feature-check {
@@ -6268,9 +5577,14 @@ button {
     flex-basis: 17px;
   }
 
+  .pricing-btn {
+    min-height: 44px;
+    font-size: 12px;
+  }
+
   .marketplace-card {
-    padding: 17px;
-    gap: 11px;
+    padding: 16px;
+    gap: 10px;
   }
 
   .marketplace-icon {
@@ -6283,12 +5597,20 @@ button {
     font-size: 15px;
   }
 
+  .marketplace-content span {
+    font-size: 10px;
+  }
+
   .marketplace-price {
-    font-size: 15px;
+    font-size: 14px;
+  }
+
+  .marketplace-price small {
+    font-size: 9px;
   }
 
   .custom-marketplace {
-    padding: 18px;
+    padding: 17px;
   }
 
   .custom-marketplace-icon {
@@ -6306,12 +5628,11 @@ button {
   }
 
   .custom-marketplace > strong {
-    margin-left: 54px;
-    font-size: 17px;
+    font-size: 16px;
   }
 
   .custom-marketplace > a {
-    padding: 9px 12px;
+    padding: 10px 12px;
     font-size: 10px;
   }
 
@@ -6332,22 +5653,22 @@ button {
   }
 
   .pricing-faq-item button {
-    padding: 16px;
+    padding: 15px;
     font-size: 12px;
   }
 
   .pricing-faq-answer {
-    padding: 0 16px 17px;
+    padding: 0 15px 16px;
     font-size: 11px;
   }
 
   .pricing-cta-box {
-    border-radius: 17px;
-    padding: 30px 20px;
+    border-radius: 16px;
+    padding: 28px 19px;
   }
 
   .pricing-cta-content h2 {
-    font-size: 28px;
+    font-size: 27px;
   }
 
   .pricing-cta-content p {
@@ -6355,3 +5676,4 @@ button {
   }
 
 }
+
