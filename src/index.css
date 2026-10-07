@@ -2228,3 +2228,997 @@ button {
   }
 
 }
+/* =========================================================
+   BRANDBYWEBEARA CONTACT PAGE
+   DESKTOP + TABLET + MOBILE RESPONSIVE FIX
+   ========================================================= */
+
+/* =========================
+   CONTACT PAGE BASE
+========================= */
+
+.bb-contact-page {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: #f8f8f6;
+}
+
+
+/* =========================
+   CONTACT HERO - DESKTOP
+========================= */
+
+.bb-contact-page .bb-contact-hero {
+  position: relative;
+  min-height: 610px;
+  padding: 150px 0 80px;
+  background:
+    radial-gradient(
+      circle at 78% 45%,
+      rgba(255, 189, 63, 0.13),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 20% 80%,
+      rgba(25, 100, 140, 0.07),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #04080c,
+      #071018 55%,
+      #03070a
+    );
+  color: white;
+  overflow: hidden;
+}
+
+.bb-contact-page .bb-contact-hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--gold),
+    transparent
+  );
+  opacity: 0.45;
+}
+
+
+/* =========================
+   HERO GLOW
+========================= */
+
+.bb-contact-page .bb-contact-glow {
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background: rgba(255, 189, 63, 0.12);
+  filter: blur(70px);
+  pointer-events: none;
+}
+
+.bb-contact-page .bb-contact-glow-one {
+  top: 100px;
+  right: 8%;
+}
+
+.bb-contact-page .bb-contact-glow-two {
+  bottom: -100px;
+  left: 10%;
+  opacity: 0.5;
+}
+
+
+/* =========================
+   HERO INNER
+========================= */
+
+.bb-contact-page .bb-contact-hero-inner {
+  position: relative;
+  z-index: 2;
+
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: center;
+  gap: 80px;
+
+  min-height: 390px;
+}
+
+
+/* =========================
+   HERO TEXT
+========================= */
+
+.bb-contact-page .bb-contact-heading {
+  max-width: 650px;
+}
+
+.bb-contact-page .bb-contact-label {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  color: var(--gold);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+
+  margin-bottom: 16px;
+}
+
+.bb-contact-page .bb-contact-label > span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--gold);
+  box-shadow: 0 0 14px var(--gold);
+  flex-shrink: 0;
+}
+
+.bb-contact-page .bb-contact-heading h1 {
+  font-size: clamp(46px, 5vw, 72px);
+  line-height: 0.98;
+  letter-spacing: -3px;
+  font-weight: 800;
+}
+
+.bb-contact-page .bb-contact-heading h1 span {
+  color: var(--gold);
+}
+
+.bb-contact-page .bb-contact-heading > p {
+  max-width: 570px;
+  margin-top: 23px;
+
+  color: #aeb8c2;
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+
+/* =========================
+   HERO CHECK POINTS
+========================= */
+
+.bb-contact-page .bb-contact-points {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+
+  margin-top: 28px;
+}
+
+.bb-contact-page .bb-contact-points > div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  color: #d6dce1;
+  font-size: 10px;
+}
+
+.bb-contact-page .bb-contact-point-icon {
+  width: 22px;
+  height: 22px;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid rgba(255, 189, 63, 0.5);
+  border-radius: 50%;
+
+  color: var(--gold);
+  background: rgba(255, 189, 63, 0.06);
+}
+
+
+/* =========================
+   HERO PROJECT CARD
+========================= */
+
+.bb-contact-page .bb-contact-hero-card {
+  position: relative;
+
+  width: 100%;
+  max-width: 470px;
+  min-height: 290px;
+
+  margin-left: auto;
+
+  padding: 28px;
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(16, 29, 39, 0.96),
+      rgba(5, 12, 18, 0.96)
+    );
+
+  box-shadow:
+    0 30px 70px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+
+  overflow: hidden;
+}
+
+.bb-contact-page .bb-contact-hero-card::before {
+  content: "";
+  position: absolute;
+
+  width: 190px;
+  height: 190px;
+
+  right: -80px;
+  bottom: -90px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 189, 63, 0.09);
+  filter: blur(10px);
+}
+
+.bb-contact-page .bb-contact-card-top {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  color: #89949e;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.bb-contact-page .bb-contact-card-dot {
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+  background: var(--gold);
+  box-shadow: 0 0 14px rgba(255, 189, 63, 0.8);
+}
+
+.bb-contact-page .bb-contact-card-line {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  height: 1px;
+
+  margin-top: 18px;
+
+  background: #23313b;
+}
+
+.bb-contact-page .bb-contact-card-content {
+  position: relative;
+  z-index: 2;
+
+  padding-top: 55px;
+}
+
+.bb-contact-page .bb-contact-card-content strong {
+  display: block;
+
+  font-size: 27px;
+  line-height: 1.15;
+  letter-spacing: -1px;
+}
+
+.bb-contact-page .bb-contact-card-content p {
+  max-width: 350px;
+
+  margin-top: 12px;
+
+  color: #7f8b95;
+  font-size: 10px;
+  line-height: 1.7;
+}
+
+
+/* =========================
+   CARD SERVICE TAGS
+========================= */
+
+.bb-contact-page .bb-contact-card-services {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  margin-top: 25px;
+}
+
+.bb-contact-page .bb-contact-card-services span {
+  padding: 7px 11px;
+
+  border: 1px solid #293944;
+  border-radius: 20px;
+
+  color: #cbd2d8;
+  background: rgba(255, 255, 255, 0.025);
+
+  font-size: 8px;
+}
+
+
+/* =========================================================
+   CONTACT INFORMATION + FORM
+========================================================= */
+
+.bb-contact-page .bb-contact-section {
+  padding: 85px 0;
+
+  background: #f8f8f6;
+  color: #111820;
+}
+
+.bb-contact-page .bb-contact-grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  align-items: start;
+  gap: 70px;
+}
+
+
+/* =========================
+   LEFT CONTACT INFO
+========================= */
+
+.bb-contact-page .bb-contact-info {
+  padding-top: 8px;
+}
+
+.bb-contact-page .bb-contact-info > .bb-contact-label {
+  color: #b47d18;
+}
+
+.bb-contact-page .bb-contact-info > h2 {
+  font-size: clamp(32px, 3.2vw, 48px);
+  line-height: 1.02;
+  letter-spacing: -2px;
+}
+
+.bb-contact-page .bb-contact-info > h2 span {
+  color: #b47d18;
+}
+
+.bb-contact-page .bb-contact-info > p {
+  max-width: 470px;
+
+  margin-top: 20px;
+
+  color: #68727a;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+
+/* =========================
+   CONTACT INFO LIST
+========================= */
+
+.bb-contact-page .bb-contact-info-list {
+  margin-top: 35px;
+}
+
+.bb-contact-page .bb-contact-info-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  padding: 16px 0;
+
+  border-bottom: 1px solid #dedfe0;
+}
+
+.bb-contact-page .bb-contact-info-icon {
+  width: 42px;
+  height: 42px;
+
+  flex-shrink: 0;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid rgba(180, 125, 24, 0.25);
+  border-radius: 50%;
+
+  color: #b47d18;
+  background: #fff9eb;
+}
+
+.bb-contact-page .bb-contact-info-item small,
+.bb-contact-page .bb-contact-info-item strong {
+  display: block;
+}
+
+.bb-contact-page .bb-contact-info-item small {
+  color: #8a9298;
+  font-size: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.bb-contact-page .bb-contact-info-item strong {
+  margin-top: 4px;
+
+  color: #222a30;
+  font-size: 11px;
+}
+
+
+/* =========================
+   NOTE
+========================= */
+
+.bb-contact-page .bb-contact-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+
+  margin-top: 28px;
+  padding: 18px;
+
+  border: 1px solid #e0d9c9;
+  border-radius: 8px;
+
+  background: #fffaf0;
+}
+
+.bb-contact-page .bb-contact-note-icon {
+  color: #b47d18;
+  font-size: 17px;
+}
+
+.bb-contact-page .bb-contact-note strong {
+  display: block;
+  color: #20272c;
+  font-size: 10px;
+}
+
+.bb-contact-page .bb-contact-note p {
+  margin-top: 5px;
+  color: #7b8389;
+  font-size: 8px;
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   CONTACT FORM
+========================================================= */
+
+.bb-contact-page .bb-contact-form-card {
+  position: relative;
+
+  padding: 34px;
+
+  border-radius: 12px;
+
+  background: #061017;
+  color: white;
+
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.12);
+
+  overflow: hidden;
+}
+
+.bb-contact-page .bb-contact-form-card::before {
+  content: "";
+
+  position: absolute;
+
+  width: 260px;
+  height: 260px;
+
+  right: -120px;
+  top: -120px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 189, 63, 0.08);
+  filter: blur(5px);
+}
+
+.bb-contact-page .bb-contact-form-card > * {
+  position: relative;
+  z-index: 2;
+}
+
+.bb-contact-page .bb-contact-form-card .bb-contact-label {
+  margin-bottom: 10px;
+}
+
+.bb-contact-page .bb-contact-form-card h2 {
+  font-size: clamp(26px, 2.6vw, 38px);
+  line-height: 1.05;
+  letter-spacing: -1.5px;
+}
+
+.bb-contact-page .bb-contact-form-card > p {
+  margin-top: 10px;
+
+  color: #7f8b95;
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+
+/* =========================
+   SUCCESS MESSAGE
+========================= */
+
+.bb-contact-page .bb-contact-success {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-top: 20px;
+  padding: 12px 14px;
+
+  border: 1px solid rgba(255, 189, 63, 0.35);
+  border-radius: 6px;
+
+  background: rgba(255, 189, 63, 0.07);
+  color: #e5e9ec;
+
+  font-size: 9px;
+}
+
+.bb-contact-page .bb-contact-success > div {
+  width: 25px;
+  height: 25px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  background: var(--gold);
+  color: #111;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.bb-contact-page .bb-contact-form-card form {
+  margin-top: 25px;
+}
+
+.bb-contact-page .bb-contact-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.bb-contact-page .bb-contact-field {
+  margin-bottom: 14px;
+}
+
+.bb-contact-page .bb-contact-field label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #d9dfe3;
+  font-size: 9px;
+  font-weight: 600;
+}
+
+.bb-contact-page .bb-contact-field input,
+.bb-contact-page .bb-contact-field select,
+.bb-contact-page .bb-contact-field textarea {
+  width: 100%;
+
+  border: 1px solid #263743;
+  border-radius: 6px;
+
+  outline: none;
+
+  background: #0a151e;
+  color: white;
+
+  padding: 12px 13px;
+
+  font-size: 9px;
+
+  transition: 0.2s ease;
+}
+
+.bb-contact-page .bb-contact-field input,
+.bb-contact-page .bb-contact-field select {
+  height: 42px;
+}
+
+.bb-contact-page .bb-contact-field textarea {
+  min-height: 125px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+.bb-contact-page .bb-contact-field input::placeholder,
+.bb-contact-page .bb-contact-field textarea::placeholder {
+  color: #65727d;
+}
+
+.bb-contact-page .bb-contact-field select {
+  color: #89949d;
+}
+
+.bb-contact-page .bb-contact-field input:focus,
+.bb-contact-page .bb-contact-field select:focus,
+.bb-contact-page .bb-contact-field textarea:focus {
+  border-color: rgba(255, 189, 63, 0.7);
+  box-shadow: 0 0 0 2px rgba(255, 189, 63, 0.05);
+}
+
+
+/* =========================
+   SEND ENQUIRY BUTTON
+========================= */
+
+.bb-contact-page .bb-contact-submit {
+  width: 100%;
+
+  min-height: 46px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  border: 0;
+  border-radius: 6px;
+
+  background: var(--gold);
+  color: #101010;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  transition: 0.25s ease;
+}
+
+.bb-contact-page .bb-contact-submit:hover {
+  background: var(--gold-light);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(255, 189, 63, 0.15);
+}
+
+.bb-contact-page .bb-contact-form-bottom {
+  display: block;
+
+  margin-top: 13px;
+
+  color: #66737d;
+  font-size: 7px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+
+  .bb-contact-page .bb-contact-hero-inner {
+    grid-template-columns: 1fr;
+    gap: 50px;
+    text-align: center;
+  }
+
+  .bb-contact-page .bb-contact-heading {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .bb-contact-page .bb-contact-label {
+    justify-content: center;
+  }
+
+  .bb-contact-page .bb-contact-heading > p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .bb-contact-page .bb-contact-points {
+    justify-content: center;
+  }
+
+  .bb-contact-page .bb-contact-hero-card {
+    margin: 0 auto;
+  }
+
+  .bb-contact-page .bb-contact-grid {
+    grid-template-columns: 1fr;
+    gap: 55px;
+  }
+
+  .bb-contact-page .bb-contact-info {
+    max-width: 700px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .bb-contact-page .bb-contact-form-card {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 760px) {
+
+  .bb-contact-page .bb-contact-hero {
+    min-height: auto;
+    padding: 125px 0 60px;
+  }
+
+  .bb-contact-page .bb-contact-hero-inner {
+    min-height: auto;
+    gap: 42px;
+  }
+
+  .bb-contact-page .bb-contact-heading {
+    text-align: center;
+  }
+
+  .bb-contact-page .bb-contact-label {
+    font-size: 10px;
+    letter-spacing: 1.2px;
+    justify-content: center;
+  }
+
+  .bb-contact-page .bb-contact-heading h1 {
+    font-size: 43px;
+    letter-spacing: -2px;
+    line-height: 1;
+  }
+
+  .bb-contact-page .bb-contact-heading > p {
+    max-width: 540px;
+    margin-top: 18px;
+
+    font-size: 11px;
+    line-height: 1.7;
+  }
+
+  .bb-contact-page .bb-contact-points {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+
+    width: max-content;
+    max-width: 100%;
+    margin: 24px auto 0;
+
+    text-align: left;
+  }
+
+  .bb-contact-page .bb-contact-points > div {
+    font-size: 9px;
+  }
+
+  .bb-contact-page .bb-contact-hero-card {
+    min-height: 245px;
+    padding: 22px;
+  }
+
+  .bb-contact-page .bb-contact-card-content {
+    padding-top: 40px;
+  }
+
+  .bb-contact-page .bb-contact-card-content strong {
+    font-size: 22px;
+  }
+
+  .bb-contact-page .bb-contact-card-content p {
+    font-size: 9px;
+    line-height: 1.6;
+  }
+
+  .bb-contact-page .bb-contact-card-services {
+    gap: 6px;
+    margin-top: 20px;
+  }
+
+  .bb-contact-page .bb-contact-card-services span {
+    padding: 6px 9px;
+    font-size: 7px;
+  }
+
+
+  /* CONTACT INFO SECTION */
+
+  .bb-contact-page .bb-contact-section {
+    padding: 60px 0;
+  }
+
+  .bb-contact-page .bb-contact-grid {
+    gap: 42px;
+  }
+
+  .bb-contact-page .bb-contact-info {
+    text-align: center;
+  }
+
+  .bb-contact-page .bb-contact-info > .bb-contact-label {
+    justify-content: center;
+  }
+
+  .bb-contact-page .bb-contact-info > h2 {
+    font-size: 32px;
+    letter-spacing: -1.5px;
+  }
+
+  .bb-contact-page .bb-contact-info > p {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 10px;
+  }
+
+  .bb-contact-page .bb-contact-info-list {
+    text-align: left;
+    margin-top: 25px;
+  }
+
+  .bb-contact-page .bb-contact-info-item {
+    padding: 14px 0;
+  }
+
+  .bb-contact-page .bb-contact-info-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .bb-contact-page .bb-contact-info-item strong {
+    font-size: 10px;
+  }
+
+  .bb-contact-page .bb-contact-note {
+    text-align: left;
+  }
+
+
+  /* FORM */
+
+  .bb-contact-page .bb-contact-form-card {
+    padding: 24px 20px;
+    border-radius: 9px;
+  }
+
+  .bb-contact-page .bb-contact-form-card h2 {
+    font-size: 27px;
+    letter-spacing: -1px;
+  }
+
+  .bb-contact-page .bb-contact-form-card > p {
+    font-size: 9px;
+  }
+
+  .bb-contact-page .bb-contact-form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .bb-contact-page .bb-contact-field {
+    margin-bottom: 13px;
+  }
+
+  .bb-contact-page .bb-contact-field input,
+  .bb-contact-page .bb-contact-field select {
+    height: 44px;
+  }
+
+  .bb-contact-page .bb-contact-field input,
+  .bb-contact-page .bb-contact-field select,
+  .bb-contact-page .bb-contact-field textarea {
+    padding: 12px;
+    font-size: 10px;
+  }
+
+  .bb-contact-page .bb-contact-field textarea {
+    min-height: 125px;
+  }
+
+  .bb-contact-page .bb-contact-submit {
+    min-height: 48px;
+    font-size: 10px;
+  }
+
+  .bb-contact-page .bb-contact-form-bottom {
+    font-size: 7px;
+    line-height: 1.6;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 450px) {
+
+  .bb-contact-page .bb-contact-hero {
+    padding-top: 115px;
+    padding-bottom: 50px;
+  }
+
+  .bb-contact-page .bb-contact-heading h1 {
+    font-size: 37px;
+    letter-spacing: -1.8px;
+  }
+
+  .bb-contact-page .bb-contact-heading > p {
+    font-size: 10px;
+  }
+
+  .bb-contact-page .bb-contact-points {
+    width: 100%;
+    padding-left: 8px;
+  }
+
+  .bb-contact-page .bb-contact-hero-card {
+    min-height: 230px;
+    padding: 19px;
+  }
+
+  .bb-contact-page .bb-contact-card-content {
+    padding-top: 35px;
+  }
+
+  .bb-contact-page .bb-contact-card-content strong {
+    font-size: 20px;
+  }
+
+  .bb-contact-page .bb-contact-card-content p {
+    font-size: 8px;
+  }
+
+  .bb-contact-page .bb-contact-section {
+    padding: 50px 0;
+  }
+
+  .bb-contact-page .bb-contact-info > h2 {
+    font-size: 29px;
+  }
+
+  .bb-contact-page .bb-contact-form-card {
+    padding: 21px 17px;
+  }
+
+  .bb-contact-page .bb-contact-form-card h2 {
+    font-size: 24px;
+  }
+
+  .bb-contact-page .bb-contact-info-item strong {
+    font-size: 9px;
+  }
+
+  .bb-contact-page .bb-contact-note {
+    padding: 15px;
+  }
+}
