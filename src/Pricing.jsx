@@ -240,7 +240,7 @@ function Pricing() {
             </Link>
 
             <Link
-              to="/"
+              to="/services"
               onClick={() => setMenuOpen(false)}
             >
               Services

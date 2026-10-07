@@ -53,7 +53,7 @@ function Contact() {
               Home
             </a>
 
-            <a href="/#services" onClick={() => setMenuOpen(false)}>
+            <a href="/services" onClick={() => setMenuOpen(false)}>
               Services
             </a>
 
