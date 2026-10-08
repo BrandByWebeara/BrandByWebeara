@@ -8527,3 +8527,19 @@ button {
     font-size: 27px;
   }
 }
+/* Portfolio Features - Mobile 2 Column Layout */
+@media (max-width: 760px) {
+  .portfolio-page .portfolio-features {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 14px 20px !important;
+    width: 100% !important;
+  }
+
+  .portfolio-page .portfolio-feature {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    width: 100% !important;
+  }
+}
