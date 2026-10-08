@@ -322,15 +322,6 @@ function Portfolio() {
 
           <div className="portfolio-hero-left">
 
-            <button
-              type="button"
-              className="portfolio-back-home"
-              onClick={() => goHome()}
-            >
-              <ArrowLeft size={14} />
-              Back to Home
-            </button>
-
             <div className="portfolio-gold-label">
               <span></span>
               OUR PORTFOLIO
