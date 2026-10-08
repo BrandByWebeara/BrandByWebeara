@@ -16,56 +16,33 @@ function Contact() {
   const [menuOpen, setMenuOpen] = React.useState(false);
   const [submitted, setSubmitted] = React.useState(false);
 
- const handleSubmit = async (e) => {
+const handleSubmit = (e) => {
   e.preventDefault();
 
   const form = e.target;
   const formData = new FormData(form);
 
-  // Prevent double-click / multiple submissions
-  const submitButton = form.querySelector('button[type="submit"]');
-
-  if (submitButton) {
-    submitButton.disabled = true;
-    submitButton.innerText = "Sending...";
-  }
-
-  // Show success immediately for a fast visitor experience
-  setSubmitted(true);
+  // Immediately clear the form
   form.reset();
 
-  try {
-    const controller = new AbortController();
+  // Immediately show thank-you message
+  setSubmitted(true);
 
-    // Stop waiting after 10 seconds
-    const timeout = setTimeout(() => {
-      controller.abort();
-    }, 10000);
+  // Send enquiry in background
+  fetch(
+    "https://formsubmit.co/ajax/brandbywebeara@protonmail.com",
+    {
+      method: "POST",
+      body: formData,
+      headers: {
+        Accept: "application/json",
+      },
+    }
+  ).catch((error) => {
+    console.log("Email sending error:", error);
+  });
 
-    await fetch(
-      "https://formsubmit.co/ajax/brandbywebeara@protonmail.com",
-      {
-        method: "POST",
-        body: formData,
-        headers: {
-          Accept: "application/json",
-        },
-        signal: controller.signal,
-      }
-    );
-
-    clearTimeout(timeout);
-  } catch (error) {
-    console.log("Email sending:", error);
-  }
-
-  // Re-enable button
-  if (submitButton) {
-    submitButton.disabled = false;
-    submitButton.innerHTML = `Send Message <span style="display:inline-flex;align-items:center;">→</span>`;
-  }
-
-  // Hide success message after 5 seconds
+  // Hide message after 5 seconds
   setTimeout(() => {
     setSubmitted(false);
   }, 5000);
