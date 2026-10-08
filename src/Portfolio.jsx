@@ -5,8 +5,11 @@ import {
   ArrowUpRight,
   BarChart3,
   Code2,
+  Facebook,
   Globe,
+  Instagram,
   Menu,
+  MessageCircle,
   Smartphone,
   X,
 } from "lucide-react";
