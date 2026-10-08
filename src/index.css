@@ -9801,7 +9801,7 @@ button {
     margin: 0 !important;
   }
 }
-/* SERVICES HERO TRUST - MOBILE ONLY */
+/* SERVICES HERO TRUST - MOBILE ONE ROW */
 @media (max-width: 760px) {
   .services-hero-trust {
     display: flex !important;
@@ -9809,28 +9809,37 @@ button {
     flex-wrap: nowrap !important;
     align-items: center !important;
     justify-content: space-between !important;
-    gap: 6px !important;
+    gap: 4px !important;
     width: 100% !important;
+    max-width: 100% !important;
   }
 
   .services-hero-trust .trust-item {
-    display: flex !important;
+    display: inline-flex !important;
+    flex-direction: row !important;
+    flex: 1 1 0 !important;
+    width: auto !important;
+    max-width: none !important;
+    min-width: 0 !important;
     align-items: center !important;
     justify-content: center !important;
     gap: 4px !important;
-    flex: 1 1 0 !important;
-    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
     white-space: nowrap !important;
   }
 
   .services-hero-trust .trust-item svg {
-    flex-shrink: 0 !important;
-    width: 14px !important;
-    height: 14px !important;
+    display: block !important;
+    flex: 0 0 auto !important;
+    width: 13px !important;
+    height: 13px !important;
   }
 
   .services-hero-trust .trust-item span {
-    font-size: 9px !important;
+    display: inline-block !important;
+    width: auto !important;
+    font-size: 8px !important;
     line-height: 1.2 !important;
     white-space: nowrap !important;
   }
