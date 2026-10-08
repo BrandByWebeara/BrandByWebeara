@@ -16,13 +16,38 @@ function Contact() {
   const [menuOpen, setMenuOpen] = React.useState(false);
   const [submitted, setSubmitted] = React.useState(false);
 
-  const handleSubmit = (e) => {
-    setSubmitted(true);
+  const handleSubmit = async (e) => {
+  e.preventDefault();
 
-    setTimeout(() => {
-      setSubmitted(false);
-    }, 5000);
-  };
+  const form = e.target;
+  const formData = new FormData(form);
+
+  try {
+    const response = await fetch(
+      "https://formsubmit.co/ajax/brandbywebeara@protonmail.com",
+      {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
+      }
+    );
+
+    if (response.ok) {
+      setSubmitted(true);
+      form.reset();
+
+      setTimeout(() => {
+        setSubmitted(false);
+      }, 5000);
+    } else {
+      alert("Something went wrong. Please try again.");
+    }
+  } catch (error) {
+    alert("Unable to send enquiry. Please try again.");
+  }
+};
 
   return (
     <div className="bb-contact-page">
@@ -321,11 +346,7 @@ function Contact() {
               )}
 
 
-              <form
-                action="https://formsubmit.co/brandbywebeara@protonmail.com"
-                method="POST"
-                onSubmit={handleSubmit}
-              >
+             <form onSubmit={handleSubmit}>
 
                 {/* FormSubmit settings */}
                 <input
