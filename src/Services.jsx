@@ -201,7 +201,7 @@ const Services = () => {
       </a>
 
       <a
-        href="/#about"
+        href="/about"
         onClick={() => setMenuOpen(false)}
       >
         About
@@ -676,7 +676,7 @@ const Services = () => {
     <div className="footer-links">
       <a href="/">Home</a>
       <a href="/services">Services</a>
-      <a href="/#about">About</a>
+      <a href="/about">About</a>
       <a href="/portfolio">Portfolio</a>
       <a href="/contact">Contact</a>
     </div>

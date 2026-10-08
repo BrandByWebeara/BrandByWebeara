@@ -227,7 +227,7 @@ function Pricing() {
                 <nav className={`nav-links ${menuOpen ? "mobile-open" : ""}`}>
                   <a href="/#home" onClick={() => setMenuOpen(false)}>Home</a>
                   <a href="/services" onClick={() => setMenuOpen(false)}>Services</a>
-                  <a href="/#about" onClick={() => setMenuOpen(false)}>About</a>
+                  <a href="/about" onClick={() => setMenuOpen(false)}>About</a>
                   <a href="/portfolio" onClick={() => setMenuOpen(false)}>Portfolio</a>
                   <a href="/pricing" onClick={() => setMenuOpen(false)}>Pricing</a>
                   <a href="/contact" onClick={() => setMenuOpen(false)}>Contact</a>
@@ -769,7 +769,7 @@ function Pricing() {
                <div className="footer-links">
                  <a href="/#home">Home</a>
                  <a href="/services">Services</a>
-                 <a href="/#about">About</a>
+                 <a href="/about">About</a>
                  <a href="/portfolio">Portfolio</a>
                  <a href="/contact">Contact</a>
                </div>
