@@ -67,7 +67,7 @@ function App() {
       alert("Something went wrong. Please try again.");
     }
   } catch (error) {
-    alert("Unable to send enquiry. Please try again.");
+    alert("Unable to send enquiry. Please check your internet connection and try again.");
   }
 };
 
@@ -680,88 +680,80 @@ function App() {
   </p>
 
   {submitted && (
-    <div className="bb-contact-success">
-      <div>
-        <Check size={18} />
-      </div>
-
-      <span>
-        Thank you! Your enquiry has been received.
-      </span>
+  <div className="bb-contact-success">
+    <div>
+      <Check size={18} />
     </div>
-  )}
+    <span>Thank you! Your enquiry has been received.</span>
+  </div>
+)}
 
-  <form onSubmit={handleSubmit}>
+<form onSubmit={handleSubmit}>
+  <input
+    type="hidden"
+    name="_subject"
+    value="New Enquiry - BrandByWebeara"
+  />
 
+  <input
+    type="hidden"
+    name="_captcha"
+    value="false"
+  />
+
+  <input
+    type="hidden"
+    name="_template"
+    value="table"
+  />
+
+  <div className="form-row">
     <input
-      type="hidden"
-      name="_subject"
-      value="New Enquiry - BrandByWebeara"
-    />
-
-    <input
-      type="hidden"
-      name="_captcha"
-      value="false"
-    />
-
-    <input
-      type="hidden"
-      name="_template"
-      value="table"
-    />
-
-    <div className="form-row">
-
-      <input
-        type="text"
-        name="Your Name"
-        placeholder="Your Name"
-        required
-      />
-
-      <input
-        type="email"
-        name="Email Address"
-        placeholder="Your Email"
-        required
-      />
-
-    </div>
-
-    <select
-      name="Service Required"
+      type="text"
+      name="Your Name"
+      placeholder="Your Name"
       required
-      defaultValue=""
-    >
-      <option value="" disabled>
-        Select Service
-      </option>
+    />
 
-      <option>Website Development</option>
-      <option>Meta Ads</option>
-      <option>Google Business Profile</option>
-      <option>E-Commerce Listing</option>
-      <option>Graphic Design</option>
-      <option>Online Business Setup</option>
-    </select>
-
-    <textarea
-      name="Project Details"
-      placeholder="Tell us about your project..."
-      rows="5"
+    <input
+      type="email"
+      name="Email Address"
+      placeholder="Your Email"
       required
-    ></textarea>
+    />
+  </div>
 
-    <button
-      type="submit"
-      className="btn btn-primary submit-btn"
-    >
-      Send Message
-      <ArrowRight size={18} />
-    </button>
+  <select
+    name="Service Required"
+    required
+    defaultValue=""
+  >
+    <option value="" disabled>
+      Select Service
+    </option>
 
-  </form>
+    <option>Website Development</option>
+    <option>Meta Ads</option>
+    <option>Google Business Profile</option>
+    <option>E-Commerce Listing</option>
+    <option>Graphic Design</option>
+    <option>Online Business Setup</option>
+  </select>
+
+  <textarea
+    name="Project Details"
+    placeholder="Tell us about your project..."
+    rows="5"
+    required
+  ></textarea>
+
+  <button
+    type="submit"
+    className="btn btn-primary submit-btn"
+  >
+    Send Message <ArrowRight size={18} />
+  </button>
+</form>
 </div>
         </div>
       </section>
