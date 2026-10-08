@@ -701,9 +701,9 @@ function App() {
           </div>
 
           <div className="socials">
-            <a href="#contact"><Facebook size={17} /></a>
-            <a href="#contact"><Instagram size={17} /></a>
-            <a href="#contact"><MessageCircle size={17} /></a>
+            <a href="/contact"><Facebook size={17} /></a>
+            <a href="/contact"><Instagram size={17} /></a>
+            <a href="/contact"><MessageCircle size={17} /></a>
           </div>
         </div>
 

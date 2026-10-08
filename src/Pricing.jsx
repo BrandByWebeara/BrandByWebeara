@@ -209,93 +209,44 @@ function Pricing() {
   return (
     <div className="pricing-page">
 
-      {/* ================= NAVBAR ================= */}
-      <header className="navbar pricing-navbar">
-        <div className="container nav-inner">
-
-          <Link
-            to="/"
-            className="brand"
-            onClick={() => setMenuOpen(false)}
-          >
-            <div className="brand-logo">
-              <span>W</span>
-            </div>
-
-            <div>
-              <div className="brand-name">
-                Brand<span>By</span>Webeara
+       {/* NAVBAR */}
+            <header className="navbar">
+              <div className="container nav-inner">
+                <a href="#home" className="brand">
+                  <div className="brand-logo">
+                    <span>W</span>
+                  </div>
+                  <div>
+                    <div className="brand-name">
+                      Brand<span>By</span>Webeara
+                    </div>
+                    <div className="brand-tagline">YOUR BRAND. OUR CREATION.</div>
+                  </div>
+                </a>
+      
+                <nav className={`nav-links ${menuOpen ? "mobile-open" : ""}`}>
+                  <a href="/#home" onClick={() => setMenuOpen(false)}>Home</a>
+                  <a href="/services" onClick={() => setMenuOpen(false)}>Services</a>
+                  <a href="/#about" onClick={() => setMenuOpen(false)}>About</a>
+                  <a href="/portfolio" onClick={() => setMenuOpen(false)}>Portfolio</a>
+                  <a href="/pricing" onClick={() => setMenuOpen(false)}>Pricing</a>
+                  <a href="/contact" onClick={() => setMenuOpen(false)}>Contact</a>
+      
+                  <a href="/contact" className="nav-cta" onClick={() => setMenuOpen(false)}>
+                    Get Started <ArrowRight size={15} />
+                  </a>
+                </nav>
+      
+                <button
+                  className="menu-btn"
+                  onClick={() => setMenuOpen(!menuOpen)}
+                  aria-label="Toggle menu"
+                >
+                  {menuOpen ? <X /> : <Menu />}
+                </button>
               </div>
-
-              <div className="brand-tagline">
-                YOUR BRAND. OUR CREATION.
-              </div>
-            </div>
-          </Link>
-
-          <nav className={`nav-links ${menuOpen ? "mobile-open" : ""}`}>
-
-            <Link to="/" onClick={() => setMenuOpen(false)}>
-              Home
-            </Link>
-
-            <Link
-              to="/services"
-              onClick={() => setMenuOpen(false)}
-            >
-              Services
-            </Link>
-
-            <Link
-              to="/"
-              onClick={() => setMenuOpen(false)}
-            >
-              About
-            </Link>
-
-            <Link
-              to="/portfolio"
-              onClick={() => setMenuOpen(false)}
-            >
-              Portfolio
-            </Link>
-
-            <Link
-              to="/pricing"
-              className="active"
-              onClick={() => setMenuOpen(false)}
-            >
-              Pricing
-            </Link>
-
-            <Link
-              to="/contact"
-              onClick={() => setMenuOpen(false)}
-            >
-              Contact
-            </Link>
-
-            <Link
-              to="/contact"
-              className="nav-cta"
-              onClick={() => setMenuOpen(false)}
-            >
-              Get Started
-              <ArrowRight size={15} />
-            </Link>
-
-          </nav>
-
-          <button
-            className="menu-btn"
-            onClick={() => setMenuOpen(!menuOpen)}
-            aria-label="Toggle menu"
-          >
-            {menuOpen ? <X /> : <Menu />}
-          </button>
-
-        </div>
-      </header>
+            </header>
+      
 
       {/* ================= HERO ================= */}
       <section className="pricing-hero">
@@ -800,74 +751,41 @@ function Pricing() {
 
       </section>
 
-      {/* ================= FOOTER ================= */}
-      <footer className="footer pricing-footer">
-
-        <div className="container footer-top">
-
-          <Link
-            to="/"
-            className="brand"
-          >
-
-            <div className="brand-logo">
-              <span>W</span>
-            </div>
-
-            <div>
-              <div className="brand-name">
-                Brand<span>By</span>Webeara
-              </div>
-
-              <div className="brand-tagline">
-                YOUR BRAND. OUR CREATION.
-              </div>
-            </div>
-
-          </Link>
-
-          <div className="footer-links">
-
-            <Link to="/">Home</Link>
-            <Link to="/">Services</Link>
-            <Link to="/">About</Link>
-            <Link to="/portfolio">Portfolio</Link>
-            <Link to="/pricing">Pricing</Link>
-            <Link to="/contact">Contact</Link>
-
-          </div>
-
-          <div className="socials">
-
-            <a href="#contact" aria-label="Facebook">
-              <Facebook size={17} />
-            </a>
-
-            <a href="#contact" aria-label="Instagram">
-              <Instagram size={17} />
-            </a>
-
-            <a href="#contact" aria-label="WhatsApp">
-              <MessageCircle size={17} />
-            </a>
-
-          </div>
-
-        </div>
-
-        <div className="container footer-bottom">
-
-          <span>
-            © 2026 BrandByWebeara. All rights reserved.
-          </span>
-
-          <span>
-            Built with modern technology.
-          </span>
-
-        </div>
-
-      </footer>
+     {/* FOOTER */}
+           <footer className="footer">
+             <div className="container footer-top">
+               <a href="#home" className="brand">
+                 <div className="brand-logo">
+                   <span>W</span>
+                 </div>
+                 <div>
+                   <div className="brand-name">
+                     Brand<span>By</span>Webeara
+                   </div>
+                   <div className="brand-tagline">YOUR BRAND. OUR CREATION.</div>
+                 </div>
+               </a>
+     
+               <div className="footer-links">
+                 <a href="/#home">Home</a>
+                 <a href="/services">Services</a>
+                 <a href="/#about">About</a>
+                 <a href="/portfolio">Portfolio</a>
+                 <a href="/contact">Contact</a>
+               </div>
+     
+               <div className="socials">
+                 <a href="#contact"><Facebook size={17} /></a>
+                 <a href="#contact"><Instagram size={17} /></a>
+                 <a href="#contact"><MessageCircle size={17} /></a>
+               </div>
+             </div>
+     
+             <div className="container footer-bottom">
+               <span>© 2026 BrandByWebeara. All rights reserved.</span>
+               <span>Built with modern technology.</span>
+             </div>
+           </footer>
 
     </div>
   );
