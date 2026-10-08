@@ -9677,3 +9677,37 @@ button {
     font-size: 29px;
   }
 }
+/* CONTACT POINTS - MOBILE ONE ROW */
+@media (max-width: 760px) {
+  .bb-contact-points {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    gap: 8px !important;
+    width: 100% !important;
+  }
+
+  .bb-contact-points > div {
+    display: flex !important;
+    align-items: center !important;
+    gap: 5px !important;
+    flex: 1 1 0 !important;
+    min-width: 0 !important;
+    width: auto !important;
+  }
+
+  .bb-contact-point-icon {
+    flex-shrink: 0 !important;
+    width: 22px !important;
+    height: 22px !important;
+    display: grid !important;
+    place-items: center !important;
+  }
+
+  .bb-contact-points > div > span {
+    font-size: 9px !important;
+    line-height: 1.2 !important;
+    white-space: nowrap !important;
+  }
+}
