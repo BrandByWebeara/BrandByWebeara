@@ -11569,3 +11569,102 @@ button {
     font-size: 7px;
   }
 }
+/* =========================================================
+   PORTFOLIO — APP.JSX SAME NAVBAR + LOGO
+   ========================================================= */
+
+/*
+   IMPORTANT:
+   Navbar + logo ko yahan style nahi kiya gaya hai.
+
+   Portfolio automatically App.jsx ke global CSS se:
+   .navbar
+   .nav-inner
+   .brand
+   .brand-logo
+   .brand-name
+   .brand-tagline
+   .nav-links
+   .nav-cta
+   .menu-btn
+
+   ka exact same design use karega.
+*/
+
+
+/* =========================================================
+   PORTFOLIO FOOTER
+   ========================================================= */
+
+.portfolio-page .footer {
+  background: #05090d;
+}
+
+
+/* Desktop footer links */
+
+.portfolio-page .footer-links {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 28px !important;
+  width: auto !important;
+}
+
+.portfolio-page .footer-links a {
+  display: inline-block !important;
+  white-space: nowrap !important;
+  flex: 0 0 auto !important;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 760px) {
+
+  /*
+     Navbar:
+     App.jsx ka original mobile CSS hi use hoga.
+     Yahan navbar/logo ko touch nahi karna.
+  */
+
+
+  /* Footer */
+
+  .portfolio-page .footer-links {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 10px !important;
+    width: 100% !important;
+  }
+
+  .portfolio-page .footer-links a {
+    display: inline-block !important;
+    white-space: nowrap !important;
+    flex: 0 0 auto !important;
+    font-size: 8px !important;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 450px) {
+
+  .portfolio-page .footer-links {
+    gap: 8px !important;
+  }
+
+  .portfolio-page .footer-links a {
+    font-size: 7.5px !important;
+  }
+}
