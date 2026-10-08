@@ -36,6 +36,40 @@ import "./index.css";
 function App() {
   const [menuOpen, setMenuOpen] = React.useState(false);
   const [openFaq, setOpenFaq] = React.useState(0);
+  const [submitted, setSubmitted] = React.useState(false);
+
+  const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  const form = e.target;
+  const formData = new FormData(form);
+
+  try {
+    const response = await fetch(
+      "https://formsubmit.co/ajax/brandbywebeara@protonmail.com",
+      {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
+      }
+    );
+
+    if (response.ok) {
+      setSubmitted(true);
+      form.reset();
+
+      setTimeout(() => {
+        setSubmitted(false);
+      }, 5000);
+    } else {
+      alert("Something went wrong. Please try again.");
+    }
+  } catch (error) {
+    alert("Unable to send enquiry. Please try again.");
+  }
+};
 
   const services = [
     {
@@ -635,46 +669,100 @@ function App() {
             </div>
           </div>
 
-          <div className="contact-box">
-            <div className="section-label">Get In Touch</div>
-            <h2>Let's Work Together</h2>
-            <p>
-              Have a project in mind? Fill out the form and we'll get back to
-              you soon.
-            </p>
+         <div className="contact-box">
+  <div className="section-label">Get In Touch</div>
 
-            <form
-              onSubmit={(e) => {
-                e.preventDefault();
-                alert("Thank you! Your enquiry has been received.");
-              }}
-            >
-              <div className="form-row">
-                <input type="text" placeholder="Your Name" required />
-                <input type="email" placeholder="Your Email" required />
-              </div>
+  <h2>Let's Work Together</h2>
 
-              <select required defaultValue="">
-                <option value="" disabled>Select Service</option>
-                <option>Website Development</option>
-                <option>Meta Ads</option>
-                <option>Google Business Profile</option>
-                <option>E-Commerce Listing</option>
-                <option>Graphic Design</option>
-                <option>Online Business Setup</option>
-              </select>
+  <p>
+    Have a project in mind? Fill out the form and we'll get back to
+    you soon.
+  </p>
 
-              <textarea
-                placeholder="Tell us about your project..."
-                rows="5"
-                required
-              ></textarea>
+  {submitted && (
+    <div className="bb-contact-success">
+      <div>
+        <Check size={18} />
+      </div>
 
-              <button type="submit" className="btn btn-primary submit-btn">
-                Send Message <ArrowRight size={18} />
-              </button>
-            </form>
-          </div>
+      <span>
+        Thank you! Your enquiry has been received.
+      </span>
+    </div>
+  )}
+
+  <form onSubmit={handleSubmit}>
+
+    <input
+      type="hidden"
+      name="_subject"
+      value="New Enquiry - BrandByWebeara"
+    />
+
+    <input
+      type="hidden"
+      name="_captcha"
+      value="false"
+    />
+
+    <input
+      type="hidden"
+      name="_template"
+      value="table"
+    />
+
+    <div className="form-row">
+
+      <input
+        type="text"
+        name="Your Name"
+        placeholder="Your Name"
+        required
+      />
+
+      <input
+        type="email"
+        name="Email Address"
+        placeholder="Your Email"
+        required
+      />
+
+    </div>
+
+    <select
+      name="Service Required"
+      required
+      defaultValue=""
+    >
+      <option value="" disabled>
+        Select Service
+      </option>
+
+      <option>Website Development</option>
+      <option>Meta Ads</option>
+      <option>Google Business Profile</option>
+      <option>E-Commerce Listing</option>
+      <option>Graphic Design</option>
+      <option>Online Business Setup</option>
+    </select>
+
+    <textarea
+      name="Project Details"
+      placeholder="Tell us about your project..."
+      rows="5"
+      required
+    ></textarea>
+
+    <button
+      type="submit"
+      className="btn btn-primary submit-btn"
+    >
+      Send Message
+      <ArrowRight size={18} />
+    </button>
+
+  </form>
+</div>
         </div>
       </section>
 
