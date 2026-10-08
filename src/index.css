@@ -9759,3 +9759,45 @@ button {
     word-break: normal !important;
   }
 }
+/* PRICING - WHY CHOOSE US - MOBILE ONLY */
+@media (max-width: 760px) {
+  .pricing-why-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 12px !important;
+    width: 100% !important;
+  }
+
+  .pricing-why-card {
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 8px !important;
+    min-width: 0 !important;
+    width: 100% !important;
+    padding: 12px !important;
+  }
+
+  .pricing-why-icon {
+    flex-shrink: 0 !important;
+    width: 28px !important;
+    height: 28px !important;
+    display: grid !important;
+    place-items: center !important;
+  }
+
+  .pricing-why-card > div:last-child {
+    min-width: 0 !important;
+  }
+
+  .pricing-why-card h3 {
+    font-size: 11px !important;
+    line-height: 1.25 !important;
+    margin-bottom: 4px !important;
+  }
+
+  .pricing-why-card p {
+    font-size: 8px !important;
+    line-height: 1.35 !important;
+    margin: 0 !important;
+  }
+}
