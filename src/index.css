@@ -9848,3 +9848,8 @@ button {
     white-space: nowrap !important;
   }
 }
+@media screen and (max-width: 760px) {
+  .services-hero .services-hero-trust {
+    transform: translateX(-6px) !important;
+  }
+}
