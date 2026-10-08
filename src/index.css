@@ -9919,3 +9919,62 @@ button {
     margin: 0 !important;
   }
 }
+/* =========================================
+   WHY CHOOSE US - MOBILE 2 COLUMN
+   Desktop remains unchanged
+========================================= */
+
+@media (max-width: 760px) {
+
+  .why-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    column-gap: 10px !important;
+    row-gap: 10px !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+  }
+
+  .why-card {
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 8px !important;
+
+    width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 12px !important;
+
+    box-sizing: border-box !important;
+  }
+
+  .why-icon {
+    flex: 0 0 28px !important;
+    width: 28px !important;
+    height: 28px !important;
+
+    display: grid !important;
+    place-items: center !important;
+  }
+
+  .why-card > div:last-child {
+    min-width: 0 !important;
+    width: 100% !important;
+  }
+
+  .why-card h3 {
+    font-size: 11px !important;
+    line-height: 1.25 !important;
+    margin: 0 0 4px !important;
+  }
+
+  .why-card p {
+    font-size: 8px !important;
+    line-height: 1.35 !important;
+    margin: 0 !important;
+  }
+
+  .grow-text {
+    margin-top: 20px !important;
+  }
+}
