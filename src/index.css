@@ -9801,3 +9801,37 @@ button {
     margin: 0 !important;
   }
 }
+/* SERVICES HERO TRUST - MOBILE ONLY */
+@media (max-width: 760px) {
+  .services-hero-trust {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 6px !important;
+    width: 100% !important;
+  }
+
+  .services-hero-trust .trust-item {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 4px !important;
+    flex: 1 1 0 !important;
+    min-width: 0 !important;
+    white-space: nowrap !important;
+  }
+
+  .services-hero-trust .trust-item svg {
+    flex-shrink: 0 !important;
+    width: 14px !important;
+    height: 14px !important;
+  }
+
+  .services-hero-trust .trust-item span {
+    font-size: 9px !important;
+    line-height: 1.2 !important;
+    white-space: nowrap !important;
+  }
+}
