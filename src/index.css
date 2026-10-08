@@ -12004,3 +12004,46 @@ button {
     padding-top: 42px;
   }
 }
+/* =========================================================
+   PORTFOLIO FOOTER LINKS - ONE ROW
+   Desktop + Mobile
+   ========================================================= */
+
+.portfolio-page .footer-bottom-links {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 18px !important;
+  width: auto !important;
+}
+
+.portfolio-page .footer-bottom-links a {
+  display: inline-block !important;
+  white-space: nowrap !important;
+  flex: 0 0 auto !important;
+  font-size: 10px !important;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 760px) {
+  .portfolio-page .footer-bottom-links {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 10px !important;
+    width: 100% !important;
+  }
+
+  .portfolio-page .footer-bottom-links a {
+    display: inline-block !important;
+    white-space: nowrap !important;
+    flex: 0 0 auto !important;
+    font-size: 8px !important;
+  }
+}
