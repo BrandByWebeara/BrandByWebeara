@@ -271,101 +271,100 @@ function Portfolio() {
   return (
     <div className="portfolio-page">
 
-      {/* =====================================================
-          NAVBAR
-      ===================================================== */}
+     {/* =====================================================
+    NAVBAR
+===================================================== */}
 
-      <header className="navbar portfolio-navbar">
-        <div className="container nav-inner">
+<header className="navbar">
+  <div className="container nav-inner">
 
-          <button
-            type="button"
-            className="portfolio-brand-button"
-            onClick={() => goHome()}
-            aria-label="Go to homepage"
-          >
-            <div className="brand-logo">
-              <span>W</span>
-            </div>
+    <button
+      type="button"
+      className="portfolio-brand-button brand"
+      onClick={() => goHome()}
+      aria-label="Go to homepage"
+    >
+      <div className="brand-logo">
+        <span>W</span>
+      </div>
 
-            <div>
-              <div className="brand-name">
-                Brand<span>By</span>Webeara
-              </div>
-
-              <div className="brand-tagline">
-                YOUR BRAND. OUR CREATION.
-              </div>
-            </div>
-          </button>
-
-          <nav
-            className={`portfolio-nav ${
-              menuOpen ? "portfolio-nav-open" : ""
-            }`}
-          >
-            <button type="button" onClick={() => goHome()}>
-              Home
-            </button>
-
-            <button type="button" onClick={() => goHome("services")}>
-              Services
-            </button>
-
-            <button type="button" onClick={() => goHome("about")}>
-              About
-            </button>
-
-            <button
-              type="button"
-              className="portfolio-nav-active"
-              onClick={() => setMenuOpen(false)}
-            >
-              Portfolio
-            </button>
-
-            <button type="button" onClick={() => (window.location.href = "/pricing")}>
-              Pricing
-            </button>
-
-            <Link
-              to="/contact"
-              onClick={() => setMenuOpen(false)}
-            >
-              Contact
-            </Link>
-
-            <Link
-              to="/contact"
-              className="portfolio-mobile-cta"
-              onClick={() => setMenuOpen(false)}
-            >
-              Get Started
-              <ArrowRight size={14} />
-            </Link>
-          </nav>
-
-          <Link
-            to="/contact"
-            className="portfolio-start-btn"
-          >
-            Get Started
-            <ArrowRight size={14} />
-          </Link>
-
-          <button
-            type="button"
-            className="portfolio-menu-btn"
-            onClick={() => setMenuOpen((value) => !value)}
-            aria-label="Toggle navigation"
-            aria-expanded={menuOpen}
-          >
-            {menuOpen ? <X size={22} /> : <Menu size={22} />}
-          </button>
-
+      <div>
+        <div className="brand-name">
+          Brand<span>By</span>Webeara
         </div>
-      </header>
 
+        <div className="brand-tagline">
+          YOUR BRAND. OUR CREATION.
+        </div>
+      </div>
+    </button>
+
+    <nav className={`nav-links ${menuOpen ? "mobile-open" : ""}`}>
+
+      <a
+        href="/"
+        onClick={() => setMenuOpen(false)}
+      >
+        Home
+      </a>
+
+      <a
+        href="/services"
+        onClick={() => setMenuOpen(false)}
+      >
+        Services
+      </a>
+
+      <a
+        href="/#about"
+        onClick={() => setMenuOpen(false)}
+      >
+        About
+      </a>
+
+      <a
+        href="/portfolio"
+        onClick={() => setMenuOpen(false)}
+      >
+        Portfolio
+      </a>
+
+      <a
+        href="/pricing"
+        onClick={() => setMenuOpen(false)}
+      >
+        Pricing
+      </a>
+
+      <a
+        href="/contact"
+        onClick={() => setMenuOpen(false)}
+      >
+        Contact
+      </a>
+
+      <a
+        href="/contact"
+        className="nav-cta"
+        onClick={() => setMenuOpen(false)}
+      >
+        Get Started
+        <ArrowRight size={15} />
+      </a>
+
+    </nav>
+
+    <button
+      className="menu-btn"
+      onClick={() => setMenuOpen(!menuOpen)}
+      aria-label="Toggle menu"
+      type="button"
+    >
+      {menuOpen ? <X /> : <Menu />}
+    </button>
+
+  </div>
+</header>
       {/* =====================================================
           HERO
       ===================================================== */}
