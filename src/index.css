@@ -9801,44 +9801,48 @@ button {
     margin: 0 !important;
   }
 }
-/* SERVICES HERO TRUST - MOBILE ONE ROW */
-@media (max-width: 760px) {
-  .services-hero-trust {
+/* SERVICES HERO TRUST - MOBILE FIX */
+@media screen and (max-width: 760px) {
+
+  .services-hero .services-hero-trust {
     display: flex !important;
     flex-direction: row !important;
     flex-wrap: nowrap !important;
     align-items: center !important;
     justify-content: space-between !important;
-    gap: 4px !important;
     width: 100% !important;
     max-width: 100% !important;
+    gap: 3px !important;
+    margin: 0 !important;
   }
 
-  .services-hero-trust .trust-item {
-    display: inline-flex !important;
+  .services-hero .services-hero-trust .trust-item {
+    display: flex !important;
     flex-direction: row !important;
-    flex: 1 1 0 !important;
-    width: auto !important;
-    max-width: none !important;
-    min-width: 0 !important;
     align-items: center !important;
     justify-content: center !important;
-    gap: 4px !important;
+    flex: 1 1 0 !important;
+    width: 33.333% !important;
+    max-width: 33.333% !important;
+    min-width: 0 !important;
+    gap: 3px !important;
     margin: 0 !important;
     padding: 0 !important;
     white-space: nowrap !important;
   }
 
-  .services-hero-trust .trust-item svg {
-    display: block !important;
+  .services-hero .services-hero-trust .trust-item svg {
     flex: 0 0 auto !important;
-    width: 13px !important;
-    height: 13px !important;
+    width: 12px !important;
+    height: 12px !important;
   }
 
-  .services-hero-trust .trust-item span {
-    display: inline-block !important;
+  .services-hero .services-hero-trust .trust-item span {
+    display: block !important;
     width: auto !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
     font-size: 8px !important;
     line-height: 1.2 !important;
     white-space: nowrap !important;
