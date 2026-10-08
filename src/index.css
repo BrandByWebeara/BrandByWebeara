@@ -9865,39 +9865,28 @@ button {
   }
 }
 /* =========================================
-   OUR PROCESS - MOBILE HORIZONTAL ROW
+   OUR PROCESS - MOBILE 2 x 2 GRID
    Desktop remains unchanged
 ========================================= */
 
 @media (max-width: 760px) {
 
   .process-grid {
-    display: flex !important;
-    flex-direction: row !important;
-    flex-wrap: nowrap !important;
-    gap: 12px !important;
-
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 14px !important;
     width: 100% !important;
-    overflow-x: auto !important;
-    overflow-y: hidden !important;
-
-    padding: 0 4px 10px !important;
-
-    scroll-snap-type: x mandatory !important;
-    -webkit-overflow-scrolling: touch !important;
-
-    scrollbar-width: none !important;
-  }
-
-  .process-grid::-webkit-scrollbar {
-    display: none !important;
   }
 
   .process-card {
-    flex: 0 0 150px !important;
-    width: 150px !important;
-    min-width: 150px !important;
+    width: 100% !important;
+    min-width: 0 !important;
+  }
 
-    scroll-snap-align: start !important;
+  /* 5th card center */
+  .process-card:last-child {
+    grid-column: 1 / -1 !important;
+    width: calc(50% - 7px) !important;
+    justify-self: center !important;
   }
 }
