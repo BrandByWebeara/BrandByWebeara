@@ -271,100 +271,44 @@ function Portfolio() {
   return (
     <div className="portfolio-page">
 
-     {/* =====================================================
-    NAVBAR
-===================================================== */}
-
-<header className="navbar">
-  <div className="container nav-inner">
-
-    <button
-      type="button"
-      className="portfolio-brand-button brand"
-      onClick={() => goHome()}
-      aria-label="Go to homepage"
-    >
-      <div className="brand-logo">
-        <span>W</span>
-      </div>
-
-      <div>
-        <div className="brand-name">
-          Brand<span>By</span>Webeara
-        </div>
-
-        <div className="brand-tagline">
-          YOUR BRAND. OUR CREATION.
-        </div>
-      </div>
-    </button>
-
-    <nav className={`nav-links ${menuOpen ? "mobile-open" : ""}`}>
-
-      <a
-        href="/"
-        onClick={() => setMenuOpen(false)}
-      >
-        Home
-      </a>
-
-      <a
-        href="/services"
-        onClick={() => setMenuOpen(false)}
-      >
-        Services
-      </a>
-
-      <a
-        href="/#about"
-        onClick={() => setMenuOpen(false)}
-      >
-        About
-      </a>
-
-      <a
-        href="/portfolio"
-        onClick={() => setMenuOpen(false)}
-      >
-        Portfolio
-      </a>
-
-      <a
-        href="/pricing"
-        onClick={() => setMenuOpen(false)}
-      >
-        Pricing
-      </a>
-
-      <a
-        href="/contact"
-        onClick={() => setMenuOpen(false)}
-      >
-        Contact
-      </a>
-
-      <a
-        href="/contact"
-        className="nav-cta"
-        onClick={() => setMenuOpen(false)}
-      >
-        Get Started
-        <ArrowRight size={15} />
-      </a>
-
-    </nav>
-
-    <button
-      className="menu-btn"
-      onClick={() => setMenuOpen(!menuOpen)}
-      aria-label="Toggle menu"
-      type="button"
-    >
-      {menuOpen ? <X /> : <Menu />}
-    </button>
-
-  </div>
-</header>
+     {/* NAVBAR */}
+          <header className="navbar">
+            <div className="container nav-inner">
+              <a href="#home" className="brand">
+                <div className="brand-logo">
+                  <span>W</span>
+                </div>
+                <div>
+                  <div className="brand-name">
+                    Brand<span>By</span>Webeara
+                  </div>
+                  <div className="brand-tagline">YOUR BRAND. OUR CREATION.</div>
+                </div>
+              </a>
+    
+              <nav className={`nav-links ${menuOpen ? "mobile-open" : ""}`}>
+                <a href="/home" onClick={() => setMenuOpen(false)}>Home</a>
+                <a href="/services" onClick={() => setMenuOpen(false)}>Services</a>
+                <a href="/about" onClick={() => setMenuOpen(false)}>About</a>
+                <a href="/portfolio" onClick={() => setMenuOpen(false)}>Portfolio</a>
+                <a href="/pricing" onClick={() => setMenuOpen(false)}>Pricing</a>
+                <a href="/contact" onClick={() => setMenuOpen(false)}>Contact</a>
+    
+                <a href="/contact" className="nav-cta" onClick={() => setMenuOpen(false)}>
+                  Get Started <ArrowRight size={15} />
+                </a>
+              </nav>
+    
+              <button
+                className="menu-btn"
+                onClick={() => setMenuOpen(!menuOpen)}
+                aria-label="Toggle menu"
+              >
+                {menuOpen ? <X /> : <Menu />}
+              </button>
+            </div>
+          </header>
+    
       {/* =====================================================
           HERO
       ===================================================== */}
@@ -623,80 +567,40 @@ function Portfolio() {
         </div>
       </section>
 
-      {/* =====================================================
-          FOOTER
-      ===================================================== */}
-
-      <footer className="footer portfolio-footer">
-
+       {/* FOOTER */}
+      <footer className="footer">
         <div className="container footer-top">
-
-          <button
-            type="button"
-            className="portfolio-footer-brand"
-            onClick={() => goHome()}
-          >
+          <a href="#home" className="brand">
             <div className="brand-logo">
               <span>W</span>
             </div>
-
             <div>
               <div className="brand-name">
                 Brand<span>By</span>Webeara
               </div>
-
-              <div className="brand-tagline">
-                YOUR BRAND. OUR CREATION.
-              </div>
+              <div className="brand-tagline">YOUR BRAND. OUR CREATION.</div>
             </div>
-          </button>
+          </a>
 
           <div className="footer-links">
-
-            <button type="button" onClick={() => goHome()}>
-              Home
-            </button>
-
-            <button
-              type="button"
-              onClick={() => goHome("services")}
-            >
-              Services
-            </button>
-
-            <button
-              type="button"
-              onClick={() => goHome("about")}
-            >
-              About
-            </button>
-
-            <button
-              type="button"
-              onClick={() => setActiveFilter("All")}
-            >
-              Portfolio
-            </button>
-
-            <button
-              type="button"
-              onClick={() => goHome("pricing")}
-            >
-              Pricing
-            </button>
-
-            <Link to="/contact">
-              Contact
-            </Link>
-
+            <a href="/home">Home</a>
+            <a href="/services">Services</a>
+            <a href="/about">About</a>
+            <a href="/portfolio">Portfolio</a>
+            <a href="/contact">Contact</a>
           </div>
 
-          <div className="copyright">
-            © 2026 BrandByWebeara
+          <div className="socials">
+            <a href="#contact"><Facebook size={17} /></a>
+            <a href="#contact"><Instagram size={17} /></a>
+            <a href="#contact"><MessageCircle size={17} /></a>
           </div>
-
         </div>
 
+        <div className="container footer-bottom">
+          <span>© 2026 BrandByWebeara. All rights reserved.</span>
+          <span>Built with modern technology.</span>
+        </div>
       </footer>
 
     </div>
