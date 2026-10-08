@@ -6309,3 +6309,545 @@ button {
     min-height: 140px !important;
   }
 }
+/* =========================================================
+   SERVICES PAGE — OUR PROCESS FINAL FIX
+   Desktop: 5 clean columns
+   Mobile: 2 columns
+========================================================= */
+
+
+/* =========================================================
+   PROCESS SECTION
+========================================================= */
+
+.services-page .process {
+  position: relative;
+
+  width: 100%;
+
+  padding: 90px 0 95px;
+
+  background: #f7f7f5;
+
+  overflow: hidden;
+}
+
+
+/* ---------- PROCESS HEADING ---------- */
+
+.services-page .process .section-heading {
+  position: relative;
+
+  width: 100%;
+  max-width: 720px;
+
+  margin: 0 auto 55px;
+
+  text-align: center;
+}
+
+.services-page .process .section-heading h2 {
+  margin: 0;
+
+  color: #071118;
+
+  font-size: clamp(34px, 4vw, 48px);
+
+  line-height: 1.08;
+
+  letter-spacing: -1.5px;
+}
+
+.services-page .process .section-heading p {
+  max-width: 600px;
+
+  margin: 13px auto 0;
+
+  color: #899399;
+
+  font-size: 11px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   PROCESS GRID — DESKTOP
+========================================================= */
+
+.services-page .process-grid {
+  position: relative;
+
+  width: 100%;
+
+  display: grid !important;
+
+  grid-template-columns:
+    repeat(5, minmax(0, 1fr)) !important;
+
+  gap: 18px !important;
+
+  align-items: start !important;
+
+  margin: 0 !important;
+
+  padding: 0 !important;
+}
+
+
+/* =========================================================
+   PROCESS CONNECTOR LINE
+   ONLY BEHIND NUMBER CIRCLES
+========================================================= */
+
+.services-page .process-grid::before {
+  content: "";
+
+  position: absolute;
+
+  left: 10%;
+  right: 10%;
+
+  top: 23px;
+
+  height: 1px;
+
+  background: #d6dadd;
+
+  z-index: 0;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   PROCESS ITEM
+========================================================= */
+
+.services-page .process-item {
+  position: relative;
+
+  width: 100%;
+
+  min-width: 0;
+
+  min-height: 190px;
+
+  padding: 0 10px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  text-align: center;
+
+  background: transparent;
+
+  border: 0;
+
+  overflow: visible;
+
+  z-index: 1;
+}
+
+
+/* =========================================================
+   NUMBER CIRCLE
+========================================================= */
+
+.services-page .process-item .process-number {
+  position: relative !important;
+
+  top: auto !important;
+  right: auto !important;
+
+  width: 46px !important;
+  height: 46px !important;
+
+  min-width: 46px;
+  min-height: 46px;
+
+  margin: 0 auto 18px !important;
+
+  display: flex !important;
+
+  align-items: center !important;
+  justify-content: center !important;
+
+  background: #071118 !important;
+
+  color: #ffffff !important;
+
+  border: 3px solid #ffbd3f !important;
+
+  border-radius: 50% !important;
+
+  font-size: 9px !important;
+
+  font-weight: 700 !important;
+
+  line-height: 1 !important;
+
+  z-index: 3 !important;
+
+  transform: none !important;
+}
+
+
+/* =========================================================
+   PROCESS TITLE
+========================================================= */
+
+.services-page .process-item h3 {
+  width: 100%;
+
+  margin: 0 0 8px !important;
+
+  color: #071118 !important;
+
+  font-size: 13px !important;
+
+  line-height: 1.3 !important;
+
+  font-weight: 750 !important;
+
+  text-align: center !important;
+}
+
+
+/* =========================================================
+   PROCESS DESCRIPTION
+========================================================= */
+
+.services-page .process-item p {
+  width: 100%;
+
+  max-width: 165px !important;
+
+  margin: 0 auto !important;
+
+  color: #899399 !important;
+
+  font-size: 8px !important;
+
+  line-height: 1.65 !important;
+
+  text-align: center !important;
+}
+
+
+/* =========================================================
+   OLD ARROWS — REMOVE
+========================================================= */
+
+.services-page .process-arrow {
+  display: none !important;
+
+  visibility: hidden !important;
+}
+
+
+/* =========================================================
+   REMOVE OLD ITEM CONNECTOR
+========================================================= */
+
+.services-page .process-item::after {
+  display: none !important;
+
+  content: none !important;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .services-page .process {
+    padding: 75px 0 80px;
+  }
+
+  .services-page .process-grid {
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr)) !important;
+
+    row-gap: 45px !important;
+  }
+
+  .services-page .process-grid::before {
+    display: none !important;
+  }
+
+  .services-page .process-item {
+    min-height: 175px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE — 2 COLUMNS
+========================================================= */
+
+@media (max-width: 760px) {
+
+  .services-page .process {
+    padding: 55px 0 60px !important;
+
+    background: #f7f7f5 !important;
+  }
+
+
+  /* ---------- HEADING ---------- */
+
+  .services-page .process .section-heading {
+    width: 100% !important;
+
+    max-width: 100% !important;
+
+    margin: 0 auto 30px !important;
+
+    text-align: center !important;
+
+    padding: 0 5px !important;
+  }
+
+  .services-page .process .section-heading h2 {
+    font-size: 28px !important;
+
+    line-height: 1.08 !important;
+
+    letter-spacing: -0.8px !important;
+  }
+
+  .services-page .process .section-heading p {
+    max-width: 330px !important;
+
+    margin: 10px auto 0 !important;
+
+    font-size: 8px !important;
+
+    line-height: 1.65 !important;
+  }
+
+
+  /* ---------- GRID ---------- */
+
+  .services-page .process-grid {
+    position: relative !important;
+
+    width: 100% !important;
+
+    display: grid !important;
+
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr)) !important;
+
+    gap: 10px !important;
+
+    margin: 0 !important;
+
+    padding: 0 !important;
+  }
+
+
+  /* ---------- REMOVE DESKTOP LINE ---------- */
+
+  .services-page .process-grid::before {
+    display: none !important;
+
+    content: none !important;
+  }
+
+
+  /* ---------- PROCESS CARD ---------- */
+
+  .services-page .process-item {
+    width: 100% !important;
+
+    min-width: 0 !important;
+
+    min-height: 175px !important;
+
+    margin: 0 !important;
+
+    padding: 18px 10px 17px !important;
+
+    display: flex !important;
+
+    flex-direction: column !important;
+
+    align-items: center !important;
+
+    justify-content: flex-start !important;
+
+    text-align: center !important;
+
+    background: #ffffff !important;
+
+    border: 1px solid #e0e3e4 !important;
+
+    border-radius: 10px !important;
+
+    box-shadow:
+      0 4px 14px rgba(0, 0, 0, 0.035) !important;
+
+    overflow: hidden !important;
+  }
+
+
+  /* ---------- NUMBER ---------- */
+
+  .services-page .process-item .process-number {
+    position: relative !important;
+
+    top: auto !important;
+    right: auto !important;
+
+    width: 35px !important;
+    height: 35px !important;
+
+    min-width: 35px !important;
+    min-height: 35px !important;
+
+    margin: 0 auto 12px !important;
+
+    display: flex !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    background: #071118 !important;
+
+    color: #ffffff !important;
+
+    border: 2px solid #ffbd3f !important;
+
+    border-radius: 50% !important;
+
+    font-size: 7px !important;
+
+    line-height: 1 !important;
+
+    z-index: 2 !important;
+  }
+
+
+  /* ---------- TITLE ---------- */
+
+  .services-page .process-item h3 {
+    width: 100% !important;
+
+    margin: 0 0 7px !important;
+
+    color: #071118 !important;
+
+    font-size: 11px !important;
+
+    line-height: 1.3 !important;
+
+    font-weight: 750 !important;
+
+    text-align: center !important;
+  }
+
+
+  /* ---------- DESCRIPTION ---------- */
+
+  .services-page .process-item p {
+    width: 100% !important;
+
+    max-width: 145px !important;
+
+    margin: 0 auto !important;
+
+    color: #899399 !important;
+
+    font-size: 7px !important;
+
+    line-height: 1.55 !important;
+
+    text-align: center !important;
+  }
+
+
+  /* ---------- NO ARROWS ---------- */
+
+  .services-page .process-arrow,
+  .services-page .process-item::after {
+    display: none !important;
+
+    visibility: hidden !important;
+
+    content: none !important;
+  }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 430px) {
+
+  .services-page .process {
+    padding: 50px 0 55px !important;
+  }
+
+  .services-page .process .section-heading {
+    margin-bottom: 25px !important;
+  }
+
+  .services-page .process .section-heading h2 {
+    font-size: 25px !important;
+  }
+
+  .services-page .process .section-heading p {
+    font-size: 7.5px !important;
+
+    max-width: 300px !important;
+  }
+
+  .services-page .process-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr)) !important;
+
+    gap: 8px !important;
+  }
+
+  .services-page .process-item {
+    min-height: 165px !important;
+
+    padding: 15px 8px !important;
+
+    border-radius: 9px !important;
+  }
+
+  .services-page .process-item .process-number {
+    width: 32px !important;
+    height: 32px !important;
+
+    min-width: 32px !important;
+    min-height: 32px !important;
+
+    margin-bottom: 10px !important;
+
+    font-size: 6.5px !important;
+  }
+
+  .services-page .process-item h3 {
+    font-size: 10px !important;
+
+    margin-bottom: 6px !important;
+  }
+
+  .services-page .process-item p {
+    max-width: 125px !important;
+
+    font-size: 6.5px !important;
+
+    line-height: 1.5 !important;
+  }
+}
