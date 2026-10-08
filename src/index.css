@@ -5064,3 +5064,399 @@ button {
     gap: 12px 17px;
   }
 }
+/* =========================================================
+   SERVICES PAGE — MOBILE FINAL FIX
+   DESKTOP LAYOUT UNCHANGED
+========================================================= */
+
+
+/* =========================================================
+   1. WHAT WE DO — MOBILE 2 COLUMN CARDS
+========================================================= */
+
+@media (max-width: 760px) {
+
+  .services-page .services-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 12px !important;
+    width: 100% !important;
+    align-items: stretch !important;
+  }
+
+  .services-page .service-card {
+    width: 100% !important;
+    min-width: 0 !important;
+    height: auto !important;
+    min-height: 300px !important;
+    padding: 18px 13px !important;
+    overflow: hidden !important;
+  }
+
+  .services-page .service-card h3 {
+    width: 100%;
+    margin-top: 15px !important;
+    line-height: 1.3 !important;
+  }
+
+  .services-page .service-card p {
+    width: 100%;
+    line-height: 1.55 !important;
+  }
+
+
+  /* =====================================================
+     2. SERVICE FEATURES — FIXED 2 COLUMN ALIGNMENT
+  ===================================================== */
+
+  .services-page .service-features {
+    width: 100% !important;
+    margin-top: 15px !important;
+    padding: 0 !important;
+
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+
+    column-gap: 8px !important;
+    row-gap: 7px !important;
+
+    list-style: none !important;
+  }
+
+  .services-page .service-features li {
+    position: relative !important;
+
+    width: 100% !important;
+    min-width: 0 !important;
+
+    margin: 0 !important;
+    padding: 0 0 0 11px !important;
+
+    font-size: 7px !important;
+    line-height: 1.45 !important;
+
+    text-align: left !important;
+
+    overflow-wrap: anywhere !important;
+  }
+
+  /* Check/dot stays at exact same location */
+  .services-page .service-features li::before {
+    content: "✓" !important;
+
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+
+    width: auto !important;
+    height: auto !important;
+
+    background: transparent !important;
+    border-radius: 0 !important;
+
+    color: var(--gold, #ffbd3f) !important;
+
+    font-size: 7px !important;
+    line-height: 1.45 !important;
+    font-weight: 800 !important;
+  }
+
+
+  /* =====================================================
+     3. GRAPHIC & BRAND DESIGN — 6 ITEMS PROPERLY 2 COLUMN
+  ===================================================== */
+
+  .services-page .service-card:last-child .service-features {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    column-gap: 8px !important;
+    row-gap: 7px !important;
+  }
+
+  .services-page .service-card:last-child .service-features li {
+    min-height: 16px !important;
+    display: flex !important;
+    align-items: flex-start !important;
+  }
+
+
+  /* =====================================================
+     4. PROFESSIONAL / MOBILE FRIENDLY / GROWTH FOCUSED
+        MOBILE = VERTICAL COLUMN
+  ===================================================== */
+
+  .services-page .trust-items {
+    width: 100% !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+
+    gap: 9px !important;
+  }
+
+  .services-page .trust-item {
+    width: 100% !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+
+    gap: 7px !important;
+
+    white-space: normal !important;
+  }
+
+  .services-page .trust-item svg {
+    flex: 0 0 auto !important;
+    width: 12px !important;
+    height: 12px !important;
+  }
+
+  .services-page .trust-item span,
+  .services-page .trust-item p {
+    margin: 0 !important;
+    white-space: normal !important;
+    text-align: left !important;
+  }
+
+
+  /* =====================================================
+     5. HERO — TRUST ITEMS KI LOCATION
+  ===================================================== */
+
+  .services-page .services-hero .trust-items {
+    margin-top: 15px !important;
+  }
+
+  .services-page .services-hero .trust-item {
+    min-height: 18px !important;
+  }
+
+
+  /* =====================================================
+     6. SERVICE CARD CONTENT OVERFLOW FIX
+  ===================================================== */
+
+  .services-page .service-card,
+  .services-page .service-card > div,
+  .services-page .service-card > ul {
+    max-width: 100% !important;
+  }
+
+  .services-page .service-card-number {
+    z-index: 5 !important;
+    pointer-events: none !important;
+  }
+
+  .services-page .service-card-icon {
+    position: relative !important;
+    z-index: 4 !important;
+    flex-shrink: 0 !important;
+  }
+
+
+  /* =====================================================
+     7. MOBILE SECTION HEADING
+        "Digital Services Built For Real Growth"
+  ===================================================== */
+
+  .services-page .section-heading {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    text-align: center !important;
+
+    margin-left: auto !important;
+    margin-right: auto !important;
+
+    padding: 0 5px !important;
+  }
+
+  .services-page .section-heading h2 {
+    width: 100% !important;
+
+    font-size: 28px !important;
+    line-height: 1.12 !important;
+
+    letter-spacing: -0.8px !important;
+
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+  }
+
+  .services-page .section-heading p {
+    width: 100% !important;
+    max-width: 500px !important;
+
+    margin-left: auto !important;
+    margin-right: auto !important;
+
+    font-size: 9px !important;
+    line-height: 1.65 !important;
+  }
+
+
+  /* =====================================================
+     8. PROCESS — MOBILE 2 COLUMN
+  ===================================================== */
+
+  .services-page .process-grid {
+    display: grid !important;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+
+    gap: 12px !important;
+
+    width: 100% !important;
+  }
+
+  .services-page .process-item {
+    width: 100% !important;
+    min-width: 0 !important;
+
+    min-height: 175px !important;
+
+    padding: 20px 10px !important;
+
+    text-align: center !important;
+
+    overflow: hidden !important;
+  }
+
+  .services-page .process-item h3 {
+    font-size: 11px !important;
+    line-height: 1.3 !important;
+  }
+
+  .services-page .process-item p {
+    width: 100% !important;
+    max-width: 150px !important;
+
+    margin-left: auto !important;
+    margin-right: auto !important;
+
+    font-size: 7.5px !important;
+    line-height: 1.55 !important;
+  }
+
+
+  /* =====================================================
+     9. TECHNOLOGIES — NO OVERFLOW
+  ===================================================== */
+
+  .services-page .technology-grid,
+  .services-page .technology-list,
+  .services-page .tech-grid {
+    display: flex !important;
+    flex-wrap: wrap !important;
+
+    justify-content: center !important;
+    align-items: center !important;
+
+    gap: 7px !important;
+  }
+
+  .services-page .technology-item,
+  .services-page .technology-grid span,
+  .services-page .tech-item {
+    white-space: nowrap !important;
+    flex: 0 0 auto !important;
+
+    font-size: 7px !important;
+
+    padding: 7px 9px !important;
+  }
+
+}
+
+
+/* =========================================================
+   EXTRA SMALL PHONES
+========================================================= */
+
+@media (max-width: 430px) {
+
+  .services-page .services-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 9px !important;
+  }
+
+  .services-page .service-card {
+    min-height: 285px !important;
+    padding: 16px 10px !important;
+  }
+
+  .services-page .service-card h3 {
+    font-size: 11.5px !important;
+  }
+
+  .services-page .service-card p {
+    font-size: 7.2px !important;
+  }
+
+  .services-page .service-features {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    column-gap: 6px !important;
+    row-gap: 6px !important;
+  }
+
+  .services-page .service-features li {
+    padding-left: 10px !important;
+    font-size: 6.7px !important;
+    line-height: 1.4 !important;
+  }
+
+  .services-page .service-features li::before {
+    font-size: 6.5px !important;
+  }
+
+
+  /* Professional / Mobile Friendly / Growth Focused */
+
+  .services-page .trust-items {
+    gap: 8px !important;
+  }
+
+  .services-page .trust-item {
+    gap: 6px !important;
+  }
+
+  .services-page .trust-item svg {
+    width: 11px !important;
+    height: 11px !important;
+  }
+
+
+  /* Heading */
+
+  .services-page .section-heading h2 {
+    font-size: 25px !important;
+  }
+
+  .services-page .section-heading p {
+    font-size: 8px !important;
+  }
+
+
+  /* Process */
+
+  .services-page .process-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 9px !important;
+  }
+
+  .services-page .process-item {
+    min-height: 165px !important;
+    padding: 18px 8px !important;
+  }
+
+  .services-page .process-item h3 {
+    font-size: 10px !important;
+  }
+
+  .services-page .process-item p {
+    font-size: 7px !important;
+  }
+}
