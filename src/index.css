@@ -8628,3 +8628,49 @@ button {
     letter-spacing: 1.4px !important;
   }
 }
+/* =========================================================
+   PORTFOLIO LOGO — USE EXACT APP.JSX LOGO STYLING
+   ========================================================= */
+
+/* Remove Portfolio-specific logo overrides */
+.portfolio-page .navbar .brand,
+.portfolio-page .footer .brand {
+  all: unset;
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  cursor: pointer !important;
+  text-decoration: none !important;
+  flex-shrink: 0 !important;
+}
+
+.portfolio-page .navbar .brand-logo,
+.portfolio-page .footer .brand-logo {
+  all: unset;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0 !important;
+}
+
+.portfolio-page .navbar .brand-logo span,
+.portfolio-page .footer .brand-logo span {
+  all: unset;
+}
+
+.portfolio-page .navbar .brand-name,
+.portfolio-page .footer .brand-name {
+  all: unset;
+  display: block !important;
+}
+
+.portfolio-page .navbar .brand-name span,
+.portfolio-page .footer .brand-name span {
+  all: unset;
+}
+
+.portfolio-page .navbar .brand-tagline,
+.portfolio-page .footer .brand-tagline {
+  all: unset;
+  display: block !important;
+}
