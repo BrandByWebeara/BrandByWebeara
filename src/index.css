@@ -9809,7 +9809,7 @@ button {
     flex-direction: row !important;
     flex-wrap: nowrap !important;
     align-items: center !important;
-    justify-content: space-between !important;
+    justify-content: space !important;
     width: 100% !important;
     max-width: 100% !important;
     gap: 3px !important;
@@ -9850,6 +9850,17 @@ button {
 }
 @media screen and (max-width: 760px) {
   .services-hero .services-hero-trust {
-    transform: translateX(-8px) !important;
+    width: max-content !important;
+    max-width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    transform: none !important;
+    justify-content: center !important;
+  }
+
+  .services-hero .services-hero-trust .trust-item {
+    flex: 0 0 auto !important;
+    width: auto !important;
+    max-width: none !important;
   }
 }
