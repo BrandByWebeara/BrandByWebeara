@@ -16,14 +16,33 @@ function Contact() {
   const [menuOpen, setMenuOpen] = React.useState(false);
   const [submitted, setSubmitted] = React.useState(false);
 
-  const handleSubmit = async (e) => {
+ const handleSubmit = async (e) => {
   e.preventDefault();
 
   const form = e.target;
   const formData = new FormData(form);
 
+  // Prevent double-click / multiple submissions
+  const submitButton = form.querySelector('button[type="submit"]');
+
+  if (submitButton) {
+    submitButton.disabled = true;
+    submitButton.innerText = "Sending...";
+  }
+
+  // Show success immediately for a fast visitor experience
+  setSubmitted(true);
+  form.reset();
+
   try {
-    const response = await fetch(
+    const controller = new AbortController();
+
+    // Stop waiting after 10 seconds
+    const timeout = setTimeout(() => {
+      controller.abort();
+    }, 10000);
+
+    await fetch(
       "https://formsubmit.co/ajax/brandbywebeara@protonmail.com",
       {
         method: "POST",
@@ -31,22 +50,25 @@ function Contact() {
         headers: {
           Accept: "application/json",
         },
+        signal: controller.signal,
       }
     );
 
-    if (response.ok) {
-      setSubmitted(true);
-      form.reset();
-
-      setTimeout(() => {
-        setSubmitted(false);
-      }, 5000);
-    } else {
-      alert("Something went wrong. Please try again.");
-    }
+    clearTimeout(timeout);
   } catch (error) {
-    alert("Unable to send enquiry. Please try again.");
+    console.log("Email sending:", error);
   }
+
+  // Re-enable button
+  if (submitButton) {
+    submitButton.disabled = false;
+    submitButton.innerHTML = `Send Message <span style="display:inline-flex;align-items:center;">→</span>`;
+  }
+
+  // Hide success message after 5 seconds
+  setTimeout(() => {
+    setSubmitted(false);
+  }, 5000);
 };
 
   return (
