@@ -8527,3 +8527,63 @@ button {
     font-size: 27px;
   }
 }
+/* PORTFOLIO - SAME LOGO AS HOME */
+.portfolio-page .brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.portfolio-page .brand-logo {
+  width: 43px;
+  height: 43px;
+  border: 2px solid var(--gold);
+  border-radius: 9px;
+  display: grid;
+  place-items: center;
+  transform: rotate(-7deg);
+  position: relative;
+  box-shadow: 0 0 20px rgba(255, 189, 63, 0.08);
+}
+
+.portfolio-page .brand-logo::before,
+.portfolio-page .brand-logo::after {
+  content: "";
+  position: absolute;
+  border: 1px solid var(--gold);
+  width: 19px;
+  height: 27px;
+  transform: rotate(35deg);
+}
+
+.portfolio-page .brand-logo::after {
+  width: 14px;
+  height: 22px;
+  transform: rotate(-35deg);
+}
+
+.portfolio-page .brand-logo span {
+  font-weight: 800;
+  font-size: 17px;
+  color: var(--white);
+  transform: rotate(7deg);
+  z-index: 2;
+}
+
+.portfolio-page .brand-name {
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.portfolio-page .brand-name span {
+  color: var(--gold);
+}
+
+.portfolio-page .brand-tagline {
+  color: var(--gold);
+  font-size: 6px;
+  letter-spacing: 1.5px;
+  margin-top: 2px;
+  font-weight: 700;
+}
