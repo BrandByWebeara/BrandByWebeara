@@ -8527,19 +8527,35 @@ button {
     font-size: 27px;
   }
 }
-/* Portfolio Features - Mobile 2 Column Layout */
+/* =========================================
+   PORTFOLIO BOTTOM INFO - MOBILE 2x2
+========================================= */
+
 @media (max-width: 760px) {
-  .portfolio-page .portfolio-features {
+  .portfolio-page .portfolio-bottom-info {
     display: grid !important;
-    grid-template-columns: 1fr 1fr !important;
-    gap: 14px 20px !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 14px 18px !important;
     width: 100% !important;
   }
 
-  .portfolio-page .portfolio-feature {
+  .portfolio-page .portfolio-bottom-info > div {
     display: flex !important;
     align-items: center !important;
     gap: 8px !important;
+    min-width: 0 !important;
     width: 100% !important;
+  }
+
+  .portfolio-page .portfolio-bottom-info svg {
+    flex-shrink: 0 !important;
+    width: 17px !important;
+    height: 17px !important;
+  }
+
+  .portfolio-page .portfolio-bottom-info span {
+    font-size: 11px !important;
+    line-height: 1.3 !important;
+    white-space: normal !important;
   }
 }
