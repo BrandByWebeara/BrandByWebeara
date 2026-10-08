@@ -9864,3 +9864,40 @@ button {
     max-width: none !important;
   }
 }
+/* =========================================
+   OUR PROCESS - MOBILE HORIZONTAL ROW
+   Desktop remains unchanged
+========================================= */
+
+@media (max-width: 760px) {
+
+  .process-grid {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    gap: 12px !important;
+
+    width: 100% !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+
+    padding: 0 4px 10px !important;
+
+    scroll-snap-type: x mandatory !important;
+    -webkit-overflow-scrolling: touch !important;
+
+    scrollbar-width: none !important;
+  }
+
+  .process-grid::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  .process-card {
+    flex: 0 0 150px !important;
+    width: 150px !important;
+    min-width: 150px !important;
+
+    scroll-snap-align: start !important;
+  }
+}
