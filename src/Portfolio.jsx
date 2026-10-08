@@ -290,9 +290,9 @@ function Portfolio() {
               </a>
     
               <nav className={`nav-links ${menuOpen ? "mobile-open" : ""}`}>
-                <a href="#home" onClick={() => setMenuOpen(false)}>Home</a>
+                <a href="/#home" onClick={() => setMenuOpen(false)}>Home</a>
                 <a href="/services" onClick={() => setMenuOpen(false)}>Services</a>
-                <a href="#about" onClick={() => setMenuOpen(false)}>About</a>
+                <a href="/#about" onClick={() => setMenuOpen(false)}>About</a>
                 <a href="/portfolio" onClick={() => setMenuOpen(false)}>Portfolio</a>
                 <a href="/pricing" onClick={() => setMenuOpen(false)}>Pricing</a>
                 <a href="/contact" onClick={() => setMenuOpen(false)}>Contact</a>
