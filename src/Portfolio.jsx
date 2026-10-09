@@ -530,7 +530,7 @@ function Portfolio() {
                   <button
                     type="button"
                     className="portfolio-view-project"
-                    onClick={() => navigate("/contact")}
+                    onClick={() => navigate("https://urban-drip-mu.vercel.app/")}
                   >
                     View Project
                     <ArrowRight size={13} />
