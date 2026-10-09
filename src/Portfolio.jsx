@@ -16,15 +16,13 @@ import {
 import { Link, useNavigate } from "react-router-dom";
 
 const projects = [
- 
-{
-  id: 1,
-  title: "Urban Drip",
-  category: "E-Commerce",
-  type: "ecommerce",
-  text: "Premium black-and-silver streetwear e-commerce store with a modern shopping experience.",
-  liveUrl: "https://urban-drip-mu.vercel.app/",
-},
+  {
+    id: 1,
+    title: "E-Commerce Store",
+    category: "E-Commerce",
+    type: "ecommerce",
+    text: "Modern online store with product listing and a smooth shopping experience.",
+  },
   {
     id: 2,
     title: "Business Website",
@@ -530,7 +528,7 @@ function Portfolio() {
                   <button
                     type="button"
                     className="portfolio-view-project"
-                    onClick={() => navigate("https://urban-drip-mu.vercel.app/")}
+                    onClick={() => navigate("/contact")}
                   >
                     View Project
                     <ArrowRight size={13} />
