@@ -6,6 +6,7 @@ import Pricing from "./Pricing";
 import Services from "./Services";
 import About from "./About";
 import MarketingDemo from "./MarketingDemo";
+import GoogleBusinessDemo from "./GoogleBusinessDemo";
 import {
   ArrowRight,
   ArrowUpRight,
@@ -809,6 +810,7 @@ function AppRouter() {
         <Route path="/services" element={<Services />} />
         <Route path="/about" element={<About />} />
         <Route path="/marketing-demo" element={<MarketingDemo />} />
+        <Route path="/google-business-demo" element={<GoogleBusinessDemo />}/>
       </Routes>
     </BrowserRouter>
   );
