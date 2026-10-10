@@ -27,10 +27,11 @@ const projects = [
   },
   {
     id: 2,
-    title: "Business Website",
+    title: "Interior Design Website",
     category: "Business",
-    type: "business",
-    text: "Professional website designed to build trust and generate quality leads.",
+    type: "interior",
+    text: "Modern interior design website showcasing elegant spaces, stylish interiors and contemporary design.",
+    liveUrl: "https://interior-sand-phi.vercel.app/",
   },
   {
     id: 3,
@@ -76,6 +77,32 @@ const filters = [
 ========================================================= */
 
 function ProjectPreview({ type }) {
+  if (type === "interior") {
+    return (
+      <div
+        className="portfolio-preview portfolio-preview-interior"
+        style={{
+          width: "100%",
+          height: "100%",
+          overflow: "hidden",
+          background: "#eee9e1",
+        }}
+      >
+        <img
+          src="/interior-design.jpg"
+          alt="Interior Design Website Preview"
+          style={{
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            objectPosition: "top",
+            display: "block",
+          }}
+        />
+      </div>
+    );
+  }
+
   if (type === "ecommerce") {
     return (
       <div className="portfolio-preview portfolio-preview-ecommerce">
