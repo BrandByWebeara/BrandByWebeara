@@ -5,7 +5,7 @@ import {
   ArrowRight,
   ArrowUpRight,
   BarChart3,
-  BriefcaseBusiness,
+  Briefcase,
   Camera,
   CheckCircle2,
   ChevronRight,
@@ -39,7 +39,7 @@ const business = {
 
 const services = [
   {
-    icon: BriefcaseBusiness,
+    icon: Briefcase,
     title: "Business Profile Setup",
     text: "Set up your business information, category, contact details and service information.",
   },
