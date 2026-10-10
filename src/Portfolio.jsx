@@ -1,5 +1,6 @@
 
 import React, { useState } from "react";
+
 import {
   ArrowLeft,
   ArrowRight,
@@ -14,6 +15,7 @@ import {
   Smartphone,
   X,
 } from "lucide-react";
+
 import { Link, useNavigate } from "react-router-dom";
 
 const projects = [
@@ -151,32 +153,26 @@ function ProjectPreview({ type }) {
 
   if (type === "marketing") {
     return (
-      <div className="portfolio-preview portfolio-preview-marketing">
-        <div className="portfolio-marketing-phone">
-          <div className="portfolio-phone-header">Instagram</div>
-
-          <div className="portfolio-instagram-photo">
-            <span>SALE</span>
-          </div>
-
-          <div className="portfolio-instagram-line"></div>
-          <div className="portfolio-instagram-line portfolio-short"></div>
-        </div>
-
-        <div className="portfolio-marketing-chart">
-          <small>CAMPAIGN RESULTS</small>
-
-          <strong>+127%</strong>
-
-          <div className="portfolio-chart-bars">
-            <i></i>
-            <i></i>
-            <i></i>
-            <i></i>
-            <i></i>
-            <i></i>
-          </div>
-        </div>
+      <div
+        className="portfolio-preview portfolio-preview-marketing"
+        style={{
+          width: "100%",
+          height: "100%",
+          overflow: "hidden",
+          padding: 0,
+        }}
+      >
+        <img
+          src="/marketing.jpg"
+          alt="BrandByWebeara Meta Ads Campaign Portfolio"
+          style={{
+            display: "block",
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            objectPosition: "center",
+          }}
+        />
       </div>
     );
   }
@@ -286,11 +282,10 @@ function Portfolio() {
 
   return (
     <div className="portfolio-page">
-
       {/* ================= NAVBAR ================= */}
+
       <header className="navbar">
         <div className="container nav-inner">
-
           <a href="/" className="brand">
             <div className="brand-logo">
               <span>W</span>
@@ -308,46 +303,27 @@ function Portfolio() {
           </a>
 
           <nav className={`nav-links ${menuOpen ? "mobile-open" : ""}`}>
-
-            <a
-              href="/"
-              onClick={() => setMenuOpen(false)}
-            >
+            <a href="/" onClick={() => setMenuOpen(false)}>
               Home
             </a>
 
-            <a
-              href="/services"
-              onClick={() => setMenuOpen(false)}
-            >
+            <a href="/services" onClick={() => setMenuOpen(false)}>
               Services
             </a>
 
-            <a
-              href="/about"
-              onClick={() => setMenuOpen(false)}
-            >
+            <a href="/about" onClick={() => setMenuOpen(false)}>
               About
             </a>
 
-            <a
-              href="/portfolio"
-              onClick={() => setMenuOpen(false)}
-            >
+            <a href="/portfolio" onClick={() => setMenuOpen(false)}>
               Portfolio
             </a>
 
-            <a
-              href="/pricing"
-              onClick={() => setMenuOpen(false)}
-            >
+            <a href="/pricing" onClick={() => setMenuOpen(false)}>
               Pricing
             </a>
 
-            <a
-              href="/contact"
-              onClick={() => setMenuOpen(false)}
-            >
+            <a href="/contact" onClick={() => setMenuOpen(false)}>
               Contact
             </a>
 
@@ -359,7 +335,6 @@ function Portfolio() {
               Get Started
               <ArrowRight size={15} />
             </a>
-
           </nav>
 
           <button
@@ -370,7 +345,6 @@ function Portfolio() {
           >
             {menuOpen ? <X /> : <Menu />}
           </button>
-
         </div>
       </header>
 
@@ -379,11 +353,8 @@ function Portfolio() {
       ===================================================== */}
 
       <section className="portfolio-hero">
-
         <div className="portfolio-container portfolio-hero-inner">
-
           <div className="portfolio-hero-left">
-
             <div className="portfolio-gold-label">
               <span></span>
               OUR PORTFOLIO
@@ -400,13 +371,10 @@ function Portfolio() {
               landing pages and digital projects created for
               modern businesses and brands.
             </p>
-
           </div>
 
           <div className="portfolio-hero-visual">
-
             <div className="portfolio-mini-browser">
-
               <div className="portfolio-browser-dots">
                 <i></i>
                 <i></i>
@@ -414,7 +382,6 @@ function Portfolio() {
               </div>
 
               <div className="portfolio-mini-browser-content">
-
                 <small>BRANDBYWEBEARA</small>
 
                 <h3>
@@ -426,13 +393,10 @@ function Portfolio() {
                 <div className="portfolio-mini-button">
                   GET STARTED
                 </div>
-
               </div>
-
             </div>
 
             <div className="portfolio-mini-phone">
-
               <div className="portfolio-mini-notch"></div>
 
               <small>BrandBy</small>
@@ -444,11 +408,8 @@ function Portfolio() {
               </strong>
 
               <div className="portfolio-mini-phone-box"></div>
-
             </div>
-
           </div>
-
         </div>
       </section>
 
@@ -457,11 +418,8 @@ function Portfolio() {
       ===================================================== */}
 
       <section className="portfolio-work">
-
         <div className="portfolio-container">
-
           <div className="portfolio-work-heading">
-
             <div>
               <div className="portfolio-gold-label">
                 <span></span>
@@ -477,74 +435,61 @@ function Portfolio() {
               A collection of websites and digital experiences
               we've created for businesses and brands.
             </p>
-
           </div>
 
           {/* FILTERS */}
 
           <div className="portfolio-filters">
-
             {filters.map((filter) => (
               <button
                 type="button"
                 key={filter}
-                className={
-                  activeFilter === filter ? "active" : ""
-                }
+                className={activeFilter === filter ? "active" : ""}
                 onClick={() => setActiveFilter(filter)}
               >
                 {filter}
               </button>
             ))}
-
           </div>
 
           {/* PROJECT GRID */}
 
           <div className="portfolio-projects-grid">
-
             {filteredProjects.map((project, index) => (
-
               <article
                 className="portfolio-project-card"
                 key={project.id}
               >
-
                 <div className="portfolio-project-preview">
-
                   <ProjectPreview type={project.type} />
 
                   <span className="portfolio-project-number">
                     {String(index + 1).padStart(2, "0")}
                   </span>
 
-                  
-<button
-  type="button"
-  className="portfolio-preview-arrow"
-  aria-label={`Open ${project.title}`}
-  onClick={() => {
-    if (project.type === "marketing") {
-      navigate("/marketing-demo");
-    } else if (project.liveUrl) {
-      window.open(
-        project.liveUrl,
-        "_blank",
-        "noopener,noreferrer"
-      );
-    } else {
-      navigate("/contact");
-    }
-  }}
->
-  <ArrowUpRight size={17} />
-</button>
-
-
+                  <button
+                    type="button"
+                    className="portfolio-preview-arrow"
+                    aria-label={`Open ${project.title}`}
+                    onClick={() => {
+                      if (project.type === "marketing") {
+                        navigate("/marketing-demo");
+                      } else if (project.liveUrl) {
+                        window.open(
+                          project.liveUrl,
+                          "_blank",
+                          "noopener,noreferrer"
+                        );
+                      } else {
+                        navigate("/contact");
+                      }
+                    }}
+                  >
+                    <ArrowUpRight size={17} />
+                  </button>
                 </div>
 
                 <div className="portfolio-project-info">
-
                   <div className="portfolio-project-category">
                     {project.category}
                   </div>
@@ -553,44 +498,39 @@ function Portfolio() {
 
                   <p>{project.text}</p>
 
-                  
-<button
-  type="button"
-  className="portfolio-view-project"
-  onClick={() => {
-    if (project.type === "marketing") {
-      navigate("/marketing-demo");
-    } else if (project.liveUrl) {
-      window.open(
-        project.liveUrl,
-        "_blank",
-        "noopener,noreferrer"
-      );
-    } else {
-      navigate("/contact");
-    }
-  }}
->
-  {project.type === "marketing"
-    ? "View Campaign"
-    : project.liveUrl
-      ? "Live Demo"
-      : "View Project"}
-  <ArrowRight size={13} />
-</button>
+                  <button
+                    type="button"
+                    className="portfolio-view-project"
+                    onClick={() => {
+                      if (project.type === "marketing") {
+                        navigate("/marketing-demo");
+                      } else if (project.liveUrl) {
+                        window.open(
+                          project.liveUrl,
+                          "_blank",
+                          "noopener,noreferrer"
+                        );
+                      } else {
+                        navigate("/contact");
+                      }
+                    }}
+                  >
+                    {project.type === "marketing"
+                      ? "View Campaign"
+                      : project.liveUrl
+                      ? "Live Demo"
+                      : "View Project"}
 
+                    <ArrowRight size={13} />
+                  </button>
                 </div>
-
               </article>
-
             ))}
-
           </div>
 
           {/* BOTTOM INFO */}
 
           <div className="portfolio-bottom-info">
-
             <div>
               <Globe size={18} />
               <span>Modern & Responsive</span>
@@ -610,9 +550,7 @@ function Portfolio() {
               <BarChart3 size={18} />
               <span>Business Focused</span>
             </div>
-
           </div>
-
         </div>
       </section>
 
@@ -621,13 +559,9 @@ function Portfolio() {
       ===================================================== */}
 
       <section className="portfolio-cta">
-
         <div className="portfolio-container">
-
           <div className="portfolio-cta-inner">
-
             <div>
-
               <small>HAVE A PROJECT IN MIND?</small>
 
               <h2>
@@ -639,7 +573,6 @@ function Portfolio() {
                 Ready to turn your idea into a professional
                 digital experience?
               </p>
-
             </div>
 
             <Link
@@ -649,9 +582,7 @@ function Portfolio() {
               Start Your Project
               <ArrowUpRight size={17} />
             </Link>
-
           </div>
-
         </div>
       </section>
 
@@ -659,7 +590,6 @@ function Portfolio() {
 
       <footer className="footer">
         <div className="container footer-top">
-
           <a href="#home" className="brand">
             <div className="brand-logo">
               <span>W</span>
@@ -685,11 +615,18 @@ function Portfolio() {
           </div>
 
           <div className="socials">
-            <a href="#contact"><Facebook size={17} /></a>
-            <a href="#contact"><Instagram size={17} /></a>
-            <a href="#contact"><MessageCircle size={17} /></a>
-          </div>
+            <a href="#contact">
+              <Facebook size={17} />
+            </a>
 
+            <a href="#contact">
+              <Instagram size={17} />
+            </a>
+
+            <a href="#contact">
+              <MessageCircle size={17} />
+            </a>
+          </div>
         </div>
 
         <div className="container footer-bottom">
@@ -697,7 +634,6 @@ function Portfolio() {
           <span>Built with modern technology.</span>
         </div>
       </footer>
-
     </div>
   );
 }
