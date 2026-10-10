@@ -5,6 +5,7 @@ import Contact from "./Contact";
 import Pricing from "./Pricing";
 import Services from "./Services";
 import About from "./About";
+import MarketingDemo from "./MarketingDemo";
 import {
   ArrowRight,
   ArrowUpRight,
@@ -807,6 +808,7 @@ function AppRouter() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/services" element={<Services />} />
         <Route path="/about" element={<About />} />
+        <Route path="/marketing-demo" element={<MarketingDemo />} />
       </Routes>
     </BrowserRouter>
   );

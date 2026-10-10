@@ -518,22 +518,28 @@ function Portfolio() {
                     {String(index + 1).padStart(2, "0")}
                   </span>
 
-                  <button
-                    type="button"
-                    className="portfolio-preview-arrow"
-                    aria-label={`Open ${project.title}`}
-                    onClick={() => {
-                      if (project.liveUrl) {
-                        window.open(
-                          project.liveUrl,
-                          "_blank",
-                          "noopener,noreferrer"
-                        );
-                      }
-                    }}
-                  >
-                    <ArrowUpRight size={17} />
-                  </button>
+                  
+<button
+  type="button"
+  className="portfolio-preview-arrow"
+  aria-label={`Open ${project.title}`}
+  onClick={() => {
+    if (project.type === "marketing") {
+      navigate("/marketing-demo");
+    } else if (project.liveUrl) {
+      window.open(
+        project.liveUrl,
+        "_blank",
+        "noopener,noreferrer"
+      );
+    } else {
+      navigate("/contact");
+    }
+  }}
+>
+  <ArrowUpRight size={17} />
+</button>
+
 
                 </div>
 
@@ -547,24 +553,31 @@ function Portfolio() {
 
                   <p>{project.text}</p>
 
-                  <button
-                    type="button"
-                    className="portfolio-view-project"
-                    onClick={() => {
-                      if (project.liveUrl) {
-                        window.open(
-                          project.liveUrl,
-                          "_blank",
-                          "noopener,noreferrer"
-                        );
-                      } else {
-                        navigate("/contact");
-                      }
-                    }}
-                  >
-                    {project.liveUrl ? "Live Demo" : "View Project"}
-                    <ArrowRight size={13} />
-                  </button>
+                  
+<button
+  type="button"
+  className="portfolio-view-project"
+  onClick={() => {
+    if (project.type === "marketing") {
+      navigate("/marketing-demo");
+    } else if (project.liveUrl) {
+      window.open(
+        project.liveUrl,
+        "_blank",
+        "noopener,noreferrer"
+      );
+    } else {
+      navigate("/contact");
+    }
+  }}
+>
+  {project.type === "marketing"
+    ? "View Campaign"
+    : project.liveUrl
+      ? "Live Demo"
+      : "View Project"}
+  <ArrowRight size={13} />
+</button>
 
                 </div>
 
