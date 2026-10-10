@@ -18,6 +18,7 @@ import {
 
 import { Link, useNavigate } from "react-router-dom";
 
+
 const projects = [
   {
     id: 1,
@@ -49,20 +50,6 @@ const projects = [
     type: "google",
     text: "Google Business Profile setup and optimization for better local visibility.",
   },
-  {
-    id: 5,
-    title: "Modern Landing Page",
-    category: "Landing Page",
-    type: "landing",
-    text: "High-converting landing page created for a growing modern business.",
-  },
-  {
-    id: 6,
-    title: "Mobile Business App",
-    category: "Mobile",
-    type: "mobile",
-    text: "Mobile-first interface designed for a modern brand and its customers.",
-  },
 ];
 
 const filters = [
@@ -70,8 +57,6 @@ const filters = [
   "E-Commerce",
   "Business",
   "Marketing",
-  "Landing Page",
-  "Mobile",
 ];
 
 /* =========================================================
@@ -472,17 +457,15 @@ function Portfolio() {
                     className="portfolio-preview-arrow"
                     aria-label={`Open ${project.title}`}
                     onClick={() => {
-                      if (project.type === "marketing") {
-                        navigate("/marketing-demo");
-                      } else if (project.liveUrl) {
-                        window.open(
-                          project.liveUrl,
-                          "_blank",
-                          "noopener,noreferrer"
-                        );
-                      } else {
-                        navigate("/contact");
-                      }
+                    if (project.type === "marketing") {
+  navigate("/marketing-demo");
+} else if (project.type === "google") {
+  navigate("/google-business-demo");
+} else if (project.liveUrl) {
+  window.open(project.liveUrl, "_blank", "noopener,noreferrer");
+} else {
+  navigate("/contact");
+}
                     }}
                   >
                     <ArrowUpRight size={17} />
@@ -502,18 +485,20 @@ function Portfolio() {
                     type="button"
                     className="portfolio-view-project"
                     onClick={() => {
-                      if (project.type === "marketing") {
-                        navigate("/marketing-demo");
-                      } else if (project.liveUrl) {
-                        window.open(
-                          project.liveUrl,
-                          "_blank",
-                          "noopener,noreferrer"
-                        );
-                      } else {
-                        navigate("/contact");
-                      }
-                    }}
+  if (project.type === "marketing") {
+    navigate("/marketing-demo");
+  } else if (project.type === "google") {
+    navigate("/google-business-demo");
+  } else if (project.liveUrl) {
+    window.open(
+      project.liveUrl,
+      "_blank",
+      "noopener,noreferrer"
+    );
+  } else {
+    navigate("/contact");
+  }
+}}
                   >
                     {project.type === "marketing"
                       ? "View Campaign"
