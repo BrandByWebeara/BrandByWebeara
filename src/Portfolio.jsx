@@ -106,33 +106,17 @@ function ProjectPreview({ type }) {
   if (type === "ecommerce") {
     return (
       <div className="portfolio-preview portfolio-preview-ecommerce">
-        <div className="portfolio-preview-top">
-          <strong>SHOP</strong>
-
-          <div className="portfolio-preview-icons">
-            <span>⌕</span>
-            <span>♡</span>
-            <span>🛒</span>
-          </div>
-        </div>
-
-        <div className="portfolio-ecommerce-banner">
-          <small>NEW COLLECTION</small>
-
-          <h4>
-            Grow Your
-            <br />
-            <span>Business Online</span>
-          </h4>
-
-          <button type="button">SHOP NOW</button>
-        </div>
-
-        <div className="portfolio-product-row">
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
+        <img
+          src="/urban-drip.jpg"
+          alt="Urban Drip E-Commerce Website Preview"
+          style={{
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            objectPosition: "top",
+            display: "block",
+          }}
+        />
       </div>
     );
   }
