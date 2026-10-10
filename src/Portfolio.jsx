@@ -162,31 +162,33 @@ function ProjectPreview({ type }) {
     );
   }
 
-  if (type === "google") {
-    return (
-      <div className="portfolio-preview portfolio-preview-google">
-        <div className="portfolio-google-logo">G</div>
+  
+if (type === "google") {
+  return (
+    <div
+      className="portfolio-preview portfolio-preview-google"
+      style={{
+        width: "100%",
+        height: "100%",
+        overflow: "hidden",
+        padding: 0,
+      }}
+    >
+      <img
+        src="/google-business.jpg"
+        alt="BrandByWebeara Google Business Listing Portfolio Preview"
+        style={{
+          display: "block",
+          width: "100%",
+          height: "100%",
+          objectFit: "cover",
+          objectPosition: "center",
+        }}
+      />
+    </div>
+  );
+}
 
-        <div className="portfolio-google-search">
-          Google Business Profile
-        </div>
-
-        <div className="portfolio-google-card">
-          <div className="portfolio-google-stars">★★★★★</div>
-
-          <strong>BrandByWebeara</strong>
-
-          <small>Digital Growth Agency</small>
-
-          <div className="portfolio-google-info">
-            📍 India
-            <br />
-            ✓ Open · Online services
-          </div>
-        </div>
-      </div>
-    );
-  }
 
   if (type === "landing") {
     return (
