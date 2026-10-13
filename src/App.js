@@ -508,47 +508,60 @@ function App() {
           </div>
         </div>
       </section>
+{/* WORK */}
+<section className="work section-dark" id="work">
+  <div className="container">
+    <div className="section-heading work-heading">
+      <div>
+        <div className="section-label">Our Work</div>
+        <h2>Recent Projects</h2>
+        <p>We’ve helped many businesses go online and grow.</p>
+      </div>
 
-      {/* WORK */}
-      <section className="work section-dark" id="work">
-        <div className="container">
-          <div className="section-heading work-heading">
-            <div>
-              <div className="section-label">Our Work</div>
-              <h2>Recent Projects</h2>
-              <p>We’ve helped many businesses go online and grow.</p>
+      <a href="/portfolio" className="small-btn">
+        View All Projects <ArrowRight size={15} />
+      </a>
+    </div>
+
+    <div className="projects-grid">
+      {projects.map((project, index) => (
+        <a
+          className="project-card"
+          key={index}
+          href={project.url || "/portfolio"}
+          target={project.url ? "_blank" : undefined}
+          rel={project.url ? "noopener noreferrer" : undefined}
+          aria-label={`View ${project.title} project`}
+          style={{
+            textDecoration: "none",
+            color: "inherit",
+            cursor: "pointer"
+          }}
+        >
+          <div className={`project-image project-${index}`}>
+            <div className="project-window">
+              <div className="window-dots">● ● ●</div>
+              <div className="project-big-icon">{project.icon}</div>
+              <strong>{project.title}</strong>
+            </div>
+          </div>
+
+          <div className="project-info">
+            <small>{project.type}</small>
+
+            <div className="tag-list">
+              {project.tags.map((tag, i) => (
+                <span key={i}>{tag}</span>
+              ))}
             </div>
 
-            <a href="/portfolio" className="small-btn">
-              View All Projects <ArrowRight size={15} />
-            </a>
+            <p>Complete setup & professional online presence.</p>
           </div>
-
-          <div className="projects-grid">
-            {projects.map((project, index) => (
-              <div className="project-card" key={index}>
-                <div className={`project-image project-${index}`}>
-                  <div className="project-window">
-                    <div className="window-dots">● ● ●</div>
-                    <div className="project-big-icon">{project.icon}</div>
-                    <strong>{project.title}</strong>
-                  </div>
-                </div>
-
-                <div className="project-info">
-                  <small>{project.type}</small>
-                  <div className="tag-list">
-                    {project.tags.map((tag, i) => (
-                      <span key={i}>{tag}</span>
-                    ))}
-                  </div>
-                  <p>Complete setup & professional online presence.</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* WHY US */}
       <section className="why section-light" id="pricing">
