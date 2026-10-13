@@ -15339,3 +15339,100 @@ button {
     min-height: 180px;
   }
 }
+/* ABOUT US — DESKTOP SITE MODE FIX */
+.about-grid {
+  grid-template-columns: minmax(0, 44fr) minmax(0, 56fr);
+}
+
+.about-image {
+  display: grid;
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  min-height: 320px;
+  height: 320px;
+  place-items: center;
+  overflow: visible;
+  visibility: visible;
+  opacity: 1;
+}
+
+.office-card {
+  display: block;
+  position: relative;
+  width: 90%;
+  max-width: 500px;
+  min-width: 0;
+  height: 285px;
+  min-height: 245px;
+  visibility: visible;
+  opacity: 1;
+}
+
+.office-laptop {
+  display: block;
+  position: absolute;
+  z-index: 2;
+}
+
+.office-screen {
+  display: flex;
+  flex-direction: column;
+  visibility: visible;
+  opacity: 1;
+}
+
+.office-card::after {
+  pointer-events: none;
+}
+
+@media (max-width: 760px) {
+  .about-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .about-image {
+    width: 100%;
+    max-width: 560px;
+    min-height: 300px;
+    height: 300px;
+    margin: 0 auto;
+  }
+
+  .office-card {
+    width: 92%;
+    max-width: 500px;
+    height: 270px;
+    min-height: 245px;
+  }
+
+  .about-content {
+    width: 100%;
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 450px) {
+  .about-image {
+    min-height: 270px;
+    height: 270px;
+  }
+
+  .office-card {
+    width: 96%;
+    height: 245px;
+    min-height: 245px;
+  }
+
+  .office-laptop {
+    width: 68%;
+    left: 16%;
+    top: 62px;
+  }
+
+  .office-screen {
+    height: 95px;
+  }
+}
