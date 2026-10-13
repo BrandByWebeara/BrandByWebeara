@@ -259,7 +259,7 @@ const handleSubmit = (e) => {
 
                   <div>
                     <small>WhatsApp</small>
-                    <strong>Let's discuss your project</strong>
+                    <strong>+91 8957689571</strong>
                   </div>
                 </div>
 
@@ -271,7 +271,7 @@ const handleSubmit = (e) => {
 
                   <div>
                     <small>Email</small>
-                    <strong>Send us your enquiry</strong>
+                    <strong>brandbywebeara@protonmail.com</strong>
                   </div>
                 </div>
 
@@ -283,7 +283,7 @@ const handleSubmit = (e) => {
 
                   <div>
                     <small>Phone</small>
-                    <strong>Available for business enquiries</strong>
+                    <strong>+91 8957689571</strong>
                   </div>
                 </div>
 
