@@ -139,32 +139,50 @@ function App() {
     },
   ];
 
-  const projects = [
-    {
-      type: "E-Commerce Store",
-      title: "Online Store Setup",
-      icon: <ShoppingBag size={38} />,
-      tags: ["Amazon", "Flipkart", "Meesho"],
-    },
-    {
-      type: "Business Website",
-      title: "Modern Business Website",
-      icon: <Laptop size={38} />,
-      tags: ["React", "Responsive", "Vercel"],
-    },
-    {
-      type: "Meta Ads Campaign",
-      title: "Facebook & Instagram Ads",
-      icon: <Target size={38} />,
-      tags: ["Facebook", "Instagram", "Ads"],
-    },
-    {
-      type: "Google Business",
-      title: "Google Business Listing",
-      icon: <MapPin size={38} />,
-      tags: ["Maps", "GBP", "SEO"],
-    },
-  ];
+ const projects = [
+  {
+    type: "E-Commerce Store",
+    title: "Urban Drip",
+    icon: <ShoppingBag size={38} />,
+    tags: ["E-Commerce", "Streetwear", "React"],
+    url: "https://urban-drip-mu.vercel.app/",
+  },
+  {
+    type: "Business Website",
+    title: "Interior Design Website",
+    icon: <Laptop size={38} />,
+    tags: ["Website", "Interior Design", "Vercel"],
+    url: "https://interior-sand-phi.vercel.app/",
+  },
+  {
+    type: "Meta Ads Campaign",
+    title: "Facebook & Instagram Ads",
+    icon: <Target size={38} />,
+    tags: ["Facebook", "Instagram", "Ads"],
+    url: "/marketing-demo",
+  },
+  {
+    type: "Google Business",
+    title: "Google Business Listing",
+    icon: <MapPin size={38} />,
+    tags: ["Google Maps", "GBP", "SEO"],
+    url: "/google-business-demo",
+  },
+  {
+    type: "Landing Page",
+    title: "Modern Landing Page",
+    icon: <Globe size={38} />,
+    tags: ["Landing Page", "UI/UX", "Responsive"],
+    url: "/portfolio",
+  },
+  {
+    type: "Mobile App Design",
+    title: "Mobile Business App",
+    icon: <Laptop size={38} />,
+    tags: ["Mobile UI", "App Design", "Responsive"],
+    url: "/portfolio",
+  },
+];
 
   const faqs = [
     {
@@ -508,7 +526,8 @@ function App() {
           </div>
         </div>
       </section>
-{/* WORK */}
+
+      {/* WORK */}
 <section className="work section-dark" id="work">
   <div className="container">
     <div className="section-heading work-heading">
@@ -528,20 +547,31 @@ function App() {
         <a
           className="project-card"
           key={index}
-          href={project.url || "/portfolio"}
-          target={project.url ? "_blank" : undefined}
-          rel={project.url ? "noopener noreferrer" : undefined}
-          aria-label={`View ${project.title} project`}
+          href={project.url}
+          target={
+            project.url.startsWith("https://")
+              ? "_blank"
+              : undefined
+          }
+          rel={
+            project.url.startsWith("https://")
+              ? "noopener noreferrer"
+              : undefined
+          }
+          aria-label={`Open ${project.title}`}
           style={{
+            display: "block",
             textDecoration: "none",
             color: "inherit",
-            cursor: "pointer"
+            cursor: "pointer",
           }}
         >
           <div className={`project-image project-${index}`}>
             <div className="project-window">
               <div className="window-dots">● ● ●</div>
-              <div className="project-big-icon">{project.icon}</div>
+              <div className="project-big-icon">
+                {project.icon}
+              </div>
               <strong>{project.title}</strong>
             </div>
           </div>
