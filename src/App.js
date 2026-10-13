@@ -168,20 +168,6 @@ function App() {
     tags: ["Google Maps", "GBP", "SEO"],
     url: "/google-business-demo",
   },
-  {
-    type: "Landing Page",
-    title: "Modern Landing Page",
-    icon: <Globe size={38} />,
-    tags: ["Landing Page", "UI/UX", "Responsive"],
-    url: "/portfolio",
-  },
-  {
-    type: "Mobile App Design",
-    title: "Mobile Business App",
-    icon: <Laptop size={38} />,
-    tags: ["Mobile UI", "App Design", "Responsive"],
-    url: "/portfolio",
-  },
 ];
 
   const faqs = [
