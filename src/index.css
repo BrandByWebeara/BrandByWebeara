@@ -15311,3 +15311,31 @@ button {
     animation-iteration-count: 1 !important;
   }
 }
+
+/* BrandByWebeara - About image visibility fix */
+.about-image,
+.about-photo,
+.about-who-visual,
+.office-card,
+.office-laptop,
+.office-screen,
+.desk-laptop,
+.desk-screen,
+.coffee,
+.phone-small,
+.plant {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Keep the About visual visible on narrow screens */
+@media screen and (max-width: 760px) {
+  .about-image,
+  .about-photo,
+  .about-who-visual {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    min-height: 180px;
+  }
+}
